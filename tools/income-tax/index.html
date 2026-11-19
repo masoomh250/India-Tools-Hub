@@ -1,1 +1,358 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Income Tax Estimator | India Tools Hub</title><meta name="description" content="Estimate tax under the FY 2026-27 new tax regime. This is an indicative calculator and does not cover every special-rate income, surcharge or cess nuance."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/income-tax/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Tax / Income Tax Estimator</div><div class="tool-layout"><div class="calc-card"><h1>Income Tax Estimator</h1><p>Estimate tax under the FY 2026-27 new tax regime. This is an indicative calculator and does not cover every special-rate income, surcharge or cess nuance.</p><div class="form-grid"><div class="field"><label>Taxable income (₹)</label><input id="income" type="number" value="1200000"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Estimate tax</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Income Tax Estimator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function slabTax(x){let s=[[400000,0],[800000,.05],[1200000,.10],[1600000,.15],[2000000,.20],[2400000,.25],[Infinity,.30]],prev=0,t=0;for(let [lim,rate] of s){if(x>prev)t+=(Math.min(x,lim)-prev)*rate;else break;prev=lim;if(x<=lim)break}return t}function calc(){let income=num('income'),tax=slabTax(income);if(income<=1200000)tax=0;else tax=Math.max(0,tax-60000);let cess=tax*.04,total=tax+cess;document.getElementById('out').innerHTML=`<div class="main-result">${money(total)}</div><div class="result-row"><span>Tax before cess</span><strong>${money(tax)}</strong></div><div class="result-row"><span>4% cess estimate</span><strong>${money(cess)}</strong></div><div class="note">Uses the AY 2026-27 new-regime slab structure published by the Income Tax Department. Special-rate income, surcharge and some deductions are not modeled.</div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Income Tax Estimator | India Tools Hub</title>
+  <meta name="description" content="Estimate income tax under India's new tax regime for Tax Year 2026-27.">
+  <link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/income-tax/">
+  <link rel="icon" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+  <div class="container">
+
+    <div class="breadcrumbs">
+      <a href="../../index.html">Home</a> / Tax / Income Tax Estimator
+    </div>
+
+    <div class="tool-layout">
+
+      <div class="calc-card">
+
+        <h1>Income Tax Estimator</h1>
+
+        <p>
+          Estimate income tax under India's new tax regime for Tax Year 2026-27.
+          This is an indicative calculator and does not cover special-rate income
+          or every tax nuance.
+        </p>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="income">Taxable income (₹)</label>
+            <input
+              id="income"
+              type="number"
+              value="1200000"
+              min="0"
+              step="1000"
+            >
+          </div>
+
+        </div>
+
+        <button class="btn" style="margin-top:20px" onclick="calc()">
+          Estimate tax
+        </button>
+
+        <div class="result" id="out"></div>
+
+      </div>
+
+      <aside>
+
+        <div class="adbox">
+          Advertisement space
+        </div>
+
+        <div class="info-card">
+
+          <div class="tag">
+            About this tool
+          </div>
+
+          <h3>
+            Simple and fast
+          </h3>
+
+          <p>
+            Enter your values and calculate instantly.
+            Your inputs are processed in your browser.
+          </p>
+
+          <p class="note">
+            Results are estimates and should be independently verified
+            where financial or tax decisions are involved.
+          </p>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="article">
+
+      <h2>
+        How to use the Income Tax Estimator
+      </h2>
+
+      <p>
+        Enter your taxable income above and select
+        <strong>Estimate tax</strong>.
+        The result updates instantly without requiring an account.
+      </p>
+
+      <h3>
+        Important note
+      </h3>
+
+      <p>
+        This calculator is provided for general informational purposes.
+        Real-world results may differ because of tax rules, special-rate
+        income, deductions, surcharge, rounding and other conditions.
+      </p>
+
+      <div class="faq">
+
+        <details>
+          <summary>
+            Is this calculator free?
+          </summary>
+
+          <p>
+            Yes. India Tools Hub tools are designed to be free to use
+            without registration.
+          </p>
+
+        </details>
+
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>
+            Are my inputs stored?
+          </summary>
+
+          <p>
+            No. The calculations run in your browser.
+            This static website does not need your calculator inputs
+            to calculate the result.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+    <div class="adbox">
+      Advertisement space
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function slabTax(income) {
+
+  const slabs = [
+    [400000, 0],
+    [800000, 0.05],
+    [1200000, 0.10],
+    [1600000, 0.15],
+    [2000000, 0.20],
+    [2400000, 0.25],
+    [Infinity, 0.30]
+  ];
+
+  let previous = 0;
+  let tax = 0;
+
+  for (const [limit, rate] of slabs) {
+
+    if (income <= previous) {
+      break;
+    }
+
+    const taxable = Math.min(income, limit) - previous;
+
+    if (taxable > 0) {
+      tax += taxable * rate;
+    }
+
+    previous = limit;
+
+    if (income <= limit) {
+      break;
+    }
+  }
+
+  return tax;
+}
+
+
+function surchargeRate(income) {
+
+  if (income > 20000000) {
+    return 0.25;
+  }
+
+  if (income > 10000000) {
+    return 0.15;
+  }
+
+  if (income > 5000000) {
+    return 0.10;
+  }
+
+  return 0;
+}
+
+
+function calculateMarginalRelief(income, taxBeforeRelief) {
+
+  const rebateLimit = 1200000;
+
+  /*
+   * Marginal relief around the rebate threshold.
+   * Tax should not exceed the amount by which income
+   * exceeds the threshold.
+   */
+
+  if (
+    income > rebateLimit &&
+    income <= 1270590
+  ) {
+
+    const excessIncome = income - rebateLimit;
+
+    if (taxBeforeRelief > excessIncome) {
+      return taxBeforeRelief - excessIncome;
+    }
+  }
+
+  return 0;
+}
+
+
+function calculateSurcharge(income, tax) {
+
+  const rate = surchargeRate(income);
+
+  if (rate === 0) {
+    return 0;
+  }
+
+  let surcharge = tax * rate;
+
+  const marginalRelief = calculateMarginalRelief(
+    income,
+    tax + surcharge
+  );
+
+  if (marginalRelief > 0) {
+    surcharge = Math.max(0, surcharge - marginalRelief);
+  }
+
+  return surcharge;
+}
+
+
+function calc() {
+
+  const income = Math.max(
+    0,
+    num('income')
+  );
+
+  let tax = slabTax(income);
+
+  /*
+   * Section 87A rebate under the new regime.
+   * Tax up to ₹60,000 can be rebated when
+   * taxable income does not exceed ₹12 lakh.
+   */
+
+  if (income <= 1200000) {
+    tax = 0;
+  }
+
+  const surcharge = calculateSurcharge(
+    income,
+    tax
+  );
+
+  const cess =
+    (tax + surcharge) * 0.04;
+
+  const total =
+    tax + surcharge + cess;
+
+
+  document.getElementById('out').innerHTML = `
+
+    <div class="main-result">
+      ${money(total)}
+    </div>
+
+    <div class="result-row">
+      <span>Tax before surcharge</span>
+      <strong>${money(tax)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Surcharge</span>
+      <strong>${money(surcharge)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>4% Health & Education Cess</span>
+      <strong>${money(cess)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Total estimated tax</span>
+      <strong>${money(total)}</strong>
+    </div>
+
+    <div class="note">
+      This calculator provides an indicative estimate
+      under the Tax Year 2026-27 new tax regime.
+      Special-rate income and certain deductions
+      are not modeled.
+    </div>
+
+  `;
+
+}
+
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

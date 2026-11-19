@@ -1,563 +1,60 @@
 <!doctype html>
 <html lang="en-IN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Income Tax Estimator | India Tools Hub</title>
-
-<meta
-    name="description"
-    content="Estimate income tax under India's new tax regime for Tax Year 2026-27. This is an indicative calculator and does not cover special-rate income or every tax nuance."
->
-
-<link
-    rel="canonical"
-    href="https://masoomh250.github.io/India-Tools-Hub/tools/income-tax/"
->
-
-<link rel="icon" href="../../favicon.svg">
-<link rel="stylesheet" href="../../assets/style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>India Tools Hub | Free Calculators & Online Tools for India</title>
+<meta name="description" content="Free online calculators and useful tools for India: EMI, FD, SIP, GST, salary, tax, BMI, age, fuel cost and more.">
+<link rel="canonical" href="https://YOUR-DOMAIN.example/">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
-
 <div id="site-header"></div>
-
 <main>
-
-<section class="tool-hero">
-
-<div class="container">
-
-<div class="breadcrumbs">
-<a href="../../index.html">Home</a> / Tax / Income Tax Estimator
+<section class="hero"><div class="container hero-grid">
+<div>
+<span class="eyebrow">Free tools for everyday India</span>
+<h1>Calculate it.<br><span style="color:#315efb">Understand it.</span><br>Plan it.</h1>
+<p>Simple, fast and mobile-friendly calculators for money, travel, health, dates and everyday decisions.</p>
+<div class="search"><input id="toolSearch" placeholder="Search a calculator, e.g. EMI, SIP, GST..." oninput="renderSearch()"><button class="btn" onclick="renderSearch()">Search</button></div>
+<div id="searchResults"></div>
 </div>
-
-<div class="tool-layout">
-
-<div class="calc-card">
-
-<h1>Income Tax Estimator</h1>
-
-<p>
-Estimate income tax under India's new tax regime for Tax Year 2026-27.
-This is an indicative calculator and does not cover special-rate income
-or every tax nuance.
-</p>
-
-<div class="form-grid">
-
-<div class="field">
-
-<label for="income">
-Taxable income (₹)
-</label>
-
-<input
-    id="income"
-    type="number"
-    value="1200000"
-    min="0"
-    step="1"
->
-
+<div class="hero-card">
+<div class="stat"><span>Free tools</span><strong>15+</strong></div>
+<div class="stat"><span>Made for India</span><strong>🇮🇳</strong></div>
+<div class="stat"><span>Mobile friendly</span><strong>✓</strong></div>
+<div class="stat"><span>No sign-up</span><strong>0</strong></div>
 </div>
+</div></section>
 
+<div class="container"><div class="adbox">Advertisement space</div></div>
+
+<section class="section" id="tools"><div class="container">
+<div class="section-head"><div><h2>Popular tools</h2><p>Start with the calculators people use most.</p></div></div>
+<div class="grid" id="toolGrid"></div>
+</div></section>
+
+<section class="section" style="background:#fff"><div class="container">
+<div class="section-head"><div><h2>Why India Tools Hub?</h2><p>Built to be simple, transparent and useful.</p></div></div>
+<div class="grid">
+<div class="card"><div class="icon">⚡</div><h3>Instant results</h3><p>Calculations run directly in your browser. No account or registration required.</p></div>
+<div class="card"><div class="icon">🇮🇳</div><h3>India focused</h3><p>Rupee based calculations, Indian number formatting and practical use cases.</p></div>
+<div class="card"><div class="icon">🔒</div><h3>Privacy first</h3><p>Calculator inputs stay in your browser and are not submitted to our server.</p></div>
 </div>
-
-<button
-    class="btn"
-    style="margin-top:20px"
-    onclick="calc()"
->
-Estimate tax
-</button>
-
-<div class="result" id="out"></div>
-
-</div>
-
-<aside>
-
-<div class="adbox">
-Advertisement space
-</div>
-
-<div class="info-card">
-
-<div class="tag">
-About this tool
-</div>
-
-<h3>
-Simple and fast
-</h3>
-
-<p>
-Enter your values and calculate instantly.
-Your inputs are processed in your browser.
-</p>
-
-<p class="note">
-Results are estimates and should be independently verified
-where financial, tax or health decisions are involved.
-</p>
-
-</div>
-
-</aside>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<div class="article">
-
-<h2>
-How to use the Income Tax Estimator
-</h2>
-
-<p>
-Enter the required values above and select
-<strong>Calculate</strong>.
-The result updates instantly without requiring an account.
-</p>
-
-<h3>
-Important note
-</h3>
-
-<p>
-This calculator is provided for general informational purposes.
-Real-world results may differ because of lender rules,
-investment assumptions, tax rules, rounding, fees, timing
-and other conditions.
-</p>
-
-
-<div class="faq">
-
-<details>
-
-<summary>
-Is this calculator free?
-</summary>
-
-<p>
-Yes. India Tools Hub tools are designed to be free to use
-without registration.
-</p>
-
-</details>
-
-</div>
-
-
-<div class="faq">
-
-<details>
-
-<summary>
-Are my inputs stored?
-</summary>
-
-<p>
-The calculations run in your browser.
-This static site does not need your calculator inputs
-to calculate the result.
-</p>
-
-</details>
-
-</div>
-
-</div>
-
-
-<div class="adbox">
-Advertisement space
-</div>
-
-</div>
-
-</section>
-
+</div></section>
 </main>
-
-
 <div id="site-footer"></div>
-
-
-<script src="../../js/main.js"></script>
-
-
-<script>
-
-function slabTax(x) {
-
-    const slabs = [
-        [400000, 0],
-        [800000, 0.05],
-        [1200000, 0.10],
-        [1600000, 0.15],
-        [2000000, 0.20],
-        [2400000, 0.25],
-        [Infinity, 0.30]
-    ];
-
-    let previous = 0;
-    let tax = 0;
-
-    for (const [limit, rate] of slabs) {
-
-        if (x > previous) {
-            tax +=
-                (Math.min(x, limit) - previous) * rate;
-        }
-
-        if (x <= limit) {
-            break;
-        }
-
-        previous = limit;
-    }
-
-    return tax;
-}
-
-
-/*
- * Applicable surcharge rates.
- *
- * Income above ₹50 lakh:
- * 10%
- *
- * Income above ₹1 crore:
- * 15%
- *
- * Income above ₹2 crore:
- * 25%
- */
-
-function surchargeRate(income) {
-
-    if (income > 20000000) {
-        return 0.25;
-    }
-
-    if (income > 10000000) {
-        return 0.15;
-    }
-
-    if (income > 5000000) {
-        return 0.10;
-    }
-
-    return 0;
-}
-
-
-/*
- * Section 87A rebate and marginal relief.
- *
- * Full rebate applies when taxable income
- * does not exceed ₹12,00,000.
- *
- * Marginal relief is applied in the income range
- * immediately above ₹12,00,000.
- *
- * The marginal relief boundary used here is
- * ₹12,70,590.
- */
-
-function calculateMarginalRelief(income, tax) {
-
-    const rebateLimit = 1200000;
-    const marginalReliefLimit = 1270590;
-
-    /*
-     * Full Section 87A rebate.
-     */
-
-    if (income <= rebateLimit) {
-
-        return {
-            tax: 0,
-            rebate: tax
-        };
-
-    }
-
-
-    /*
-     * Marginal relief.
-     *
-     * Additional tax should not exceed
-     * the additional income above ₹12 lakh.
-     */
-
-    if (income <= marginalReliefLimit) {
-
-        const additionalIncome =
-            income - rebateLimit;
-
-        if (tax > additionalIncome) {
-
-            return {
-                tax: additionalIncome,
-                rebate: tax - additionalIncome
-            };
-
-        }
-
-    }
-
-
-    return {
-        tax: tax,
-        rebate: 0
-    };
-
-}
-
-
-/*
- * Calculate surcharge and applicable
- * marginal relief on surcharge.
- */
-
-function calculateSurcharge(income, tax) {
-
-    const rate = surchargeRate(income);
-
-    if (rate === 0) {
-        return 0;
-    }
-
-    let surcharge = tax * rate;
-
-    /*
-     * Determine the applicable surcharge threshold.
-     */
-
-    let threshold;
-    let thresholdRate;
-
-    if (income > 20000000) {
-
-        threshold = 20000000;
-        thresholdRate = 0.15;
-
-    } else if (income > 10000000) {
-
-        threshold = 10000000;
-        thresholdRate = 0.10;
-
-    } else {
-
-        threshold = 5000000;
-        thresholdRate = 0;
-    }
-
-
-    /*
-     * Calculate tax and surcharge at the
-     * applicable threshold.
-     */
-
-    const thresholdTax =
-        slabTax(threshold);
-
-    const thresholdSurcharge =
-        thresholdTax * thresholdRate;
-
-
-    /*
-     * Maximum liability after marginal relief.
-     */
-
-    const maximumLiability =
-        thresholdTax +
-        thresholdSurcharge +
-        (income - threshold);
-
-
-    /*
-     * Apply surcharge marginal relief if required.
-     */
-
-    if (tax + surcharge > maximumLiability) {
-
-        surcharge =
-            Math.max(
-                0,
-                maximumLiability - tax
-            );
-
-    }
-
-    return surcharge;
-
-}
-
-
-/*
- * Main calculator.
- */
-
-function calc() {
-
-    const income =
-        Math.max(
-            0,
-            num('income')
-        );
-
-
-    /*
-     * Calculate tax using the new-regime
-     * slab structure.
-     */
-
-    const calculatedSlabTax =
-        slabTax(income);
-
-
-    /*
-     * Apply Section 87A rebate and
-     * marginal relief.
-     */
-
-    const relief =
-        calculateMarginalRelief(
-            income,
-            calculatedSlabTax
-        );
-
-
-    const tax =
-        relief.tax;
-
-
-    /*
-     * Calculate surcharge.
-     */
-
-    const surcharge =
-        calculateSurcharge(
-            income,
-            tax
-        );
-
-
-    /*
-     * Health and Education Cess = 4%
-     *
-     * Cess is calculated on:
-     *
-     * Tax + Surcharge
-     */
-
-    const cess =
-        (tax + surcharge) * 0.04;
-
-
-    /*
-     * Final tax liability.
-     */
-
-    const total =
-        tax +
-        surcharge +
-        cess;
-
-
-    /*
-     * Display result.
-     */
-
-    document.getElementById('out').innerHTML = `
-
-        <div class="main-result">
-            ${money(total)}
-        </div>
-
-        <div class="result-row">
-
-            <span>
-                Tax before surcharge
-            </span>
-
-            <strong>
-                ${money(tax)}
-            </strong>
-
-        </div>
-
-
-        <div class="result-row">
-
-            <span>
-                Surcharge
-            </span>
-
-            <strong>
-                ${money(surcharge)}
-            </strong>
-
-        </div>
-
-
-        <div class="result-row">
-
-            <span>
-                4% health &amp; education cess
-            </span>
-
-            <strong>
-                ${money(cess)}
-            </strong>
-
-        </div>
-
-
-        <div class="note">
-
-            Uses the Tax Year 2026-27 new-regime
-            slab structure. Includes Section 87A rebate,
-            marginal relief, applicable surcharge rates
-            and 4% health &amp; education cess.
-
-            Special-rate income and other tax-specific
-            adjustments are not modeled.
-
-        </div>
-
-    `;
-
-}
-
-
-/*
- * Calculate the default value when the page loads.
- */
-
-calc();
-
-</script>
-
-
+<script src="js/main.js"></script>
 <script>
 loadChrome();
+function renderTools(list=TOOLS){
+ document.getElementById("toolGrid").innerHTML=list.map(t=>`<a class="card" href="${t.url}"><div class="icon">${t.icon}</div><div class="category">${t.cat}</div><h3>${t.name}</h3><p>${t.desc}</p><span class="card-link">Open calculator →</span></a>`).join("");
+}
+function renderSearch(){
+ const q=document.getElementById("toolSearch").value.toLowerCase().trim();
+ const r=q?TOOLS.filter(t=>(t.name+" "+t.cat+" "+t.desc).toLowerCase().includes(q)):TOOLS;
+ document.getElementById("searchResults").innerHTML=q?`<div style="margin-top:12px" class="small">${r.length} result(s) found</div>`:"";
+ renderTools(r);
+}
+renderTools();
 </script>
-
-</body>
-</html>
+</body></html>

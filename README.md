@@ -1,24 +1,19 @@
 # India Tools Hub
 
-A static, GitHub Pages ready collection of free calculators and utilities.
+A fast static collection of practical calculators and utilities for India.
+
+## Deploy on GitHub Pages
+1. Upload the contents of this folder to the repository root.
+2. Open Settings → Pages.
+3. Choose Deploy from a branch.
+4. Select `main` and `/ (root)`.
+5. Save and wait for the site to publish.
 
 ## Included
+19 calculator and utility pages, responsive design, search, categories, dark mode, SEO metadata, sitemap, robots.txt, legal pages and 404 page.
 
-15 calculators across Finance, Utility and Travel categories.
-
-## Deploy
-
-1. Upload all files to the repository root.
-2. Commit to `main`.
-3. Open **Settings → Pages**.
-4. Under Build and deployment, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`.
-6. Save and wait for GitHub Pages to publish.
-
-## Before AdSense
-
-Replace `YOUR-DOMAIN.example` in `sitemap.xml`, `robots.txt` and the homepage canonical tag with the actual site URL. Add a real contact email. Review and expand the legal pages and calculator content. Do not publish copied or mass generated low value content.
+## AdSense
+AdSense approval is not guaranteed. Before applying, make sure the site has useful original content, working navigation, accurate disclosures, a privacy policy and a clear user experience. Add the AdSense code only after the site is ready and the account is approved.
 
 ## Important
-
-Financial, tax and health calculators are estimates and should be independently verified.
+Financial, tax and health tools are estimates. Verify important decisions with official or professional sources.

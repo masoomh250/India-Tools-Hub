@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>India Tools Hub | Free Calculators & Online Tools for India</title>
+<meta name="description" content="Free online calculators and useful tools for India: EMI, FD, SIP, GST, salary, tax, BMI, age, fuel cost and more.">
+<link rel="canonical" href="https://YOUR-DOMAIN.example/">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero"><div class="container hero-grid">
+<div>
+<span class="eyebrow">Free tools for everyday India</span>
+<h1>Calculate it.<br><span style="color:#315efb">Understand it.</span><br>Plan it.</h1>
+<p>Simple, fast and mobile-friendly calculators for money, travel, health, dates and everyday decisions.</p>
+<div class="search"><input id="toolSearch" placeholder="Search a calculator, e.g. EMI, SIP, GST..." oninput="renderSearch()"><button class="btn" onclick="renderSearch()">Search</button></div>
+<div id="searchResults"></div>
+</div>
+<div class="hero-card">
+<div class="stat"><span>Free tools</span><strong>15+</strong></div>
+<div class="stat"><span>Made for India</span><strong>🇮🇳</strong></div>
+<div class="stat"><span>Mobile friendly</span><strong>✓</strong></div>
+<div class="stat"><span>No sign-up</span><strong>0</strong></div>
+</div>
+</div></section>
+
+<div class="container"><div class="adbox">Advertisement space</div></div>
+
+<section class="section" id="tools"><div class="container">
+<div class="section-head"><div><h2>Popular tools</h2><p>Start with the calculators people use most.</p></div></div>
+<div class="grid" id="toolGrid"></div>
+</div></section>
+
+<section class="section" style="background:#fff"><div class="container">
+<div class="section-head"><div><h2>Why India Tools Hub?</h2><p>Built to be simple, transparent and useful.</p></div></div>
+<div class="grid">
+<div class="card"><div class="icon">⚡</div><h3>Instant results</h3><p>Calculations run directly in your browser. No account or registration required.</p></div>
+<div class="card"><div class="icon">🇮🇳</div><h3>India focused</h3><p>Rupee based calculations, Indian number formatting and practical use cases.</p></div>
+<div class="card"><div class="icon">🔒</div><h3>Privacy first</h3><p>Calculator inputs stay in your browser and are not submitted to our server.</p></div>
+</div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+<script>
+loadChrome();
+function renderTools(list=TOOLS){
+ document.getElementById("toolGrid").innerHTML=list.map(t=>`<a class="card" href="${t.url}"><div class="icon">${t.icon}</div><div class="category">${t.cat}</div><h3>${t.name}</h3><p>${t.desc}</p><span class="card-link">Open calculator →</span></a>`).join("");
+}
+function renderSearch(){
+ const q=document.getElementById("toolSearch").value.toLowerCase().trim();
+ const r=q?TOOLS.filter(t=>(t.name+" "+t.cat+" "+t.desc).toLowerCase().includes(q)):TOOLS;
+ document.getElementById("searchResults").innerHTML=q?`<div style="margin-top:12px" class="small">${r.length} result(s) found</div>`:"";
+ renderTools(r);
+}
+renderTools();
+</script>
+</body></html>

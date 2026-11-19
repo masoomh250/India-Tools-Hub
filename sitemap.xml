@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/about.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/contact.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/privacy.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/terms.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/disclaimer.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/emi/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/fd/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/sip/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/loan-interest/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/gst/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/salary/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/income-tax/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/ppf/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/nps/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/age/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/percentage/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/date-difference/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/bmi/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/fuel-cost/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/tools/trip-cost/</loc></url>
+</urlset>

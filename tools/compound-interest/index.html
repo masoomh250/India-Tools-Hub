@@ -1,1 +1,547 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Compound Interest Calculator | India Tools Hub</title><meta name="description" content="Calculate future value and interest using compound growth."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/compound-interest/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Investment / Compound Interest Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Compound Interest Calculator</h1><p>Calculate future value and interest using compound growth.</p><div class="form-grid"><div class="field"><label>Principal (₹)</label><input id="p" type="number" value="100000"></div><div class="field"><label>Annual rate (%)</label><input id="r" type="number" value="8" step="0.1"></div><div class="field"><label>Years</label><input id="y" type="number" value="10"></div><div class="field"><label>Compounding</label><select id="n"><option value="1">Yearly</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option></select></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Compound Interest Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let p=num('p'),r=num('r')/100,y=num('y'),n=num('n'),a=p*Math.pow(1+r/n,n*y);document.getElementById('out').innerHTML=`<div class="main-result">${money(a)}</div><div class="result-row"><span>Interest earned</span><strong>${money(a-p)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Compound Interest Calculator: Calculate Compound Growth | India Tools Hub</title>
+
+<meta name="description" content="Calculate compound interest and future value using principal, annual interest rate, investment period and compounding frequency. Free online compound interest calculator.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/compound-interest/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Compound Interest Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/compound-interest/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate compound interest and future value using principal, annual interest rate, investment period and compounding frequency.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Investment / Compound Interest Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Compound Interest Calculator</h1>
+
+<p>
+Calculate the future value of an investment and the interest earned
+using compound interest.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="p">Principal (₹)</label>
+
+<input
+id="p"
+type="number"
+value="100000"
+min="1"
+step="1000"
+>
+
+</div>
+
+<div class="field">
+
+<label for="r">Annual interest rate (%)</label>
+
+<input
+id="r"
+type="number"
+value="8"
+min="0"
+step="0.1"
+>
+
+</div>
+
+<div class="field">
+
+<label for="y">Investment period (Years)</label>
+
+<input
+id="y"
+type="number"
+value="10"
+min="0.1"
+step="0.1"
+>
+
+</div>
+
+<div class="field">
+
+<label for="n">Compounding frequency</label>
+
+<select id="n">
+
+<option value="1">Yearly</option>
+
+<option value="2">Half-yearly</option>
+
+<option value="4">Quarterly</option>
+
+<option value="12" selected>Monthly</option>
+
+<option value="365">Daily</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>See the power of compounding</h3>
+
+<p>
+Enter your principal, interest rate, investment period and compounding
+frequency to estimate how your money could grow over time.
+</p>
+
+<p class="note">
+This calculator provides mathematical estimates only. Actual investment
+returns may vary depending on the product, rate, fees, taxes and timing.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>What is Compound Interest?</h2>
+
+<p>
+Compound interest is interest calculated on both the original principal
+and the interest accumulated during previous compounding periods.
+</p>
+
+<p>
+Unlike simple interest, compound interest allows previously earned
+interest to generate additional interest over time.
+</p>
+
+
+<h2>Compound Interest Formula</h2>
+
+<p>
+The standard compound interest formula is:
+</p>
+
+<p>
+<strong>
+A = P × (1 + r / n)<sup>nt</sup>
+</strong>
+</p>
+
+<p>Where:</p>
+
+<p>
+<strong>A</strong> = Final amount<br>
+<strong>P</strong> = Initial principal<br>
+<strong>r</strong> = Annual interest rate expressed as a decimal<br>
+<strong>n</strong> = Number of compounding periods per year<br>
+<strong>t</strong> = Investment period in years
+</p>
+
+<p>
+Compound interest earned can then be calculated as:
+</p>
+
+<p>
+<strong>
+Compound Interest = A − P
+</strong>
+</p>
+
+
+<h2>Example of Compound Interest</h2>
+
+<p>
+Suppose you invest ₹1,00,000 at an annual interest rate of 8% for
+10 years with monthly compounding.
+</p>
+
+<p>
+The calculator applies the compound interest formula using 12
+compounding periods per year and estimates the final value.
+</p>
+
+<p>
+Because interest is added to the balance during each compounding
+period, the investment can grow faster than it would under simple
+interest at the same nominal rate.
+</p>
+
+
+<h2>How Compounding Frequency Affects Returns</h2>
+
+<p>
+The same annual interest rate can produce different results depending
+on how frequently interest is compounded.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>Yearly compounding</summary>
+
+<p>
+Interest is compounded once per year.
+</p>
+
+</details>
+
+<details>
+<summary>Half-yearly compounding</summary>
+
+<p>
+Interest is compounded twice per year.
+</p>
+
+</details>
+
+<details>
+<summary>Quarterly compounding</summary>
+
+<p>
+Interest is compounded four times per year.
+</p>
+
+</details>
+
+<details>
+<summary>Monthly compounding</summary>
+
+<p>
+Interest is compounded twelve times per year.
+</p>
+
+</details>
+
+<details>
+<summary>Daily compounding</summary>
+
+<p>
+Interest is mathematically compounded 365 times per year in this
+calculator.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Compound Interest vs Simple Interest</h2>
+
+<p>
+With simple interest, interest is calculated only on the original
+principal. With compound interest, previously accumulated interest
+also participates in future growth.
+</p>
+
+<p>
+For long investment periods, this difference can become significant.
+The actual result depends on the interest rate, time period and
+compounding frequency.
+</p>
+
+
+<h2>How to Use This Calculator</h2>
+
+<p>
+Enter the amount you initially invest, the annual interest rate and
+the investment period. Then choose how frequently the interest is
+compounded.
+</p>
+
+<p>
+Select <strong>Calculate</strong> to see the estimated final amount,
+interest earned and total principal invested.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>What is the difference between principal and final amount?</summary>
+
+<p>
+Principal is the amount you initially invest. The final amount is the
+principal plus the compound interest earned during the investment
+period.
+</p>
+
+</details>
+
+
+<details>
+<summary>Does more frequent compounding always increase the final amount?</summary>
+
+<p>
+For the same nominal annual rate and investment period, more frequent
+compounding generally produces a higher mathematical final amount,
+assuming all other conditions remain the same.
+</p>
+
+</details>
+
+
+<details>
+<summary>What happens if the interest rate is 0%?</summary>
+
+<p>
+If the interest rate is zero, no interest is earned and the final
+amount remains equal to the principal.
+</p>
+
+</details>
+
+
+<details>
+<summary>Can I use this calculator for investments?</summary>
+
+<p>
+Yes. You can use it to understand compound growth mathematically.
+However, actual investment returns can differ from a fixed compound
+interest calculation because many investments have variable returns,
+fees, taxes and other conditions.
+</p>
+
+</details>
+
+
+<details>
+<summary>Is this calculator free?</summary>
+
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+
+</details>
+
+
+<details>
+<summary>Are my inputs stored?</summary>
+
+<p>
+The calculation runs in your browser. The static calculator does not
+need to store your entered values to perform the calculation.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+You may also find these India Tools Hub calculators useful:
+</p>
+
+<p>
+<a href="../emi/">EMI Calculator</a> |
+<a href="../fd/">FD Calculator</a> |
+<a href="../sip/">SIP Calculator</a> |
+<a href="../ppf/">PPF Calculator</a> |
+<a href="../nps/">NPS Calculator</a>
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    let p = num('p');
+    let r = num('r');
+    let y = num('y');
+    let n = num('n');
+
+    let out = document.getElementById('out');
+
+    if(!p || p <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid principal amount greater than 0.</div>';
+
+        return;
+    }
+
+    if(r < 0){
+
+        out.innerHTML =
+            '<div class="note">Interest rate cannot be negative.</div>';
+
+        return;
+    }
+
+    if(y <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please enter an investment period greater than 0.</div>';
+
+        return;
+    }
+
+    if(!n || n <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please select a valid compounding frequency.</div>';
+
+        return;
+    }
+
+    let rate = r / 100;
+
+    let amount = p * Math.pow(
+        1 + rate / n,
+        n * y
+    );
+
+    let interest = amount - p;
+
+    let effectiveRate =
+        Math.pow(1 + rate / n, n) - 1;
+
+    let effectiveRatePercent =
+        effectiveRate * 100;
+
+    let frequencyName =
+        document.getElementById('n')
+        .options[document.getElementById('n').selectedIndex]
+        .text;
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${money(amount)}
+        </div>
+
+        <div class="result-row">
+            <span>Principal</span>
+            <strong>${money(p)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Interest earned</span>
+            <strong>${money(interest)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Compounding</span>
+            <strong>${frequencyName}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Effective annual rate</span>
+            <strong>${effectiveRatePercent.toFixed(2)}%</strong>
+        </div>
+
+        <div class="note">
+            Estimated final amount after ${y} year${y == 1 ? '' : 's'}.
+            Actual returns may differ depending on the financial product,
+            fees, taxes and other conditions.
+        </div>
+
+    `;
+}
+
+calc();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

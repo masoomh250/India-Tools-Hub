@@ -1,1 +1,725 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trip Cost Calculator | India Tools Hub</title><meta name="description" content="Estimate total trip cost and per-person cost."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/trip-cost/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Travel / Trip Cost Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Trip Cost Calculator</h1><p>Estimate total trip cost and per-person cost.</p><div class="form-grid"><div class="field"><label>Travel cost (₹)</label><input id="t" type="number" value="12000"></div><div class="field"><label>Stay cost (₹)</label><input id="s" type="number" value="10000"></div><div class="field"><label>Food & activities (₹)</label><input id="f" type="number" value="8000"></div><div class="field"><label>Travellers</label><input id="n" type="number" value="4"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate trip cost</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Trip Cost Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let total=num('t')+num('s')+num('f'),n=Math.max(1,num('n'));document.getElementById('out').innerHTML=`<div class="main-result">${money(total)}</div><div class="result-row"><span>Per person</span><strong>${money(total/n)}</strong></div><div class="result-row"><span>Travel + stay + food</span><strong>${money(total)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Trip Cost Calculator: Travel Budget & Per Person Cost | India Tools Hub</title>
+
+<meta name="description" content="Calculate your total trip cost including travel, stay, food, activities, tolls, parking and other expenses. Estimate your travel budget and cost per person.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/trip-cost/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Trip Cost Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/trip-cost/",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate total travel expenses and estimated cost per person for a trip.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Travel / Trip Cost Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Trip Cost Calculator</h1>
+
+<p>
+Estimate your complete trip budget including travel, accommodation,
+food, activities and other expenses.
+</p>
+
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="travel">Travel / Transport (₹)</label>
+
+<input
+id="travel"
+type="number"
+value="12000"
+min="0"
+step="0.01"
+placeholder="Example: 12000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="stay">Accommodation / Stay (₹)</label>
+
+<input
+id="stay"
+type="number"
+value="10000"
+min="0"
+step="0.01"
+placeholder="Example: 10000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="food">Food & Meals (₹)</label>
+
+<input
+id="food"
+type="number"
+value="8000"
+min="0"
+step="0.01"
+placeholder="Example: 8000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="activities">Activities & Sightseeing (₹)</label>
+
+<input
+id="activities"
+type="number"
+value="5000"
+min="0"
+step="0.01"
+placeholder="Example: 5000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="toll">Tolls (₹)</label>
+
+<input
+id="toll"
+type="number"
+value="2000"
+min="0"
+step="0.01"
+placeholder="Example: 2000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="parking">Parking (₹)</label>
+
+<input
+id="parking"
+type="number"
+value="500"
+min="0"
+step="0.01"
+placeholder="Example: 500"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="other">Other Expenses (₹)</label>
+
+<input
+id="other"
+type="number"
+value="1000"
+min="0"
+step="0.01"
+placeholder="Example: 1000"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="n">Travellers</label>
+
+<input
+id="n"
+type="number"
+value="4"
+min="1"
+step="1"
+placeholder="Example: 4"
+>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate trip cost
+</button>
+
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Plan your complete trip budget</h3>
+
+<p>
+Add your expected travel, hotel, food, sightseeing, toll, parking and
+other expenses to estimate the total trip cost.
+</p>
+
+<p class="note">
+This is a planning estimate. Actual expenses may vary depending on
+prices, bookings, route, season, travel style and unexpected expenses.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to Use the Trip Cost Calculator</h2>
+
+<p>
+Enter the estimated amount for each expense category. Then enter the
+number of people travelling together and select
+<strong>Calculate trip cost</strong>.
+</p>
+
+<p>
+The calculator adds all the expense categories and calculates both the
+total trip cost and estimated cost per person.
+</p>
+
+
+<h2>What Expenses Should You Include?</h2>
+
+<p>
+A realistic travel budget should include more than just transportation
+and hotel costs.
+</p>
+
+<p>
+<strong>Travel / Transport:</strong> Include flights, trains, buses,
+cabs or vehicle rental expenses.
+</p>
+
+<p>
+<strong>Accommodation:</strong> Include hotels, resorts, homestays,
+camps or other lodging.
+</p>
+
+<p>
+<strong>Food & Meals:</strong> Include breakfast, lunch, dinner,
+snacks and drinks.
+</p>
+
+<p>
+<strong>Activities & Sightseeing:</strong> Include attraction tickets,
+safaris, tours and other activities.
+</p>
+
+<p>
+<strong>Tolls:</strong> Useful for road trips where highway tolls are
+part of the journey.
+</p>
+
+<p>
+<strong>Parking:</strong> Include parking charges at hotels,
+attractions and other locations.
+</p>
+
+<p>
+<strong>Other Expenses:</strong> Use this category for shopping,
+local transport, tips, miscellaneous expenses or an emergency budget.
+</p>
+
+
+<h2>Trip Cost Formula</h2>
+
+<p>
+The total estimated trip cost is calculated as:
+</p>
+
+<p>
+<strong>
+Total Trip Cost = Travel + Stay + Food + Activities + Tolls +
+Parking + Other Expenses
+</strong>
+</p>
+
+<p>
+Estimated cost per person is:
+</p>
+
+<p>
+<strong>
+Cost Per Person = Total Trip Cost ÷ Number of Travellers
+</strong>
+</p>
+
+
+<h2>Example</h2>
+
+<p>
+Suppose four people are travelling together and their estimated
+expenses are:
+</p>
+
+<p>
+Travel: ₹12,000
+</p>
+
+<p>
+Stay: ₹10,000
+</p>
+
+<p>
+Food: ₹8,000
+</p>
+
+<p>
+Activities: ₹5,000
+</p>
+
+<p>
+Tolls: ₹2,000
+</p>
+
+<p>
+Parking: ₹500
+</p>
+
+<p>
+Other expenses: ₹1,000
+</p>
+
+<p>
+The estimated total trip cost is
+<strong>₹38,500</strong>.
+</p>
+
+<p>
+For four travellers, the estimated cost per person is
+<strong>₹9,625</strong>.
+</p>
+
+
+<h2>How to Build a Better Travel Budget</h2>
+
+<p>
+Start by estimating the major fixed expenses such as transportation
+and accommodation. Then add variable expenses such as food and
+activities.
+</p>
+
+<p>
+For road trips, remember to account for fuel, tolls and parking.
+Keeping a small amount for unexpected expenses can also make the
+budget more realistic.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+
+<summary>What does this Trip Cost Calculator include?</summary>
+
+<p>
+It calculates travel, accommodation, food, activities, tolls,
+parking and other expenses and provides the total trip cost and
+estimated cost per person.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I use this calculator for a family trip?</summary>
+
+<p>
+Yes. Enter the combined expenses for the trip and enter the total
+number of travellers to estimate the cost per person.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I use this for a road trip?</summary>
+
+<p>
+Yes. Add fuel costs under Travel or Transport, and enter toll and
+parking expenses separately.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I calculate the cost for two people?</summary>
+
+<p>
+Yes. Enter 2 as the number of travellers. The total trip cost will be
+divided equally between the two travellers.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Does the calculator include taxes and service charges?</summary>
+
+<p>
+Only if you include them in the relevant expense amount. The
+calculator does not automatically add hotel taxes, service charges,
+booking fees or other charges.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Does it include fuel cost?</summary>
+
+<p>
+Yes. You can include your estimated fuel expense under Travel /
+Transport. For a detailed fuel calculation, use the
+Fuel Cost Calculator on India Tools Hub.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Is this Trip Cost Calculator free?</summary>
+
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Are my travel expenses stored?</summary>
+
+<p>
+The calculation runs in your browser. The calculator does not need to
+store the amounts you enter to calculate the result.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+
+<a href="../fuel-cost/">Fuel Cost Calculator</a> |
+
+<a href="../unit-converter/">Unit Converter</a> |
+
+<a href="../date-difference/">Date Difference Calculator</a> |
+
+<a href="../percentage/">Percentage Calculator</a>
+
+</p>
+
+</div>
+
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function money(value){
+
+    return new Intl.NumberFormat(
+        'en-IN',
+        {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 2
+        }
+    ).format(value);
+
+}
+
+
+function num(id){
+
+    return parseFloat(
+        document.getElementById(id).value
+    );
+
+}
+
+
+function calc(){
+
+    let travel = num('travel');
+    let stay = num('stay');
+    let food = num('food');
+    let activities = num('activities');
+    let toll = num('toll');
+    let parking = num('parking');
+    let other = num('other');
+    let travellers = num('n');
+
+    let out = document.getElementById('out');
+
+
+    let values = [
+        travel,
+        stay,
+        food,
+        activities,
+        toll,
+        parking,
+        other
+    ];
+
+
+    if(
+        values.some(function(value){
+            return !isFinite(value) || value < 0;
+        })
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter valid expense amounts. Values cannot be negative.</div>';
+
+        return;
+
+    }
+
+
+    if(
+        !isFinite(travellers) ||
+        travellers < 1 ||
+        !Number.isInteger(travellers)
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid whole number of travellers greater than 0.</div>';
+
+        return;
+
+    }
+
+
+    let total =
+        travel +
+        stay +
+        food +
+        activities +
+        toll +
+        parking +
+        other;
+
+
+    let perPerson =
+        total / travellers;
+
+
+    let categories = [
+        {
+            name: 'Travel / Transport',
+            value: travel
+        },
+        {
+            name: 'Accommodation',
+            value: stay
+        },
+        {
+            name: 'Food & Meals',
+            value: food
+        },
+        {
+            name: 'Activities & Sightseeing',
+            value: activities
+        },
+        {
+            name: 'Tolls',
+            value: toll
+        },
+        {
+            name: 'Parking',
+            value: parking
+        },
+        {
+            name: 'Other Expenses',
+            value: other
+        }
+    ];
+
+
+    let breakdown = categories
+        .filter(function(item){
+            return item.value > 0;
+        })
+        .map(function(item){
+
+            let percentage =
+                total > 0
+                ? (item.value / total) * 100
+                : 0;
+
+            return `
+                <div class="result-row">
+                    <span>${item.name}</span>
+                    <strong>
+                        ${money(item.value)}
+                        (${percentage.toFixed(1)}%)
+                    </strong>
+                </div>
+            `;
+
+        })
+        .join('');
+
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${money(total)}
+        </div>
+
+        <div class="result-row">
+            <span>Total trip cost</span>
+            <strong>${money(total)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Cost per person</span>
+            <strong>${money(perPerson)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Travellers</span>
+            <strong>${travellers}</strong>
+        </div>
+
+        <h3 style="margin-top:20px">
+            Expense Breakdown
+        </h3>
+
+        ${breakdown}
+
+        <div class="note">
+            Cost per person assumes the total trip expenses are shared
+            equally among all travellers.
+        </div>
+
+    `;
+
+}
+
+
+calc();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

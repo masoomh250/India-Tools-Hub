@@ -1,1 +1,601 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Date Difference | India Tools Hub</title><meta name="description" content="Find the exact number of days between two dates."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/date-difference/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Date / Date Difference</div><div class="tool-layout"><div class="calc-card"><h1>Date Difference</h1><p>Find the exact number of days between two dates.</p><div class="form-grid"><div class="field"><label>Start date</label><input id="a" type="date"></div><div class="field"><label>End date</label><input id="b" type="date"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate difference</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Date Difference</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>let now=new Date(),next=new Date(now.getTime()+30*86400000);document.getElementById('a').value=now.toISOString().slice(0,10);document.getElementById('b').value=next.toISOString().slice(0,10);function calc(){let a=new Date(document.getElementById('a').value),b=new Date(document.getElementById('b').value),days=Math.round(Math.abs(b-a)/86400000);document.getElementById('out').innerHTML=`<div class="main-result">${days} days</div><div class="result-row"><span>Approx. weeks</span><strong>${(days/7).toFixed(2)}</strong></div><div class="result-row"><span>Approx. months</span><strong>${(days/30.44).toFixed(2)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Date Difference Calculator | Days Between Two Dates</title>
+
+<meta name="description" content="Use the free Date Difference Calculator to find the exact difference between two dates in years, months and days. Calculate total days, weeks, months and inclusive days.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/date-difference/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Date Difference Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/date-difference/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "description": "Free calculator to find the difference between two dates in years, months, days, weeks and total days.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Date / Date Difference
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Date Difference Calculator</h1>
+
+<p>
+Calculate the exact difference between two dates in years, months and days.
+You can also see the total number of days, weeks and months between the dates.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="a">Start date</label>
+<input id="a" type="date">
+</div>
+
+<div class="field">
+<label for="b">End date</label>
+<input id="b" type="date">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate Difference
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">Advertisement space</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Accurate date calculation</h3>
+
+<p>
+Find the calendar difference between two dates and the total number of elapsed days.
+The calculation works directly in your browser.
+</p>
+
+<p>
+This tool can be useful for calculating project durations, deadlines, age periods,
+employment periods, vacations and other date intervals.
+</p>
+
+<p class="note">
+The calculator uses calendar dates and accounts for different month lengths and leap years.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the Date Difference Calculator</h2>
+
+<p>
+Enter the start date and end date, then click <strong>Calculate Difference</strong>.
+The calculator automatically identifies which date comes first and calculates the
+difference between them.
+</p>
+
+
+<h3>What does the calculator show?</h3>
+
+<p>
+The calculator provides the difference between the selected dates in years, months
+and days. It also provides the total elapsed days, complete weeks, remaining days
+and total calendar months.
+</p>
+
+
+<h3>Calendar difference vs total days</h3>
+
+<p>
+A calendar difference such as <strong>2 years, 3 months and 10 days</strong> is
+different from simply dividing the total number of days by an average month length.
+Months have different numbers of days, and leap years can add an extra day.
+</p>
+
+<p>
+For this reason, the calculator provides both the exact calendar difference and
+the total elapsed number of days.
+</p>
+
+
+<h3>How the date difference is calculated</h3>
+
+<p>
+The calculator first determines the earlier and later date. It then calculates the
+completed calendar years, followed by the remaining months and days.
+The total day difference is calculated separately using calendar dates.
+</p>
+
+
+<h3>Inclusive vs exclusive day count</h3>
+
+<p>
+The main result shows the elapsed difference between the two dates. For example,
+the difference between 1 January and 2 January is 1 day.
+</p>
+
+<p>
+The calculator also shows an inclusive count, which counts both the start date and
+the end date. Therefore, 1 January through 2 January represents 2 calendar days
+when counted inclusively.
+</p>
+
+
+<h3>Common uses</h3>
+
+<p>
+Date difference calculations are useful for calculating project durations, notice
+periods, employment periods, travel duration, subscription periods, deadlines,
+event planning and the number of days between important dates.
+</p>
+
+
+<div class="faq">
+
+<details>
+<summary>How many days are between two dates?</summary>
+<p>
+Enter the two dates into the calculator to get the exact elapsed number of days
+between them.
+</p>
+</details>
+
+<details>
+<summary>Does the calculator account for leap years?</summary>
+<p>
+Yes. The calculation uses calendar dates and accounts for leap years when calculating
+the total number of elapsed days.
+</p>
+</details>
+
+<details>
+<summary>Does the calculator account for different month lengths?</summary>
+<p>
+Yes. The calendar difference uses the actual month boundaries rather than assuming
+that every month contains the same number of days.
+</p>
+</details>
+
+<details>
+<summary>What is the difference between inclusive and exclusive days?</summary>
+<p>
+The elapsed day difference does not count the starting date as a completed day.
+The inclusive count includes both the start date and the end date.
+</p>
+</details>
+
+<details>
+<summary>Can I enter the dates in reverse order?</summary>
+<p>
+Yes. The calculator automatically identifies the earlier and later date and
+calculates the absolute difference.
+</p>
+</details>
+
+<details>
+<summary>Can I calculate the number of weeks between two dates?</summary>
+<p>
+Yes. The result shows the number of complete weeks and the remaining days.
+</p>
+</details>
+
+<details>
+<summary>Can I calculate the difference between dates in different years?</summary>
+<p>
+Yes. You can enter dates from different years, including dates spanning multiple
+years and leap years.
+</p>
+</details>
+
+<details>
+<summary>Is this Date Difference Calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+<details>
+<summary>Are my dates stored?</summary>
+<p>
+The calculation runs directly in your browser. The static calculator does not need
+your dates to be sent to a server.
+</p>
+</details>
+
+</div>
+
+
+<h3>Related calculators</h3>
+
+<p>
+<a href="../age/index.html">Age Calculator</a> |
+<a href="../percentage/index.html">Percentage Calculator</a> |
+<a href="../unit-converter/index.html">Unit Converter</a> |
+<a href="../../index.html">All Calculators</a>
+</p>
+
+<p class="note">
+Results are provided for informational purposes. For legal, contractual, employment
+or government requirements, verify dates against the relevant official documents.
+</p>
+
+</div>
+
+<div class="adbox">Advertisement space</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function pad(n){
+
+    return String(n).padStart(2, '0');
+
+}
+
+
+function formatDate(date){
+
+    return date.getUTCFullYear() + '-' +
+           pad(date.getUTCMonth() + 1) + '-' +
+           pad(date.getUTCDate());
+
+}
+
+
+function parseDate(value){
+
+    if(!value) return null;
+
+    let parts = value.split('-');
+
+    if(parts.length !== 3) return null;
+
+    let year = Number(parts[0]);
+    let month = Number(parts[1]);
+    let day = Number(parts[2]);
+
+    let date = new Date(Date.UTC(year, month - 1, day));
+
+    if(
+        date.getUTCFullYear() !== year ||
+        date.getUTCMonth() !== month - 1 ||
+        date.getUTCDate() !== day
+    ){
+        return null;
+    }
+
+    return date;
+
+}
+
+
+function daysBetween(start, end){
+
+    let startTime = Date.UTC(
+        start.getUTCFullYear(),
+        start.getUTCMonth(),
+        start.getUTCDate()
+    );
+
+    let endTime = Date.UTC(
+        end.getUTCFullYear(),
+        end.getUTCMonth(),
+        end.getUTCDate()
+    );
+
+    return Math.round((endTime - startTime) / 86400000);
+
+}
+
+
+function daysInMonth(year, month){
+
+    return new Date(
+        Date.UTC(year, month + 1, 0)
+    ).getUTCDate();
+
+}
+
+
+function calendarDifference(start, end){
+
+    let startYear = start.getUTCFullYear();
+    let startMonth = start.getUTCMonth();
+    let startDay = start.getUTCDate();
+
+    let endYear = end.getUTCFullYear();
+    let endMonth = end.getUTCMonth();
+    let endDay = end.getUTCDate();
+
+
+    let years = endYear - startYear;
+    let months = endMonth - startMonth;
+    let days = endDay - startDay;
+
+
+    if(days < 0){
+
+        months--;
+
+        let previousMonth =
+            endMonth === 0 ? 11 : endMonth - 1;
+
+        let previousMonthYear =
+            endMonth === 0 ? endYear - 1 : endYear;
+
+        days += daysInMonth(
+            previousMonthYear,
+            previousMonth
+        );
+
+    }
+
+
+    if(months < 0){
+
+        years--;
+        months += 12;
+
+    }
+
+
+    return {
+        years: years,
+        months: months,
+        days: days
+    };
+
+}
+
+
+function calc(){
+
+    let start = parseDate(
+        document.getElementById('a').value
+    );
+
+    let end = parseDate(
+        document.getElementById('b').value
+    );
+
+
+    if(!start || !end){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter both dates.</div>';
+
+        return;
+
+    }
+
+
+    let earlier;
+    let later;
+
+
+    if(start <= end){
+
+        earlier = start;
+        later = end;
+
+    }else{
+
+        earlier = end;
+        later = start;
+
+    }
+
+
+    let totalDays = daysBetween(
+        earlier,
+        later
+    );
+
+
+    let completeWeeks = Math.floor(totalDays / 7);
+    let remainingDays = totalDays % 7;
+
+    let totalMonths =
+        (later.getUTCFullYear() - earlier.getUTCFullYear()) * 12 +
+        (later.getUTCMonth() - earlier.getUTCMonth());
+
+
+    if(later.getUTCDate() < earlier.getUTCDate()){
+
+        totalMonths--;
+
+    }
+
+
+    let calendar = calendarDifference(
+        earlier,
+        later
+    );
+
+
+    let inclusiveDays = totalDays + 1;
+
+
+    let earlierText = earlier.toLocaleDateString(
+        'en-IN',
+        {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+        }
+    );
+
+
+    let laterText = later.toLocaleDateString(
+        'en-IN',
+        {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+        }
+    );
+
+
+    document.getElementById('out').innerHTML = `
+
+        <div class="main-result">
+            ${calendar.years} years ${calendar.months} months ${calendar.days} days
+        </div>
+
+        <div class="result-row">
+            <span>Exact calendar difference</span>
+            <strong>
+                ${calendar.years}y ${calendar.months}m ${calendar.days}d
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total elapsed days</span>
+            <strong>
+                ${totalDays.toLocaleString('en-IN')}
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Complete weeks</span>
+            <strong>
+                ${completeWeeks.toLocaleString('en-IN')}
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Remaining days after weeks</span>
+            <strong>
+                ${remainingDays}
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Complete calendar months</span>
+            <strong>
+                ${totalMonths.toLocaleString('en-IN')}
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Inclusive day count</span>
+            <strong>
+                ${inclusiveDays.toLocaleString('en-IN')}
+            </strong>
+        </div>
+
+        <div class="result-row">
+            <span>Earlier date</span>
+            <strong>${earlierText}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Later date</span>
+            <strong>${laterText}</strong>
+        </div>
+
+    `;
+
+}
+
+
+const today = new Date();
+
+const todayUTC = new Date(
+    Date.UTC(
+        today.getFullYear(),
+        today.getMonth(),
+        today.getDate()
+    )
+);
+
+
+const nextDate = new Date(
+    todayUTC.getTime() + (30 * 86400000)
+);
+
+
+document.getElementById('a').value =
+    formatDate(todayUTC);
+
+document.getElementById('b').value =
+    formatDate(nextDate);
+
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

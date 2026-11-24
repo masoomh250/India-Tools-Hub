@@ -1,1 +1,608 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Discount Calculator | India Tools Hub</title><meta name="description" content="Calculate discount amount, final price and savings."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/discount/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Shopping / Discount Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Discount Calculator</h1><p>Calculate discount amount, final price and savings.</p><div class="form-grid"><div class="field"><label>Original price (₹)</label><input id="p" type="number" value="5000"></div><div class="field"><label>Discount (%)</label><input id="d" type="number" value="20"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Discount Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let p=num('p'),d=num('d'),save=p*d/100;document.getElementById('out').innerHTML=`<div class="main-result">${money(p-save)}</div><div class="result-row"><span>You save</span><strong>${money(save)}</strong></div><div class="result-row"><span>Original price</span><strong>${money(p)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Discount Calculator: Calculate Discount & Final Price | India Tools Hub</title>
+
+<meta name="description" content="Calculate discount amount, final price and savings instantly. Find sale prices, discount percentages and the original price from a discounted price.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/discount/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Discount Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/discount/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate discount amount, final price, savings and discounted prices.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Shopping / Discount Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Discount Calculator</h1>
+
+<p>
+Calculate your discount amount, final sale price and total savings.
+You can also find the original price when you know the discounted price.
+</p>
+
+<div class="field">
+
+<label for="mode">Calculation type</label>
+
+<select id="mode" onchange="updateForm()">
+
+<option value="standard" selected>
+Calculate sale price
+</option>
+
+<option value="reverse">
+Find original price
+</option>
+
+</select>
+
+</div>
+
+
+<div id="standardForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="p">Original price (₹)</label>
+
+<input
+id="p"
+type="number"
+value="5000"
+min="0.01"
+step="0.01"
+>
+
+</div>
+
+<div class="field">
+
+<label for="d">Discount (%)</label>
+
+<input
+id="d"
+type="number"
+value="20"
+min="0"
+max="100"
+step="0.1"
+>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div id="reverseForm" style="display:none">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="sale">Discounted price (₹)</label>
+
+<input
+id="sale"
+type="number"
+value="4000"
+min="0.01"
+step="0.01"
+>
+
+</div>
+
+<div class="field">
+
+<label for="rd">Discount (%)</label>
+
+<input
+id="rd"
+type="number"
+value="20"
+min="0.1"
+max="99.9"
+step="0.1"
+>
+
+</div>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Compare sale prices instantly</h3>
+
+<p>
+Enter an original price and discount percentage to calculate how much
+you save and what you actually pay.
+</p>
+
+<p class="note">
+The calculation does not include taxes, delivery charges, platform
+fees, coupons or other charges unless they are included in the price.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>What is a Discount?</h2>
+
+<p>
+A discount reduces the original selling price of a product or service
+by a specified percentage or amount.
+</p>
+
+<p>
+For example, if a product costs ₹5,000 and has a 20% discount, the
+discount amount is ₹1,000 and the final price is ₹4,000.
+</p>
+
+
+<h2>Discount Formula</h2>
+
+<p>
+The discount amount is calculated as:
+</p>
+
+<p>
+<strong>
+Discount Amount = Original Price × Discount Percentage ÷ 100
+</strong>
+</p>
+
+<p>
+The final sale price is:
+</p>
+
+<p>
+<strong>
+Sale Price = Original Price − Discount Amount
+</strong>
+</p>
+
+
+<h2>Example: 20% Discount</h2>
+
+<p>
+Suppose a product has an original price of ₹5,000 and the store offers
+a 20% discount.
+</p>
+
+<p>
+<strong>
+Discount = ₹5,000 × 20 ÷ 100 = ₹1,000
+</strong>
+</p>
+
+<p>
+Therefore:
+</p>
+
+<p>
+<strong>
+Final Price = ₹5,000 − ₹1,000 = ₹4,000
+</strong>
+</p>
+
+<p>
+You save ₹1,000 and pay ₹4,000.
+</p>
+
+
+<h2>How to Find the Original Price</h2>
+
+<p>
+Sometimes you know the sale price and discount percentage but want to
+find the original price.
+</p>
+
+<p>
+The formula is:
+</p>
+
+<p>
+<strong>
+Original Price = Sale Price ÷ (1 − Discount Percentage ÷ 100)
+</strong>
+</p>
+
+<p>
+For example, if an item costs ₹4,000 after a 20% discount:
+</p>
+
+<p>
+<strong>
+Original Price = ₹4,000 ÷ 0.80 = ₹5,000
+</strong>
+</p>
+
+
+<h2>Discount vs Price Reduction</h2>
+
+<p>
+A percentage discount is calculated from the original price. Therefore,
+a 20% discount on ₹5,000 saves ₹1,000, while a 20% discount on
+₹10,000 saves ₹2,000.
+</p>
+
+<p>
+The same discount percentage can therefore result in very different
+savings depending on the original price.
+</p>
+
+
+<h2>How to Use This Calculator</h2>
+
+<p>
+Choose <strong>Calculate sale price</strong> when you know the original
+price and discount percentage.
+</p>
+
+<p>
+Choose <strong>Find original price</strong> when you know the discounted
+price and the discount percentage and want to determine the original
+price.
+</p>
+
+
+<h2>Important Shopping Note</h2>
+
+<p>
+The calculated sale price may not represent the final amount you pay.
+Taxes, delivery charges, convenience fees, platform fees, coupons,
+cashback conditions and other charges may change the final payable
+amount.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>How do I calculate a 20% discount?</summary>
+
+<p>
+Multiply the original price by 20 and divide by 100. Subtract the
+result from the original price to get the discounted price.
+</p>
+
+</details>
+
+
+<details>
+<summary>What is the discount on ₹5,000 at 20%?</summary>
+
+<p>
+The discount is ₹1,000 and the final price is ₹4,000.
+</p>
+
+</details>
+
+
+<details>
+<summary>How do I calculate the original price after a discount?</summary>
+
+<p>
+Divide the discounted price by 1 minus the discount percentage divided
+by 100.
+</p>
+
+</details>
+
+
+<details>
+<summary>Is 50% off followed by another 50% off equal to 100% off?</summary>
+
+<p>
+No. The second 50% discount is applied to the already discounted price.
+For example, ₹10,000 reduced by 50% becomes ₹5,000, and another 50%
+discount reduces it to ₹2,500. The total effective discount is 75%.
+</p>
+
+</details>
+
+
+<details>
+<summary>Does this calculator include GST?</summary>
+
+<p>
+No. This calculator only calculates the discount based on the prices
+and percentage entered. GST and other charges should be considered
+separately.
+</p>
+
+</details>
+
+
+<details>
+<summary>Is this Discount Calculator free?</summary>
+
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+
+</details>
+
+
+<details>
+<summary>Are my inputs stored?</summary>
+
+<p>
+The calculation runs in your browser. The static calculator does not
+need to store your entered values to perform the calculation.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+You may also find these calculators useful:
+</p>
+
+<p>
+<a href="../percentage/">Percentage Calculator</a> |
+<a href="../gst/">GST Calculator</a> |
+<a href="../compound-interest/">Compound Interest Calculator</a> |
+<a href="../inflation/">Inflation Calculator</a>
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function updateForm(){
+
+    let mode = document.getElementById('mode').value;
+
+    document.getElementById('standardForm').style.display =
+        mode === 'standard' ? 'block' : 'none';
+
+    document.getElementById('reverseForm').style.display =
+        mode === 'reverse' ? 'block' : 'none';
+
+    document.getElementById('out').innerHTML = '';
+}
+
+
+function calc(){
+
+    let mode = document.getElementById('mode').value;
+
+    let out = document.getElementById('out');
+
+
+    if(mode === 'standard'){
+
+        let p = num('p');
+        let d = num('d');
+
+        if(!p || p <= 0){
+
+            out.innerHTML =
+                '<div class="note">Please enter a valid original price greater than 0.</div>';
+
+            return;
+        }
+
+        if(d < 0 || d > 100){
+
+            out.innerHTML =
+                '<div class="note">Discount must be between 0% and 100%.</div>';
+
+            return;
+        }
+
+        let discountAmount = p * d / 100;
+
+        let finalPrice = p - discountAmount;
+
+        out.innerHTML = `
+
+            <div class="main-result">
+                ${money(finalPrice)}
+            </div>
+
+            <div class="result-row">
+                <span>Original price</span>
+                <strong>${money(p)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Discount</span>
+                <strong>${d.toFixed(2)}%</strong>
+            </div>
+
+            <div class="result-row">
+                <span>You save</span>
+                <strong>${money(discountAmount)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Final price</span>
+                <strong>${money(finalPrice)}</strong>
+            </div>
+
+            <div class="note">
+                You save ${money(discountAmount)} from the original
+                price of ${money(p)}.
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    let sale = num('sale');
+    let rd = num('rd');
+
+    if(!sale || sale <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid discounted price greater than 0.</div>';
+
+        return;
+    }
+
+    if(rd <= 0 || rd >= 100){
+
+        out.innerHTML =
+            '<div class="note">Discount must be greater than 0% and less than 100%.</div>';
+
+        return;
+    }
+
+    let originalPrice =
+        sale / (1 - rd / 100);
+
+    let discountAmount =
+        originalPrice - sale;
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${money(originalPrice)}
+        </div>
+
+        <div class="result-row">
+            <span>Discounted price</span>
+            <strong>${money(sale)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Discount</span>
+            <strong>${rd.toFixed(2)}%</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Discount amount</span>
+            <strong>${money(discountAmount)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Original price</span>
+            <strong>${money(originalPrice)}</strong>
+        </div>
+
+        <div class="note">
+            The estimated original price is ${money(originalPrice)}
+            before applying the ${rd.toFixed(2)}% discount.
+        </div>
+
+    `;
+
+}
+
+calc();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

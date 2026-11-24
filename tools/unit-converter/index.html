@@ -1,1 +1,922 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit Converter | India Tools Hub</title><meta name="description" content="Convert common length, weight, temperature and distance units."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/unit-converter/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Utility / Unit Converter</div><div class="tool-layout"><div class="calc-card"><h1>Unit Converter</h1><p>Convert common length, weight, temperature and distance units.</p><div class="form-grid"><div class="field"><label>Value</label><input id="v" type="number" value="1"></div><div class="field"><label>Conversion</label><select id="u"><option value="km-mi">Kilometres → Miles</option><option value="mi-km">Miles → Kilometres</option><option value="kg-lb">Kilograms → Pounds</option><option value="lb-kg">Pounds → Kilograms</option><option value="cm-in">Centimetres → Inches</option><option value="in-cm">Inches → Centimetres</option><option value="c-f">Celsius → Fahrenheit</option><option value="f-c">Fahrenheit → Celsius</option></select></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Convert</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Unit Converter</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let v=num('v'),u=document.getElementById('u').value,x=0,label='';if(u==='km-mi'){x=v*.621371;label='miles'}if(u==='mi-km'){x=v/0.621371;label='km'}if(u==='kg-lb'){x=v*2.2046226218;label='lb'}if(u==='lb-kg'){x=v/2.2046226218;label='kg'}if(u==='cm-in'){x=v/2.54;label='inches'}if(u==='in-cm'){x=v*2.54;label='cm'}if(u==='c-f'){x=v*9/5+32;label='°F'}if(u==='f-c'){x=(v-32)*5/9;label='°C'}document.getElementById('out').innerHTML=`<div class="main-result">${x.toFixed(4)} ${label}</div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Unit Converter: Length, Weight, Temperature & More | India Tools Hub</title>
+
+<meta name="description" content="Convert length, weight, temperature, area, volume and speed units instantly. Free online unit converter with common metric and imperial conversions.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/unit-converter/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Unit Converter",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/unit-converter/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "description": "Convert common length, weight, temperature, area, volume and speed units.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Utility / Unit Converter
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Unit Converter</h1>
+
+<p>
+Convert common length, weight, temperature, area, volume and speed
+units quickly and accurately.
+</p>
+
+
+<div class="field">
+
+<label for="category">Conversion category</label>
+
+<select id="category" onchange="updateUnits()">
+
+<option value="length">Length</option>
+<option value="weight">Weight</option>
+<option value="temperature">Temperature</option>
+<option value="area">Area</option>
+<option value="volume">Volume</option>
+<option value="speed">Speed</option>
+
+</select>
+
+</div>
+
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="v">Value</label>
+
+<input
+id="v"
+type="number"
+value="1"
+step="any"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="from">From</label>
+
+<select id="from"></select>
+
+</div>
+
+
+<div class="field">
+
+<label for="to">To</label>
+
+<select id="to"></select>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Convert
+</button>
+
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Fast and accurate conversions</h3>
+
+<p>
+Choose a category, select the source and target units, enter a value
+and convert instantly.
+</p>
+
+<p class="note">
+Conversions are calculated in your browser. Results are rounded for
+display and may vary slightly because of decimal rounding.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>What is a Unit Converter?</h2>
+
+<p>
+A unit converter helps you convert a measurement from one unit to
+another while preserving the same physical quantity.
+</p>
+
+<p>
+For example, you can convert kilometres to miles, kilograms to pounds,
+litres to gallons, square metres to square feet or kilometres per hour
+to miles per hour.
+</p>
+
+
+<h2>Supported Unit Conversions</h2>
+
+<p>
+This calculator supports several commonly used conversion categories.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>Length conversions</summary>
+
+<p>
+Convert between kilometres, metres, centimetres, millimetres, miles,
+yards, feet and inches.
+</p>
+
+</details>
+
+<details>
+<summary>Weight conversions</summary>
+
+<p>
+Convert between kilograms, grams, pounds and ounces.
+</p>
+
+</details>
+
+<details>
+<summary>Temperature conversions</summary>
+
+<p>
+Convert between Celsius, Fahrenheit and Kelvin.
+</p>
+
+</details>
+
+<details>
+<summary>Area conversions</summary>
+
+<p>
+Convert between square metres, square kilometres, square feet, square
+yards, acres and hectares.
+</p>
+
+</details>
+
+<details>
+<summary>Volume conversions</summary>
+
+<p>
+Convert between litres, millilitres, US gallons, US fluid ounces and
+cubic metres.
+</p>
+
+</details>
+
+<details>
+<summary>Speed conversions</summary>
+
+<p>
+Convert between kilometres per hour, miles per hour and metres per
+second.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>How to Use the Unit Converter</h2>
+
+<p>
+First select the type of measurement you want to convert. Then enter
+the value, choose the original unit and choose the unit you want to
+convert to.
+</p>
+
+<p>
+Select <strong>Convert</strong> to display the result instantly.
+</p>
+
+
+<h2>Common Conversion Examples</h2>
+
+<p>
+<strong>1 kilometre = 0.621371 miles</strong>
+</p>
+
+<p>
+<strong>1 mile = 1.609344 kilometres</strong>
+</p>
+
+<p>
+<strong>1 kilogram = 2.2046226218 pounds</strong>
+</p>
+
+<p>
+<strong>1 inch = 2.54 centimetres</strong>
+</p>
+
+<p>
+<strong>1 litre = 1,000 millilitres</strong>
+</p>
+
+<p>
+<strong>1 kilometre per hour = 0.621371 miles per hour</strong>
+</p>
+
+
+<h2>Temperature Conversion</h2>
+
+<p>
+Temperature conversion is different from most unit conversions because
+the scales have different starting points.
+</p>
+
+<p>
+For example:
+</p>
+
+<p>
+<strong>
+Celsius to Fahrenheit = (C × 9 ÷ 5) + 32
+</strong>
+</p>
+
+<p>
+<strong>
+Fahrenheit to Celsius = (F − 32) × 5 ÷ 9
+</strong>
+</p>
+
+<p>
+Kelvin is an absolute temperature scale:
+</p>
+
+<p>
+<strong>
+Celsius to Kelvin = Celsius + 273.15
+</strong>
+</p>
+
+
+<h2>Accuracy and Rounding</h2>
+
+<p>
+The calculator performs the conversion using standard conversion
+factors and displays the result to four decimal places where
+appropriate.
+</p>
+
+<p>
+For very large or very small values, the displayed result may be
+rounded. The underlying conversion is performed using JavaScript
+number arithmetic in your browser.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>How many conversion categories are available?</summary>
+
+<p>
+This calculator currently supports length, weight, temperature, area,
+volume and speed conversions.
+</p>
+
+</details>
+
+
+<details>
+<summary>Can I convert kilometres to miles?</summary>
+
+<p>
+Yes. Select Length, choose Kilometres as the source unit and Miles as
+the target unit.
+</p>
+
+</details>
+
+
+<details>
+<summary>Can I convert kilograms to pounds?</summary>
+
+<p>
+Yes. Select Weight and choose Kilograms and Pounds.
+</p>
+
+</details>
+
+
+<details>
+<summary>Can I convert Celsius to Fahrenheit?</summary>
+
+<p>
+Yes. The calculator supports Celsius, Fahrenheit and Kelvin.
+</p>
+
+</details>
+
+
+<details>
+<summary>Does the calculator work with decimal values?</summary>
+
+<p>
+Yes. Decimal values such as 2.5 kilometres, 1.75 kilograms or 36.5
+degrees Celsius can be converted.
+</p>
+
+</details>
+
+
+<details>
+<summary>Is this Unit Converter free?</summary>
+
+<p>
+Yes. India Tools Hub calculators and utilities are free to use without
+registration.
+</p>
+
+</details>
+
+
+<details>
+<summary>Are my inputs stored?</summary>
+
+<p>
+The calculation runs in your browser. The static calculator does not
+need to store your entered values to perform the conversion.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+You may also find these India Tools Hub calculators useful:
+</p>
+
+<p>
+<a href="../percentage/">Percentage Calculator</a> |
+<a href="../date-difference/">Date Difference Calculator</a> |
+<a href="../fuel-cost/">Fuel Cost Calculator</a> |
+<a href="../trip-cost/">Trip Cost Calculator</a>
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+const units = {
+
+    length: {
+
+        "km": {
+            name: "Kilometres",
+            factor: 1000
+        },
+
+        "m": {
+            name: "Metres",
+            factor: 1
+        },
+
+        "cm": {
+            name: "Centimetres",
+            factor: 0.01
+        },
+
+        "mm": {
+            name: "Millimetres",
+            factor: 0.001
+        },
+
+        "mi": {
+            name: "Miles",
+            factor: 1609.344
+        },
+
+        "yd": {
+            name: "Yards",
+            factor: 0.9144
+        },
+
+        "ft": {
+            name: "Feet",
+            factor: 0.3048
+        },
+
+        "in": {
+            name: "Inches",
+            factor: 0.0254
+        }
+
+    },
+
+
+    weight: {
+
+        "kg": {
+            name: "Kilograms",
+            factor: 1
+        },
+
+        "g": {
+            name: "Grams",
+            factor: 0.001
+        },
+
+        "lb": {
+            name: "Pounds",
+            factor: 0.45359237
+        },
+
+        "oz": {
+            name: "Ounces",
+            factor: 0.028349523125
+        }
+
+    },
+
+
+    temperature: {
+
+        "c": {
+            name: "Celsius"
+        },
+
+        "f": {
+            name: "Fahrenheit"
+        },
+
+        "k": {
+            name: "Kelvin"
+        }
+
+    },
+
+
+    area: {
+
+        "sqm": {
+            name: "Square metres",
+            factor: 1
+        },
+
+        "sqkm": {
+            name: "Square kilometres",
+            factor: 1000000
+        },
+
+        "sqft": {
+            name: "Square feet",
+            factor: 0.09290304
+        },
+
+        "sqyd": {
+            name: "Square yards",
+            factor: 0.83612736
+        },
+
+        "acre": {
+            name: "Acres",
+            factor: 4046.8564224
+        },
+
+        "hectare": {
+            name: "Hectares",
+            factor: 10000
+        }
+
+    },
+
+
+    volume: {
+
+        "l": {
+            name: "Litres",
+            factor: 1
+        },
+
+        "ml": {
+            name: "Millilitres",
+            factor: 0.001
+        },
+
+        "cubicm": {
+            name: "Cubic metres",
+            factor: 1000
+        },
+
+        "gallon": {
+            name: "US gallons",
+            factor: 3.785411784
+        },
+
+        "floz": {
+            name: "US fluid ounces",
+            factor: 0.0295735295625
+        }
+
+    },
+
+
+    speed: {
+
+        "kmh": {
+            name: "Kilometres per hour",
+            factor: 1
+        },
+
+        "mph": {
+            name: "Miles per hour",
+            factor: 1.609344
+        },
+
+        "ms": {
+            name: "Metres per second",
+            factor: 3.6
+        }
+
+    }
+
+};
+
+
+function updateUnits(){
+
+    let category =
+        document.getElementById('category').value;
+
+    let from =
+        document.getElementById('from');
+
+    let to =
+        document.getElementById('to');
+
+    from.innerHTML = '';
+    to.innerHTML = '';
+
+    let categoryUnits = units[category];
+
+    Object.keys(categoryUnits).forEach(function(key){
+
+        let option1 =
+            document.createElement('option');
+
+        option1.value = key;
+        option1.textContent =
+            categoryUnits[key].name;
+
+        from.appendChild(option1);
+
+
+        let option2 =
+            document.createElement('option');
+
+        option2.value = key;
+        option2.textContent =
+            categoryUnits[key].name;
+
+        to.appendChild(option2);
+
+    });
+
+
+    if(category === 'length'){
+
+        from.value = 'km';
+        to.value = 'mi';
+
+    }
+
+    if(category === 'weight'){
+
+        from.value = 'kg';
+        to.value = 'lb';
+
+    }
+
+    if(category === 'temperature'){
+
+        from.value = 'c';
+        to.value = 'f';
+
+    }
+
+    if(category === 'area'){
+
+        from.value = 'sqm';
+        to.value = 'sqft';
+
+    }
+
+    if(category === 'volume'){
+
+        from.value = 'l';
+        to.value = 'gallon';
+
+    }
+
+    if(category === 'speed'){
+
+        from.value = 'kmh';
+        to.value = 'mph';
+
+    }
+
+    calc();
+
+}
+
+
+function convertTemperature(value, from, to){
+
+    let celsius;
+
+    if(from === 'c'){
+
+        celsius = value;
+
+    } else if(from === 'f'){
+
+        celsius = (value - 32) * 5 / 9;
+
+    } else if(from === 'k'){
+
+        celsius = value - 273.15;
+
+    }
+
+
+    if(to === 'c'){
+
+        return celsius;
+
+    }
+
+    if(to === 'f'){
+
+        return celsius * 9 / 5 + 32;
+
+    }
+
+    if(to === 'k'){
+
+        return celsius + 273.15;
+
+    }
+
+}
+
+
+function calc(){
+
+    let value =
+        num('v');
+
+    let category =
+        document.getElementById('category').value;
+
+    let from =
+        document.getElementById('from').value;
+
+    let to =
+        document.getElementById('to').value;
+
+    let out =
+        document.getElementById('out');
+
+
+    if(!isFinite(value)){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid number.</div>';
+
+        return;
+
+    }
+
+
+    let result;
+
+
+    if(category === 'temperature'){
+
+        result =
+            convertTemperature(
+                value,
+                from,
+                to
+            );
+
+    } else {
+
+        let fromFactor =
+            units[category][from].factor;
+
+        let toFactor =
+            units[category][to].factor;
+
+        let baseValue =
+            value * fromFactor;
+
+        result =
+            baseValue / toFactor;
+
+    }
+
+
+    let targetName =
+        units[category][to].name;
+
+
+    let formattedResult;
+
+
+    if(Math.abs(result) < 0.000001 && result !== 0){
+
+        formattedResult =
+            result.toExponential(6);
+
+    } else {
+
+        formattedResult =
+            Number(result.toFixed(6)).toLocaleString(
+                'en-IN',
+                {
+                    maximumFractionDigits: 6
+                }
+            );
+
+    }
+
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${formattedResult} ${getSymbol(to, category)}
+        </div>
+
+        <div class="result-row">
+            <span>Converted value</span>
+            <strong>${formattedResult} ${targetName}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Original value</span>
+            <strong>${value} ${units[category][from].name}</strong>
+        </div>
+
+        <div class="note">
+            Conversion calculated using standard unit conversion factors.
+        </div>
+
+    `;
+
+}
+
+
+function getSymbol(unit, category){
+
+    const symbols = {
+
+        km: 'km',
+        m: 'm',
+        cm: 'cm',
+        mm: 'mm',
+        mi: 'mi',
+        yd: 'yd',
+        ft: 'ft',
+        in: 'in',
+
+        kg: 'kg',
+        g: 'g',
+        lb: 'lb',
+        oz: 'oz',
+
+        c: '°C',
+        f: '°F',
+        k: 'K',
+
+        sqm: 'm²',
+        sqkm: 'km²',
+        sqft: 'ft²',
+        sqyd: 'yd²',
+        acre: 'acre',
+        hectare: 'ha',
+
+        l: 'L',
+        ml: 'mL',
+        cubicm: 'm³',
+        gallon: 'gal',
+        floz: 'fl oz',
+
+        kmh: 'km/h',
+        mph: 'mph',
+        ms: 'm/s'
+
+    };
+
+    return symbols[unit] || '';
+
+}
+
+
+updateUnits();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

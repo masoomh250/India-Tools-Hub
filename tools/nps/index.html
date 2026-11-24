@@ -1,1 +1,401 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NPS Calculator | India Tools Hub</title><meta name="description" content="Estimate retirement corpus from a monthly contribution and expected return."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/nps/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Retirement / NPS Calculator</div><div class="tool-layout"><div class="calc-card"><h1>NPS Calculator</h1><p>Estimate retirement corpus from a monthly contribution and expected return.</p><div class="form-grid"><div class="field"><label>Monthly contribution (₹)</label><input id="m" type="number" value="10000"></div><div class="field"><label>Expected annual return (%)</label><input id="r" type="number" value="10" step="0.1"></div><div class="field"><label>Investment period (years)</label><input id="y" type="number" value="25"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Estimate corpus</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the NPS Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let m=num('m'),r=num('r')/1200,n=num('y')*12,v=r?m*((Math.pow(1+r,n)-1)/r)*(1+r):m*n;document.getElementById('out').innerHTML=`<div class="main-result">${money(v)}</div><div class="result-row"><span>Total contribution</span><strong>${money(m*n)}</strong></div><div class="result-row"><span>Estimated growth</span><strong>${money(v-m*n)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>NPS Calculator 2026 | National Pension System Calculator | India Tools Hub</title>
+
+<meta name="description" content="Use the free NPS Calculator to estimate your National Pension System retirement corpus, total contribution, investment growth, and indicative annuity and lump sum amounts.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/nps/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "NPS Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/nps/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free NPS Calculator to estimate retirement corpus, total contribution, investment growth, and indicative annuity and lump sum amounts.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Retirement / NPS Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>NPS Calculator</h1>
+
+<p>
+Estimate your National Pension System retirement corpus based on your monthly contribution,
+expected annual return and investment period.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="m">Monthly contribution (₹)</label>
+<input id="m" type="number" value="10000" min="0" step="100" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="r">Expected annual return (%)</label>
+<input id="r" type="number" value="10" min="0" step="0.1" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="y">Investment period (years)</label>
+<input id="y" type="number" value="25" min="1" max="60" step="1" inputmode="numeric">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate NPS Corpus
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">Advertisement space</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Simple NPS retirement estimate</h3>
+
+<p>
+This calculator estimates how your regular NPS contributions could grow over time
+using an assumed annual rate of return.
+</p>
+
+<p>
+Your calculations are performed in your browser. No account or registration is required.
+</p>
+
+<p class="note">
+NPS returns are market linked and actual returns can be higher or lower than the assumed rate.
+Annuity income also depends on the annuity option and prevailing annuity rates.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the NPS Calculator</h2>
+
+<p>
+Enter your expected monthly NPS contribution, expected annual return and investment period.
+The calculator estimates the potential retirement corpus and shows how much you contributed
+versus the estimated investment growth.
+</p>
+
+<h3>How the NPS calculation works</h3>
+
+<p>
+For this calculator, monthly contributions are assumed to be invested regularly and compounded
+monthly using the expected annual return entered by you.
+</p>
+
+<p>
+The estimated future value is calculated using the standard future value formula for regular
+monthly contributions:
+</p>
+
+<p>
+<strong>Future Value = Monthly Contribution × (((1 + r)<sup>n</sup> − 1) ÷ r) × (1 + r)</strong>
+</p>
+
+<p>
+Here, <strong>r</strong> represents the monthly rate of return and <strong>n</strong> represents
+the total number of monthly contributions. The calculation assumes contributions are made at
+the beginning of each month.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose you invest ₹10,000 every month for 25 years and assume an annual return of 10%.
+The calculator estimates the potential retirement corpus based on these assumptions.
+Your actual NPS corpus may differ because NPS returns are market linked.
+</p>
+
+<h3>Understanding the NPS corpus</h3>
+
+<p>
+The estimated corpus represents the total value of your NPS investment at the end of the
+selected investment period. It includes both your contributions and the estimated investment
+growth.
+</p>
+
+<h3>NPS annuity and lump sum</h3>
+
+<p>
+At a normal NPS exit, applicable rules generally allow up to 60% of the accumulated pension
+wealth as lump sum, while at least 40% is used for purchasing an annuity. The exact applicable
+rules can depend on the NPS sector, exit type and prevailing regulations.
+</p>
+
+<p>
+The annuity portion is used to provide pension income. The actual pension amount cannot be
+calculated from the corpus alone because it depends on the annuity option and the rate offered
+by the annuity service provider.
+</p>
+
+<h3>Important factors affecting your NPS corpus</h3>
+
+<p>
+Your final NPS corpus can be affected by your monthly contribution, investment period,
+investment performance, contribution timing, applicable charges and changes in investment
+allocation.
+</p>
+
+<h3>NPS calculator limitations</h3>
+
+<p>
+This is an illustrative retirement planning calculator and not an official NPS statement.
+It does not account for every NPS rule, fund management charge, contribution variation,
+tax treatment, annuity pricing or individual exit condition.
+</p>
+
+
+<div class="faq">
+
+<details>
+<summary>What is NPS?</summary>
+<p>
+The National Pension System is a retirement savings system designed to help subscribers
+build a long term retirement corpus through contributions invested in market linked pension
+funds.
+</p>
+</details>
+
+<details>
+<summary>Is NPS return guaranteed?</summary>
+<p>
+No. NPS investment returns are market linked and are not guaranteed. The return entered in
+this calculator is only an assumption used to estimate the potential future corpus.
+</p>
+</details>
+
+<details>
+<summary>How much of the NPS corpus can normally be taken as lump sum?</summary>
+<p>
+For a normal exit, applicable NPS rules generally permit up to 60% of the accumulated pension
+wealth as lump sum, with at least 40% used for annuity, subject to the applicable exit rules.
+</p>
+</details>
+
+<details>
+<summary>Does the calculator include annuity income?</summary>
+<p>
+The calculator provides an indicative annuity corpus based on a 40% allocation assumption.
+It does not estimate the actual monthly pension because annuity rates and annuity options
+vary by provider and product.
+</p>
+</details>
+
+<details>
+<summary>Can I change my monthly NPS contribution?</summary>
+<p>
+Yes. In real life, your contributions can change over time. This calculator assumes the same
+monthly contribution throughout the selected investment period.
+</p>
+</details>
+
+<details>
+<summary>Are my NPS calculator inputs stored?</summary>
+<p>
+The calculation runs in your browser. The static calculator does not require your inputs to
+be sent to a server for the calculation.
+</p>
+</details>
+
+<details>
+<summary>Is this NPS calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+</div>
+
+
+<h3>Related calculators</h3>
+
+<p>
+<a href="../sip/index.html">SIP Calculator</a> |
+<a href="../ppf/index.html">PPF Calculator</a> |
+<a href="../fd/index.html">FD Calculator</a> |
+<a href="../compound-interest/index.html">Compound Interest Calculator</a> |
+<a href="../income-tax/index.html">Income Tax Calculator</a>
+</p>
+
+<p class="note">
+Results are estimates for informational purposes only. Financial products and retirement
+investments involve risk. Consider official NPS information and professional advice before
+making investment decisions.
+</p>
+
+</div>
+
+<div class="adbox">Advertisement space</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    let m = num('m');
+    let annualRate = num('r');
+    let years = num('y');
+
+    if (!Number.isFinite(m) || m < 0){
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter a valid monthly contribution.</div>';
+        return;
+    }
+
+    if (!Number.isFinite(annualRate) || annualRate < 0){
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter a valid expected annual return.</div>';
+        return;
+    }
+
+    if (!Number.isFinite(years) || years < 1){
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter an investment period of at least 1 year.</div>';
+        return;
+    }
+
+    if (years > 60){
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter an investment period of 60 years or less.</div>';
+        return;
+    }
+
+    let monthlyRate = annualRate / 1200;
+    let months = Math.round(years * 12);
+
+    let corpus;
+
+    if (monthlyRate === 0){
+
+        corpus = m * months;
+
+    } else {
+
+        corpus =
+            m *
+            ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
+            (1 + monthlyRate);
+
+    }
+
+    let totalContribution = m * months;
+    let estimatedGrowth = Math.max(0, corpus - totalContribution);
+
+    let indicativeAnnuityCorpus = corpus * 0.40;
+    let indicativeLumpSum = corpus * 0.60;
+
+    document.getElementById('out').innerHTML = `
+
+        <div class="main-result">
+            ${money(corpus)}
+        </div>
+
+        <div class="result-row">
+            <span>Estimated retirement corpus</span>
+            <strong>${money(corpus)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total contribution</span>
+            <strong>${money(totalContribution)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Estimated investment growth</span>
+            <strong>${money(estimatedGrowth)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Indicative annuity portion (40%)</span>
+            <strong>${money(indicativeAnnuityCorpus)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Indicative lump sum portion (60%)</span>
+            <strong>${money(indicativeLumpSum)}</strong>
+        </div>
+
+        <div class="note">
+            The 40% annuity and 60% lump sum figures are illustrative estimates for a normal
+            exit scenario. Actual NPS exit rules and applicable percentages can vary depending
+            on the subscriber category and exit conditions.
+        </div>
+
+    `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

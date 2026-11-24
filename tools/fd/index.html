@@ -1,1 +1,393 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FD Calculator | India Tools Hub</title><meta name="description" content="Estimate fixed deposit maturity and interest earned using annual compounding."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/fd/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Investment / FD Calculator</div><div class="tool-layout"><div class="calc-card"><h1>FD Calculator</h1><p>Estimate fixed deposit maturity and interest earned using annual compounding.</p><div class="form-grid"><div class="field"><label>Deposit amount (₹)</label><input id="p" type="number" value="200000"></div><div class="field"><label>Annual interest rate (%)</label><input id="r" type="number" value="7" step="0.01"></div><div class="field"><label>Tenure (years)</label><input id="y" type="number" value="3" step="0.1"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate maturity</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the FD Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let p=num('p'),r=num('r')/100,y=num('y'),a=p*Math.pow(1+r,y);document.getElementById('out').innerHTML=`<div class="main-result">${money(a)}</div><div class="result-row"><span>Interest earned</span><strong>${money(a-p)}</strong></div><div class="result-row"><span>Principal</span><strong>${money(p)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>FD Calculator | India Tools Hub</title>
+
+<meta name="description" content="Estimate fixed deposit maturity and interest earned using annual compounding. Compare principal, interest and maturity value for your FD investment.">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/fd/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Investment / FD Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>FD Calculator</h1>
+
+<p>
+Estimate fixed deposit maturity and interest earned using annual compounding.
+Actual bank FD maturity may differ depending on the bank's compounding frequency,
+interest rate and terms.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label>Deposit amount (₹)</label>
+<input id="p" type="number" value="200000" min="1" step="100">
+</div>
+
+<div class="field">
+<label>Annual interest rate (%)</label>
+<input id="r" type="number" value="7" min="0" step="0.01">
+</div>
+
+<div class="field">
+<label>Tenure (years)</label>
+<input id="y" type="number" value="3" min="0.01" step="0.1">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate maturity
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple and fast
+</h3>
+
+<p>
+Enter your deposit amount, interest rate and tenure to estimate your FD maturity value.
+Your inputs are processed in your browser.
+</p>
+
+<p class="note">
+This calculator uses annual compounding for estimation. Actual bank FD returns may
+differ because banks may use different compounding frequencies, payout options,
+interest rates, taxes and other terms.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the FD Calculator</h2>
+
+<p>
+Enter your deposit amount, annual interest rate and investment period, then select
+<strong>Calculate maturity</strong>. The calculator instantly estimates the maturity
+amount and interest earned.
+</p>
+
+
+<h2>How is FD maturity calculated?</h2>
+
+<p>
+This calculator uses the standard compound interest formula with annual compounding:
+</p>
+
+<p>
+<strong>A = P × (1 + r)<sup>n</sup></strong>
+</p>
+
+<p>
+Where:
+</p>
+
+<p>
+<strong>P</strong> = Principal deposit amount<br>
+<strong>r</strong> = Annual interest rate expressed as a decimal<br>
+<strong>n</strong> = Investment period in years<br>
+<strong>A</strong> = Estimated maturity amount
+</p>
+
+
+<h2>FD calculation example</h2>
+
+<p>
+Suppose you deposit <strong>₹2,00,000</strong> at an annual interest rate of
+<strong>7%</strong> for <strong>3 years</strong>.
+</p>
+
+<p>
+Using annual compounding, the estimated maturity amount is approximately
+<strong>₹2,45,010.86</strong>.
+</p>
+
+<p>
+The estimated interest earned is approximately
+<strong>₹45,010.86</strong>.
+</p>
+
+<p>
+Actual bank FD maturity may differ because banks may calculate interest using
+different compounding frequencies and deposit terms.
+</p>
+
+
+<h2>What affects FD returns?</h2>
+
+<h3>1. Deposit amount</h3>
+
+<p>
+A higher deposit amount generally results in higher interest earnings when the
+interest rate and tenure remain unchanged.
+</p>
+
+<h3>2. Interest rate</h3>
+
+<p>
+A higher FD interest rate generally increases the maturity amount and total interest
+earned.
+</p>
+
+<h3>3. Investment tenure</h3>
+
+<p>
+A longer investment period generally allows more time for interest to accumulate.
+The actual benefit depends on the interest rate and compounding method.
+</p>
+
+<h3>4. Compounding frequency</h3>
+
+<p>
+The frequency at which interest is compounded can affect the final maturity amount.
+This calculator uses annual compounding for simplicity.
+</p>
+
+
+<h2>FD vs savings account</h2>
+
+<p>
+A fixed deposit generally provides a predetermined interest rate for a specified
+period, while a savings account usually offers greater liquidity but may provide a
+different interest rate.
+</p>
+
+<p>
+Before investing, compare the interest rate, tenure, premature withdrawal rules,
+tax treatment and other terms offered by your bank.
+</p>
+
+
+<h2>Frequently asked questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>Is the FD calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Does this calculator use annual compounding?</summary>
+<p>
+Yes. This calculator uses annual compounding for estimating the maturity amount.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Will the result exactly match my bank FD?</summary>
+<p>
+Not necessarily. Actual bank FD maturity may differ because banks may use different
+compounding frequencies, interest payout options, rates, taxes and deposit terms.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Are my FD details stored?</summary>
+<p>
+The calculation runs in your browser. This static website does not need your
+calculator inputs to calculate the result.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Does the calculator include FD tax?</summary>
+<p>
+No. This calculator estimates interest and maturity before considering applicable
+taxes or other deductions.
+</p>
+</details>
+
+</div>
+
+
+<h2>Related calculators</h2>
+
+<p>
+You can also use these India Tools Hub calculators for financial planning:
+</p>
+
+<p>
+EMI Calculator<br>
+SIP Calculator<br>
+PPF Calculator<br>
+NPS Calculator<br>
+Compound Interest Calculator<br>
+Inflation Calculator
+</p>
+
+
+<h2>Important note</h2>
+
+<p>
+This calculator is provided for general informational purposes. Results are
+estimates and actual FD maturity may differ because of bank policies, interest
+rates, compounding frequency, taxes, rounding, premature withdrawal rules and
+other conditions.
+</p>
+
+</div>
+
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    let p = num('p');
+    let rate = num('r');
+    let years = num('y');
+
+    const out = document.getElementById('out');
+
+    if (!Number.isFinite(p) || p <= 0) {
+        out.innerHTML = `
+            <div class="result-row">
+                <strong>Please enter a valid deposit amount greater than ₹0.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    if (!Number.isFinite(rate) || rate < 0) {
+        out.innerHTML = `
+            <div class="result-row">
+                <strong>Please enter a valid interest rate.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    if (!Number.isFinite(years) || years <= 0) {
+        out.innerHTML = `
+            <div class="result-row">
+                <strong>Please enter a valid tenure greater than 0 years.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    const r = rate / 100;
+
+    const maturity = p * Math.pow(1 + r, years);
+
+    const interest = maturity - p;
+
+    out.innerHTML = `
+        <div class="main-result">
+            ${money(maturity)}
+        </div>
+
+        <div class="result-row">
+            <span>Interest earned</span>
+            <strong>${money(interest)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Principal</span>
+            <strong>${money(p)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total maturity value</span>
+            <strong>${money(maturity)}</strong>
+        </div>
+    `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

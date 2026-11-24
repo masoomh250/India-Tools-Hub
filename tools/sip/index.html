@@ -1,1 +1,690 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIP Calculator | India Tools Hub</title><meta name="description" content="Estimate SIP maturity value, invested amount and wealth created."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/sip/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Investment / SIP Calculator</div><div class="tool-layout"><div class="calc-card"><h1>SIP Calculator</h1><p>Estimate SIP maturity value, invested amount and wealth created.</p><div class="form-grid"><div class="field"><label>Monthly investment (₹)</label><input id="m" type="number" value="10000"></div><div class="field"><label>Expected annual return (%)</label><input id="r" type="number" value="12" step="0.1"></div><div class="field"><label>Investment period (years)</label><input id="y" type="number" value="10"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate SIP</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the SIP Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let m=num('m'),r=num('r')/1200,n=num('y')*12,v=r?m*((Math.pow(1+r,n)-1)/r)*(1+r):m*n;document.getElementById('out').innerHTML=`<div class="main-result">${money(v)}</div><div class="result-row"><span>Invested amount</span><strong>${money(m*n)}</strong></div><div class="result-row"><span>Estimated wealth gain</span><strong>${money(v-m*n)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<title>
+SIP Calculator India | Calculate SIP Returns & Maturity Value
+</title>
+
+<meta
+  name="description"
+  content="Use our free SIP calculator to estimate your mutual fund SIP maturity value, total investment and estimated returns based on monthly investment, expected return and investment period."
+>
+
+<meta
+  name="robots"
+  content="index,follow"
+>
+
+<link
+  rel="canonical"
+  href="https://masoomh250.github.io/India-Tools-Hub/tools/sip/"
+>
+
+<link
+  rel="icon"
+  href="../../favicon.svg"
+>
+
+<link
+  rel="stylesheet"
+  href="../../assets/style.css"
+>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SIP Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/sip/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Free SIP calculator for estimating investment value, invested amount and estimated returns.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+
+<body>
+
+<div id="site-header"></div>
+
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a>
+/
+Investment
+/
+SIP Calculator
+</div>
+
+
+<div class="tool-layout">
+
+
+<div class="calc-card">
+
+<h1>
+SIP Calculator
+</h1>
+
+<p>
+Estimate your SIP maturity value, total investment
+and estimated wealth gain.
+</p>
+
+
+<div class="form-grid">
+
+
+<div class="field">
+
+<label for="m">
+Monthly investment (₹)
+</label>
+
+<input
+id="m"
+type="number"
+value="10000"
+min="0"
+step="500"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="r">
+Expected annual return (%)
+</label>
+
+<input
+id="r"
+type="number"
+value="12"
+min="0"
+step="0.1"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="y">
+Investment period (years)
+</label>
+
+<input
+id="y"
+type="number"
+value="10"
+min="1"
+step="1"
+>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate SIP
+</button>
+
+
+<div
+class="result"
+id="out"
+></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple and fast
+</h3>
+
+<p>
+Enter your monthly investment, expected annual return
+and investment period to estimate the future value of
+your SIP.
+</p>
+
+<p>
+The calculation runs directly in your browser and does
+not require an account.
+</p>
+
+<p class="note">
+SIP returns are market-linked estimates. Actual mutual
+fund returns can be higher or lower than the assumed
+return used in this calculator.
+</p>
+
+</div>
+
+</aside>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+
+<h2>
+What is a SIP?
+</h2>
+
+<p>
+SIP stands for <strong>Systematic Investment Plan</strong>.
+It is a method of investing a fixed amount at regular
+intervals, commonly every month, into a mutual fund.
+</p>
+
+<p>
+Instead of investing a large amount at one time, an
+investor can invest smaller amounts regularly. Over a
+long period, the investment can potentially benefit
+from compounding and disciplined investing.
+</p>
+
+
+<h2>
+How does a SIP work?
+</h2>
+
+<p>
+With a monthly SIP, you invest a predetermined amount
+at regular intervals. The number of mutual fund units
+purchased can vary because the market price of the fund
+changes over time.
+</p>
+
+<p>
+When the investment period is longer, the returns can
+potentially compound for a longer period. However,
+mutual fund returns are market-linked and are not
+guaranteed.
+</p>
+
+
+<h2>
+How is SIP maturity value calculated?
+</h2>
+
+<p>
+For this calculator, the estimated SIP maturity value is
+calculated using the following formula:
+</p>
+
+<p>
+<strong>
+FV = M × [((1 + r)<sup>n</sup> − 1) ÷ r] × (1 + r)
+</strong>
+</p>
+
+<p>
+Where:
+</p>
+
+<p>
+<strong>M</strong> = monthly investment
+<br>
+<strong>r</strong> = monthly expected rate of return
+<br>
+<strong>n</strong> = total number of monthly investments
+</p>
+
+<p>
+The annual expected return is converted into a monthly
+rate by dividing it by 12.
+</p>
+
+<p>
+This calculator applies the additional
+<strong>(1 + r)</strong> factor, which represents SIP
+contributions being made at the beginning of each month.
+</p>
+
+
+<h2>
+SIP calculation example
+</h2>
+
+<p>
+Suppose you invest <strong>₹10,000 per month</strong> for
+<strong>10 years</strong> and assume an annual return of
+<strong>12%</strong>.
+</p>
+
+<p>
+You would invest a total of
+<strong>₹12,00,000</strong> over the 10-year period.
+Using the calculation convention used by this calculator,
+the estimated maturity value is approximately
+<strong>₹23.23 lakh</strong>.
+</p>
+
+<p>
+The estimated wealth gain would therefore be approximately
+<strong>₹11.23 lakh</strong>.
+</p>
+
+<p>
+This is only an illustration. Mutual fund returns are
+market-linked and actual results can differ significantly
+from the assumed return.
+</p>
+
+
+<h2>
+What affects SIP returns?
+</h2>
+
+
+<h3>
+1. Monthly investment amount
+</h3>
+
+<p>
+Increasing the monthly investment generally increases
+the total amount invested and can increase the potential
+maturity value, assuming the same return and investment
+period.
+</p>
+
+
+<h3>
+2. Expected rate of return
+</h3>
+
+<p>
+A higher assumed return increases the estimated maturity
+value. However, a higher expected return also generally
+means greater investment risk. Actual mutual fund returns
+are not guaranteed.
+</p>
+
+
+<h3>
+3. Investment period
+</h3>
+
+<p>
+A longer investment period gives your investments more
+time to potentially benefit from compounding. Starting
+early can therefore make a significant difference to the
+long-term value of an investment.
+</p>
+
+
+<h2>
+Why is compounding important for SIP investing?
+</h2>
+
+<p>
+Compounding means that returns generated by an investment
+can themselves generate additional returns over time.
+The effect can become more significant as the investment
+period increases.
+</p>
+
+<p>
+This is one reason long-term investing can potentially
+produce a substantially higher maturity value than simply
+adding up the monthly contributions.
+</p>
+
+
+<h2>
+SIP vs one-time investment
+</h2>
+
+<p>
+A SIP involves investing a fixed amount at regular
+intervals, while a one-time investment involves investing
+a larger amount at once.
+</p>
+
+<p>
+A SIP can help investors maintain a disciplined investment
+habit and spread purchases across different market levels.
+However, neither method guarantees a particular return.
+</p>
+
+
+<h2>
+Frequently asked questions
+</h2>
+
+
+<div class="faq">
+
+
+<details>
+
+<summary>
+Is the SIP calculator free?
+</summary>
+
+<p>
+Yes. The India Tools Hub SIP Calculator is free to use
+and does not require registration.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Are SIP returns guaranteed?
+</summary>
+
+<p>
+No. Mutual fund returns are market-linked. The return
+percentage entered into this calculator is an assumption
+used to estimate the potential future value.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What is the minimum amount required for a SIP?
+</summary>
+
+<p>
+The minimum SIP amount depends on the mutual fund and
+investment platform. Different schemes can have different
+minimum investment requirements.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Does a longer SIP period increase the maturity value?
+</summary>
+
+<p>
+A longer investment period can increase the potential
+maturity value because more contributions are made and
+the investment has more time to potentially compound.
+Actual returns depend on market performance.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What happens if I increase my monthly SIP?
+</summary>
+
+<p>
+Increasing the monthly investment generally increases
+the total amount invested and can increase the estimated
+maturity value, assuming the same investment period and
+return.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Are my SIP inputs stored?
+</summary>
+
+<p>
+The calculation is performed in your browser. The tool
+does not require an account to calculate the estimate.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I use this calculator for mutual fund planning?
+</summary>
+
+<p>
+Yes. You can use it to estimate potential investment
+values under different monthly investment amounts,
+assumed returns and investment periods. Actual mutual
+fund performance may differ from the estimate.
+</p>
+
+</details>
+
+
+</div>
+
+
+<h2>
+Related calculators
+</h2>
+
+<p>
+You can also use these India Tools Hub calculators for
+financial planning:
+</p>
+
+
+<p>
+
+<a href="../emi/index.html">
+EMI Calculator
+</a>
+<br>
+
+<a href="../fd/index.html">
+FD Calculator
+</a>
+<br>
+
+<a href="../ppf/index.html">
+PPF Calculator
+</a>
+<br>
+
+<a href="../nps/index.html">
+NPS Calculator
+</a>
+<br>
+
+<a href="../compound-interest/index.html">
+Compound Interest Calculator
+</a>
+
+</p>
+
+
+<h2>
+Important note
+</h2>
+
+<p>
+This calculator provides an estimate based on the values
+you enter. Mutual fund investments are subject to market
+risks and actual returns may differ from the assumed
+return. Taxes, fees, expenses and other investment
+conditions are not included unless specifically stated.
+</p>
+
+
+</div>
+
+
+<div class="adbox">
+Advertisement space
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+
+<script>
+
+function calc() {
+
+  let m = num('m');
+
+  let r = num('r') / 1200;
+
+  let n = num('y') * 12;
+
+
+  if (
+    !m ||
+    m <= 0 ||
+    !n ||
+    n <= 0
+  ) {
+
+    document.getElementById('out').innerHTML =
+      '<p>Please enter a valid monthly investment and investment period.</p>';
+
+    return;
+
+  }
+
+
+  let v;
+
+
+  if (r) {
+
+    v =
+      m *
+      (
+        (Math.pow(1 + r, n) - 1) / r
+      ) *
+      (1 + r);
+
+  } else {
+
+    v = m * n;
+
+  }
+
+
+  let invested = m * n;
+
+  let gain = v - invested;
+
+
+  document.getElementById('out').innerHTML = `
+
+    <div class="main-result">
+      ${money(v)}
+    </div>
+
+    <div class="result-row">
+
+      <span>
+        Invested amount
+      </span>
+
+      <strong>
+        ${money(invested)}
+      </strong>
+
+    </div>
+
+    <div class="result-row">
+
+      <span>
+        Estimated wealth gain
+      </span>
+
+      <strong>
+        ${money(gain)}
+      </strong>
+
+    </div>
+
+  `;
+
+}
+
+
+calc();
+
+loadChrome();
+
+</script>
+
+
+</body>
+
+</html>

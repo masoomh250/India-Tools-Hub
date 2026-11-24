@@ -1,1 +1,611 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fuel Cost Calculator | India Tools Hub</title><meta name="description" content="Estimate fuel cost for a road trip."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/fuel-cost/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Travel / Fuel Cost Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Fuel Cost Calculator</h1><p>Estimate fuel cost for a road trip.</p><div class="form-grid"><div class="field"><label>Distance (km)</label><input id="d" type="number" value="500"></div><div class="field"><label>Vehicle mileage (km/l)</label><input id="m" type="number" value="18"></div><div class="field"><label>Fuel price (₹/litre)</label><input id="p" type="number" value="100"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate fuel cost</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Fuel Cost Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let d=num('d'),m=num('m'),p=num('p'),lit=d/m,c=lit*p;document.getElementById('out').innerHTML=`<div class="main-result">${money(c)}</div><div class="result-row"><span>Fuel required</span><strong>${lit.toFixed(2)} litres</strong></div><div class="result-row"><span>Cost per km</span><strong>${money(c/d)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Fuel Cost Calculator: Road Trip & Travel Cost | India Tools Hub</title>
+
+<meta name="description" content="Calculate fuel required, fuel cost, cost per kilometre and cost per person for a road trip. Free online petrol and diesel fuel cost calculator for India.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/fuel-cost/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fuel Cost Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/fuel-cost/",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate fuel required and estimated fuel cost for a road trip.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Travel / Fuel Cost Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Fuel Cost Calculator</h1>
+
+<p>
+Estimate fuel required, total fuel cost and cost per person for your
+road trip.
+</p>
+
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="d">Distance (km)</label>
+
+<input
+id="d"
+type="number"
+value="500"
+min="0"
+step="0.1"
+placeholder="Example: 500"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="trip">Trip type</label>
+
+<select id="trip">
+
+<option value="oneway">One way</option>
+<option value="round">Round trip</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label for="m">Vehicle mileage (km/l)</label>
+
+<input
+id="m"
+type="number"
+value="18"
+min="0.1"
+step="0.1"
+placeholder="Example: 18"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="p">Fuel price (₹/litre)</label>
+
+<input
+id="p"
+type="number"
+value="100"
+min="0"
+step="0.01"
+placeholder="Example: 100"
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="passengers">Passengers</label>
+
+<input
+id="passengers"
+type="number"
+value="1"
+min="1"
+step="1"
+placeholder="Example: 4"
+>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate fuel cost
+</button>
+
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Plan your road trip</h3>
+
+<p>
+Enter your distance, vehicle mileage and current fuel price to
+estimate the fuel cost of your journey.
+</p>
+
+<p class="note">
+The result is an estimate. Actual fuel consumption can vary because of
+traffic, driving style, road conditions, vehicle load, air conditioning
+and other factors.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to Calculate Fuel Cost</h2>
+
+<p>
+Fuel cost can be estimated using the distance travelled, vehicle
+mileage and fuel price.
+</p>
+
+<p>
+The basic formula is:
+</p>
+
+<p>
+<strong>
+Fuel Required = Distance ÷ Vehicle Mileage
+</strong>
+</p>
+
+<p>
+Then:
+</p>
+
+<p>
+<strong>
+Fuel Cost = Fuel Required × Fuel Price
+</strong>
+</p>
+
+
+<h2>Example Fuel Cost Calculation</h2>
+
+<p>
+Suppose your road trip distance is 500 km, your vehicle gives a mileage
+of 18 km/litre and fuel costs ₹100 per litre.
+</p>
+
+<p>
+Fuel required:
+<strong>500 ÷ 18 = 27.78 litres</strong>
+</p>
+
+<p>
+Estimated fuel cost:
+<strong>27.78 × ₹100 = ₹2,777.78</strong>
+</p>
+
+
+<h2>One Way vs Round Trip</h2>
+
+<p>
+Select <strong>One way</strong> if the distance you entered represents
+only the journey from the starting point to the destination.
+</p>
+
+<p>
+Select <strong>Round trip</strong> if you want the calculator to
+automatically double the entered distance for the return journey.
+</p>
+
+
+<h2>Cost Per Person</h2>
+
+<p>
+If multiple people are travelling together, enter the number of
+passengers. The calculator will estimate the fuel cost per passenger
+by dividing the total fuel cost equally among the passengers.
+</p>
+
+<p>
+For example, if the total fuel cost is ₹4,000 and four people share the
+cost equally, the estimated fuel cost per person is ₹1,000.
+</p>
+
+
+<h2>What Affects Real World Fuel Consumption?</h2>
+
+<p>
+The mileage printed by a vehicle manufacturer may differ from the
+mileage achieved during an actual road trip.
+</p>
+
+<p>
+Factors that can affect fuel consumption include traffic conditions,
+average speed, road quality, vehicle load, tyre pressure, driving
+style, air conditioning and frequent acceleration or braking.
+</p>
+
+
+<h2>Fuel Cost Formula</h2>
+
+<p>
+<strong>Fuel Required = Distance ÷ Mileage</strong>
+</p>
+
+<p>
+<strong>Fuel Cost = Fuel Required × Fuel Price</strong>
+</p>
+
+<p>
+<strong>Cost Per Kilometre = Fuel Price ÷ Mileage</strong>
+</p>
+
+<p>
+<strong>Cost Per Person = Total Fuel Cost ÷ Number of Passengers</strong>
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+
+<summary>How do I calculate fuel cost for a car trip?</summary>
+
+<p>
+Enter the total distance, vehicle mileage and fuel price. The
+calculator divides the distance by mileage to estimate fuel required
+and then multiplies it by the fuel price.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>How is fuel required calculated?</summary>
+
+<p>
+Fuel required is calculated by dividing the journey distance in
+kilometres by the vehicle mileage in kilometres per litre.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I calculate round trip fuel cost?</summary>
+
+<p>
+Yes. Select Round trip and enter the one way distance. The calculator
+will automatically calculate the fuel cost for the return journey as
+well.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I calculate fuel cost per person?</summary>
+
+<p>
+Yes. Enter the number of passengers travelling in the vehicle. The
+calculator will divide the estimated fuel cost equally among them.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I use this calculator for petrol and diesel?</summary>
+
+<p>
+Yes. Enter the applicable petrol or diesel price per litre. The
+calculation works for either fuel type.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Does the calculator include toll charges?</summary>
+
+<p>
+No. This calculator estimates fuel expenses only. Toll charges,
+parking fees and other travel expenses are not included.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Is the Fuel Cost Calculator free?</summary>
+
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Are my inputs stored?</summary>
+
+<p>
+The calculation runs in your browser. Your entered values do not need
+to be stored to calculate the result.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+
+<a href="../trip-cost/">Trip Cost Calculator</a> |
+
+<a href="../unit-converter/">Unit Converter</a> |
+
+<a href="../percentage/">Percentage Calculator</a> |
+
+<a href="../date-difference/">Date Difference Calculator</a>
+
+</p>
+
+</div>
+
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function money(value){
+
+    return new Intl.NumberFormat(
+        'en-IN',
+        {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 2
+        }
+    ).format(value);
+
+}
+
+
+function num(id){
+
+    return parseFloat(
+        document.getElementById(id).value
+    );
+
+}
+
+
+function calc(){
+
+    let distance = num('d');
+    let trip = document.getElementById('trip').value;
+    let mileage = num('m');
+    let fuelPrice = num('p');
+    let passengers = num('passengers');
+
+    let out = document.getElementById('out');
+
+
+    if(
+        !isFinite(distance) ||
+        distance <= 0
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid distance greater than 0 km.</div>';
+
+        return;
+
+    }
+
+
+    if(
+        !isFinite(mileage) ||
+        mileage <= 0
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid vehicle mileage greater than 0 km/l.</div>';
+
+        return;
+
+    }
+
+
+    if(
+        !isFinite(fuelPrice) ||
+        fuelPrice < 0
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid fuel price.</div>';
+
+        return;
+
+    }
+
+
+    if(
+        !isFinite(passengers) ||
+        passengers < 1 ||
+        !Number.isInteger(passengers)
+    ){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid whole number of passengers.</div>';
+
+        return;
+
+    }
+
+
+    let totalDistance =
+        trip === 'round'
+        ? distance * 2
+        : distance;
+
+
+    let fuelRequired =
+        totalDistance / mileage;
+
+
+    let totalCost =
+        fuelRequired * fuelPrice;
+
+
+    let costPerKm =
+        totalCost / totalDistance;
+
+
+    let costPerPerson =
+        totalCost / passengers;
+
+
+    let tripLabel =
+        trip === 'round'
+        ? 'Round trip'
+        : 'One way';
+
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${money(totalCost)}
+        </div>
+
+        <div class="result-row">
+            <span>Trip distance</span>
+            <strong>${totalDistance.toFixed(2)} km</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Fuel required</span>
+            <strong>${fuelRequired.toFixed(2)} litres</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Cost per km</span>
+            <strong>${money(costPerKm)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Fuel cost per person</span>
+            <strong>${money(costPerPerson)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Trip type</span>
+            <strong>${tripLabel}</strong>
+        </div>
+
+        <div class="note">
+            Estimated fuel cost only. Toll, parking, food and other
+            travel expenses are not included.
+        </div>
+
+    `;
+
+}
+
+
+calc();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

@@ -1,1 +1,422 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PPF Calculator | India Tools Hub</title><meta name="description" content="Estimate PPF maturity using annual contribution, rate and tenure."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/ppf/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Investment / PPF Calculator</div><div class="tool-layout"><div class="calc-card"><h1>PPF Calculator</h1><p>Estimate PPF maturity using annual contribution, rate and tenure.</p><div class="form-grid"><div class="field"><label>Annual contribution (₹)</label><input id="c" type="number" value="150000"></div><div class="field"><label>Interest rate (%)</label><input id="r" type="number" value="7.1" step="0.1"></div><div class="field"><label>Tenure (years)</label><input id="y" type="number" value="15"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the PPF Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let c=num('c'),r=num('r')/100,y=Math.min(50,Math.max(1,Math.floor(num('y')))),v=0;for(let i=0;i<y;i++)v=(v+c)*(1+r);document.getElementById('out').innerHTML=`<div class="main-result">${money(v)}</div><div class="result-row"><span>Total contribution</span><strong>${money(c*y)}</strong></div><div class="result-row"><span>Estimated interest</span><strong>${money(v-c*y)}</strong></div><div class="note">This is a simplified estimate. Actual PPF interest calculation and deposit timing rules can affect results.</div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>PPF Calculator: Calculate PPF Maturity & Interest | India Tools Hub</title>
+
+<meta name="description" content="Calculate estimated PPF maturity amount, total investment and interest earned using annual contribution, PPF interest rate and tenure. Free PPF Calculator for India.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/ppf/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PPF Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/ppf/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "Calculate estimated PPF maturity amount, total contribution and interest earned.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Investment / PPF Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>PPF Calculator</h1>
+
+<p>
+Estimate your Public Provident Fund maturity amount, total contribution and interest earned based on annual investment, interest rate and tenure.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="c">Annual Contribution (₹)</label>
+<input
+id="c"
+type="number"
+min="500"
+max="150000"
+step="500"
+value="150000"
+placeholder="Example: 150000"
+>
+</div>
+
+<div class="field">
+<label for="r">Interest Rate (%)</label>
+<input
+id="r"
+type="number"
+min="0"
+step="0.01"
+value="7.1"
+placeholder="Example: 7.1"
+>
+</div>
+
+<div class="field">
+<label for="y">Tenure (Years)</label>
+<select id="y">
+<option value="15" selected>15 years</option>
+<option value="20">20 years</option>
+<option value="25">25 years</option>
+<option value="30">30 years</option>
+<option value="35">35 years</option>
+<option value="40">40 years</option>
+<option value="45">45 years</option>
+<option value="50">50 years</option>
+</select>
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple PPF estimate
+</h3>
+
+<p>
+Enter your annual contribution, interest rate and investment period to estimate your PPF maturity value.
+</p>
+
+<p class="note">
+The calculation runs in your browser. Your entered values are used only for the calculation.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to Use the PPF Calculator</h2>
+
+<p>
+Enter your planned annual PPF contribution, interest rate and investment period. Select <strong>Calculate</strong> to estimate the total contribution, interest earned and maturity amount.
+</p>
+
+<h3>PPF calculation method</h3>
+
+<p>
+For this calculator, the annual contribution is assumed to be deposited at the beginning of each financial year and the entered annual interest rate is applied for the year.
+</p>
+
+<p>
+The calculation is therefore:
+</p>
+
+<p>
+<strong>Year-end balance = (Previous balance + Annual contribution) × (1 + Interest Rate)</strong>
+</p>
+
+<p>
+The process is repeated for each year of the selected tenure.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose you invest ₹1,50,000 every year at an assumed interest rate of 7.1% for 15 years.
+</p>
+
+<p>
+Under the beginning-of-year contribution assumption used by this calculator:
+</p>
+
+<p>
+<strong>Total contribution = ₹22,50,000</strong>
+</p>
+
+<p>
+The estimated maturity value is approximately:
+</p>
+
+<p>
+<strong>₹40.68 lakh</strong>
+</p>
+
+<p>
+The estimated interest earned is approximately:
+</p>
+
+<p>
+<strong>₹18.18 lakh</strong>
+</p>
+
+<h3>Important PPF interest calculation rule</h3>
+
+<p>
+PPF interest is calculated monthly based on the lowest balance in the account between the close of the fifth day of the month and the end of that month. Interest is credited to the account at the end of the year. :chatgpt-content-reference{index="1"}
+</p>
+
+<p>
+Because this calculator uses an annual contribution assumption, the actual maturity value can differ depending on when you make deposits during the financial year.
+</p>
+
+<h3>PPF interest rate</h3>
+
+<p>
+The PPF interest rate is notified by the Government from time to time. India Post currently lists the PPF interest rate at 7.1% per annum, compounded yearly. :chatgpt-content-reference{index="2"}
+</p>
+
+<p>
+You can change the interest rate in the calculator if the Government announces a different rate for the relevant period.
+</p>
+
+<h3>PPF contribution limit</h3>
+
+<p>
+PPF contributions can be made in lump sum or instalments, subject to the applicable annual subscription limit. India Post documentation specifies a maximum subscription of ₹1,50,000 in a financial year. :chatgpt-content-reference{index="3"}
+</p>
+
+<h3>PPF tenure</h3>
+
+<p>
+The standard PPF maturity period is 15 years. After the initial maturity period, the account can be extended in blocks of five years, subject to the applicable rules.
+</p>
+
+<h3>Why use a PPF Calculator?</h3>
+
+<p>
+A PPF calculator helps estimate how regular long-term contributions can grow through compounding. It can be useful when planning retirement savings, long-term goals and tax-efficient investments.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>What is the current PPF interest rate?</summary>
+<p>
+India Post currently lists the PPF interest rate as 7.1% per annum, compounded yearly. The rate is subject to change according to Government notifications. :chatgpt-content-reference{index="4"}
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>What is the maximum PPF contribution per year?</summary>
+<p>
+The applicable maximum subscription is ₹1,50,000 in a financial year. Contributions may be made in lump sum or instalments subject to the scheme rules. :chatgpt-content-reference{index="5"}
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Is PPF interest calculated monthly?</summary>
+<p>
+Yes. PPF interest is calculated for each calendar month based on the lowest balance between the close of the fifth day and the end of the month, and the interest is credited annually. :chatgpt-content-reference{index="6"}
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Does this calculator give the exact PPF maturity amount?</summary>
+<p>
+No. This is an estimate based on an annual contribution made at the beginning of each year. Actual PPF maturity can differ depending on deposit dates, applicable interest rates and the actual account balance.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Can I calculate PPF for more than 15 years?</summary>
+<p>
+Yes. This calculator allows longer periods in five-year increments to represent PPF extensions after the initial 15-year maturity period.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Is PPF a tax-saving investment?</summary>
+<p>
+PPF has tax benefits under applicable tax rules. Tax treatment can depend on the applicable law and individual circumstances, so consult the latest official tax guidance before making investment decisions.
+</p>
+</details>
+
+<div class="faq">
+
+<details>
+<summary>Are my PPF inputs stored?</summary>
+<p>
+The calculation runs in your browser. This static website does not require your PPF inputs to calculate the result.
+</p>
+</details>
+
+</div>
+
+<h3>Related Calculators</h3>
+
+<p>
+<a href="../sip/">SIP Calculator</a> |
+<a href="../fd/">FD Calculator</a> |
+<a href="../compound-interest/">Compound Interest Calculator</a> |
+<a href="../inflation/">Inflation Calculator</a> |
+<a href="../nps/">NPS Calculator</a>
+</p>
+
+<p class="note">
+Disclaimer: This calculator provides an estimate for informational purposes only. Actual PPF interest and maturity value depend on deposit timing, applicable Government interest rates and the rules governing PPF accounts.
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc() {
+
+  let c = num('c');
+  let r = num('r');
+  let y = parseInt(document.getElementById('y').value, 10);
+
+  if (!Number.isFinite(c) || c < 500 || c > 150000) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter an annual contribution between ₹500 and ₹1,50,000.</p>';
+    return;
+  }
+
+  if (!Number.isFinite(r) || r < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid interest rate.</p>';
+    return;
+  }
+
+  if (!Number.isInteger(y) || y < 15 || y > 50 || y % 5 !== 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please select a valid PPF tenure.</p>';
+    return;
+  }
+
+  let rate = r / 100;
+  let balance = 0;
+
+  for (let i = 0; i < y; i++) {
+    balance = (balance + c) * (1 + rate);
+  }
+
+  let totalContribution = c * y;
+  let interest = balance - totalContribution;
+
+  document.getElementById('out').innerHTML = `
+
+    <div class="main-result">
+      ${money(balance)}
+    </div>
+
+    <div class="result-row">
+      <span>Estimated maturity value</span>
+      <strong>${money(balance)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Total contribution</span>
+      <strong>${money(totalContribution)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Estimated interest earned</span>
+      <strong>${money(interest)}</strong>
+    </div>
+
+    <div class="note">
+      Estimate assumes the annual contribution is made at the beginning of each year and the interest rate remains unchanged throughout the selected period.
+    </div>
+
+  `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

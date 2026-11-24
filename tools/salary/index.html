@@ -1,1 +1,385 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Salary Calculator | India Tools Hub</title><meta name="description" content="A simple take-home estimate from annual CTC. Actual salary depends on payroll structure, tax and deductions."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/salary/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Salary / Salary Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Salary Calculator</h1><p>A simple take-home estimate from annual CTC. Actual salary depends on payroll structure, tax and deductions.</p><div class="form-grid"><div class="field"><label>Annual CTC (₹)</label><input id="c" type="number" value="1200000"></div><div class="field"><label>Employee PF per year (₹)</label><input id="pf" type="number" value="21600"></div><div class="field"><label>Other annual deductions (₹)</label><input id="d" type="number" value="0"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Estimate salary</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Salary Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let c=num('c'),pf=num('pf'),d=num('d'),annual=Math.max(0,c-pf-d);document.getElementById('out').innerHTML=`<div class="main-result">${money(annual/12)} / month</div><div class="result-row"><span>Estimated annual take-home</span><strong>${money(annual)}</strong></div><div class="result-row"><span>Total deductions entered</span><strong>${money(pf+d)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Salary Calculator India: CTC to Monthly Salary | India Tools Hub</title>
+
+<meta name="description" content="Calculate estimated monthly and annual salary from CTC after employee PF and other deductions. Free Indian salary calculator with simple CTC to salary estimation.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/salary/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Salary Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/salary/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "Calculate estimated monthly and annual salary from annual CTC after employee PF and other entered deductions.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Salary / Salary Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Salary Calculator</h1>
+
+<p>
+Estimate your monthly and annual salary from your annual CTC after employee PF and other deductions.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="c">Annual CTC (₹)</label>
+<input
+id="c"
+type="number"
+min="0"
+step="1000"
+value="1200000"
+placeholder="Example: 1200000"
+>
+</div>
+
+<div class="field">
+<label for="pf">Employee PF per year (₹)</label>
+<input
+id="pf"
+type="number"
+min="0"
+step="100"
+value="21600"
+placeholder="Example: 21600"
+>
+</div>
+
+<div class="field">
+<label for="d">Other annual deductions (₹)</label>
+<input
+id="d"
+type="number"
+min="0"
+step="100"
+value="0"
+placeholder="Example: 12000"
+>
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate Salary
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple CTC to salary estimate
+</h3>
+
+<p>
+Enter your annual CTC, employee PF and other annual deductions to estimate your monthly salary.
+</p>
+
+<p class="note">
+This calculator runs in your browser. Your entered values are used only for the calculation.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>Salary Calculator: How It Works</h2>
+
+<p>
+A salary calculator helps estimate the amount you may receive after selected employee deductions from your annual CTC. The calculation is useful for comparing job offers and understanding the approximate monthly salary from a given CTC.
+</p>
+
+<h3>Salary calculation formula</h3>
+
+<p>
+For this calculator, the estimated annual salary is calculated as:
+</p>
+
+<p>
+<strong>Estimated Annual Salary = Annual CTC − Employee PF − Other Annual Deductions</strong>
+</p>
+
+<p>
+The estimated monthly salary is then:
+</p>
+
+<p>
+<strong>Estimated Monthly Salary = Estimated Annual Salary ÷ 12</strong>
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose your annual CTC is ₹12,00,000 and your employee PF contribution is ₹21,600 per year, with no other deductions entered.
+</p>
+
+<p>
+The estimated annual salary would be:
+</p>
+
+<p>
+<strong>₹12,00,000 − ₹21,600 = ₹11,78,400</strong>
+</p>
+
+<p>
+The estimated monthly salary would therefore be approximately:
+</p>
+
+<p>
+<strong>₹98,200 per month</strong>
+</p>
+
+<h3>CTC vs take-home salary</h3>
+
+<p>
+CTC, or Cost to Company, is not necessarily the same as the amount credited to your bank account every month. CTC can include components such as employer PF contributions, gratuity, bonuses, insurance and other benefits.
+</p>
+
+<p>
+Your actual monthly credit can also depend on income tax or TDS, professional tax, employee PF, insurance, salary structure and other payroll deductions.
+</p>
+
+<p>
+Therefore, this calculator provides an estimate based only on the deductions you enter. For an income tax estimate, use the <a href="../income-tax/">Income Tax Calculator</a>.
+</p>
+
+<h3>What can affect your actual salary?</h3>
+
+<p>
+The actual salary credited to your bank account may differ from this estimate because of several factors, including:
+</p>
+
+<p>
+Employee PF, professional tax, income tax or TDS, insurance deductions, bonuses, variable pay, gratuity, employer contributions and the structure of your compensation package.
+</p>
+
+<h3>Why use a Salary Calculator?</h3>
+
+<p>
+A salary calculator can help you quickly compare different CTC offers, estimate your monthly income and understand the effect of employee deductions on your expected salary.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>Is CTC the same as take-home salary?</summary>
+<p>
+No. CTC represents the overall cost to the company and may include employer contributions, benefits, bonuses and other components. Take-home salary is the amount credited after applicable employee deductions.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Does this calculator include income tax?</summary>
+<p>
+No. Income tax or TDS is not automatically calculated by this tool. If you want to include tax as a deduction, you can enter it under Other annual deductions. For a dedicated tax calculation, use the Income Tax Calculator.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Does this calculator include employer PF?</summary>
+<p>
+No. Employer PF is generally a component of CTC rather than an employee deduction from the salary credited to your bank account. The calculator only subtracts the Employee PF amount entered by you.
+</p>
+</details>
+
+<div class="faq">
+
+<details>
+<summary>Can I use this calculator to compare job offers?</summary>
+<p>
+Yes. You can enter the CTC and applicable deductions for different offers to get a quick estimate of the annual and monthly salary after the deductions entered.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Are my salary inputs stored?</summary>
+<p>
+The calculation runs in your browser. This static website does not require your salary inputs to calculate the result.
+</p>
+</details>
+
+</div>
+
+<h3>Related Calculators</h3>
+
+<p>
+<a href="../income-tax/">Income Tax Calculator</a> |
+<a href="../emi/">EMI Calculator</a> |
+<a href="../sip/">SIP Calculator</a> |
+<a href="../fd/">FD Calculator</a> |
+<a href="../ppf/">PPF Calculator</a>
+</p>
+
+<p class="note">
+Disclaimer: This calculator provides an estimate for informational purposes only. Actual salary and tax deductions depend on your employer's payroll structure, applicable rules and individual circumstances.
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc() {
+
+  let c = num('c');
+  let pf = num('pf');
+  let d = num('d');
+
+  if (!Number.isFinite(c) || c < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid annual CTC.</p>';
+    return;
+  }
+
+  if (!Number.isFinite(pf) || pf < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid employee PF amount.</p>';
+    return;
+  }
+
+  if (!Number.isFinite(d) || d < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter valid other annual deductions.</p>';
+    return;
+  }
+
+  let totalDeductions = pf + d;
+
+  if (totalDeductions > c) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Total deductions cannot be greater than the annual CTC.</p>';
+    return;
+  }
+
+  let annualSalary = c - totalDeductions;
+  let monthlySalary = annualSalary / 12;
+
+  document.getElementById('out').innerHTML = `
+
+    <div class="main-result">
+      ${money(monthlySalary)} / month
+    </div>
+
+    <div class="result-row">
+      <span>Estimated annual salary</span>
+      <strong>${money(annualSalary)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Annual CTC</span>
+      <strong>${money(c)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Employee PF per year</span>
+      <strong>${money(pf)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Other annual deductions</span>
+      <strong>${money(d)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Total deductions entered</span>
+      <strong>${money(totalDeductions)}</strong>
+    </div>
+
+  `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

@@ -1,1 +1,379 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Loan Interest Calculator | India Tools Hub</title><meta name="description" content="Calculate simple interest and total repayment for a loan."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/loan-interest/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Finance / Loan Interest Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Loan Interest Calculator</h1><p>Calculate simple interest and total repayment for a loan.</p><div class="form-grid"><div class="field"><label>Principal (₹)</label><input id="p" type="number" value="500000"></div><div class="field"><label>Annual interest rate (%)</label><input id="r" type="number" value="9"></div><div class="field"><label>Tenure (years)</label><input id="y" type="number" value="5"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Loan Interest Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let p=num('p'),r=num('r')/100,y=num('y'),i=p*r*y;document.getElementById('out').innerHTML=`<div class="main-result">${money(p+i)}</div><div class="result-row"><span>Simple interest</span><strong>${money(i)}</strong></div><div class="result-row"><span>Principal</span><strong>${money(p)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Loan Interest Calculator: Simple Interest & Total Repayment | India Tools Hub</title>
+
+<meta name="description" content="Calculate simple loan interest, total repayment and principal amount using our free Loan Interest Calculator. Enter loan amount, interest rate and tenure.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/loan-interest/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Loan Interest Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/loan-interest/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "Calculate simple loan interest and total repayment based on principal, annual interest rate and loan tenure.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Finance / Loan Interest Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Loan Interest Calculator</h1>
+
+<p>
+Calculate simple interest and estimated total repayment based on your loan amount, annual interest rate and tenure.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="p">Loan Amount / Principal (₹)</label>
+<input
+id="p"
+type="number"
+min="0"
+step="1000"
+value="500000"
+placeholder="Example: 500000"
+>
+</div>
+
+<div class="field">
+<label for="r">Annual Interest Rate (%)</label>
+<input
+id="r"
+type="number"
+min="0"
+step="0.01"
+value="9"
+placeholder="Example: 9"
+>
+</div>
+
+<div class="field">
+<label for="y">Tenure (Years)</label>
+<input
+id="y"
+type="number"
+min="0"
+step="0.1"
+value="5"
+placeholder="Example: 5"
+>
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple and fast
+</h3>
+
+<p>
+Enter your loan amount, interest rate and tenure to estimate simple interest and total repayment.
+</p>
+
+<p class="note">
+This calculator runs in your browser. Your inputs are used only for the calculation.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to Use the Loan Interest Calculator</h2>
+
+<p>
+Enter the loan principal, annual interest rate and loan tenure above. Select <strong>Calculate</strong> to instantly estimate the interest payable and total repayment amount.
+</p>
+
+<h3>Simple loan interest formula</h3>
+
+<p>
+This calculator uses the simple interest formula:
+</p>
+
+<p>
+<strong>Simple Interest = Principal × Rate × Time</strong>
+</p>
+
+<p>
+Where the interest rate is expressed as a decimal and the time is measured in years.
+</p>
+
+<p>
+The total repayment is calculated as:
+</p>
+
+<p>
+<strong>Total Repayment = Principal + Simple Interest</strong>
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose you borrow ₹5,00,000 at an annual interest rate of 9% for 5 years.
+</p>
+
+<p>
+The estimated simple interest is:
+</p>
+
+<p>
+<strong>₹5,00,000 × 9% × 5 = ₹2,25,000</strong>
+</p>
+
+<p>
+Therefore, the estimated total repayment would be:
+</p>
+
+<p>
+<strong>₹5,00,000 + ₹2,25,000 = ₹7,25,000</strong>
+</p>
+
+<h3>Simple interest vs EMI loan calculation</h3>
+
+<p>
+This calculator uses simple interest and is useful for a quick interest estimate. Many bank and financial institution loans, such as home loans, personal loans and car loans, are normally repaid through EMIs using an amortization schedule.
+</p>
+
+<p>
+If you want to calculate your monthly EMI, total interest and total amount payable for an EMI based loan, use our <a href="../emi/">EMI Calculator</a>.
+</p>
+
+<h3>Factors that affect loan interest</h3>
+
+<p>
+The total interest on a loan depends on the principal amount, interest rate and loan tenure. A higher loan amount or interest rate generally increases the interest payable. A longer tenure can also increase the total interest cost.
+</p>
+
+<h3>Why use a Loan Interest Calculator?</h3>
+
+<p>
+A loan interest calculator can help you quickly estimate borrowing costs and compare different loan amounts, interest rates and tenures before making a financial decision.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>Is this a simple interest calculator?</summary>
+<p>
+Yes. This calculator uses the simple interest formula based on the principal amount, annual interest rate and tenure in years.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Does this calculator calculate EMI?</summary>
+<p>
+No. This tool calculates simple interest and total repayment. For monthly EMI calculations, use the <a href="../emi/">EMI Calculator</a>.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Does actual bank loan interest work exactly like this?</summary>
+<p>
+Not necessarily. Actual loan interest can depend on the lender's calculation method, repayment schedule, compounding or amortization method, fees and other loan terms. Use your lender's repayment schedule for the exact amount.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Can I use this calculator for personal loans?</summary>
+<p>
+You can use it for a quick simple interest estimate. However, if your personal loan is repaid through monthly EMIs, the EMI Calculator will provide a more appropriate estimate.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Is this calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Are my loan details stored?</summary>
+<p>
+The calculation runs in your browser. This static website does not require your loan inputs to calculate the result.
+</p>
+</details>
+
+</div>
+
+<h3>Related Calculators</h3>
+
+<p>
+<a href="../emi/">EMI Calculator</a> |
+<a href="../compound-interest/">Compound Interest Calculator</a> |
+<a href="../percentage/">Percentage Calculator</a> |
+<a href="../inflation/">Inflation Calculator</a> |
+<a href="../sip/">SIP Calculator</a>
+</p>
+
+<p class="note">
+Disclaimer: This calculator provides an estimate for informational purposes only. Actual loan interest, repayment amounts, fees and charges depend on the lender and the specific terms of your loan.
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc() {
+
+  let p = num('p');
+  let r = num('r');
+  let y = num('y');
+
+  if (!Number.isFinite(p) || p < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid loan amount.</p>';
+    return;
+  }
+
+  if (!Number.isFinite(r) || r < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid annual interest rate.</p>';
+    return;
+  }
+
+  if (!Number.isFinite(y) || y < 0) {
+    document.getElementById('out').innerHTML =
+      '<p class="note">Please enter a valid loan tenure.</p>';
+    return;
+  }
+
+  let interest = p * (r / 100) * y;
+  let total = p + interest;
+
+  document.getElementById('out').innerHTML = `
+
+    <div class="main-result">
+      ${money(total)}
+    </div>
+
+    <div class="result-row">
+      <span>Simple interest</span>
+      <strong>${money(interest)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Principal</span>
+      <strong>${money(p)}</strong>
+    </div>
+
+    <div class="result-row">
+      <span>Total repayment</span>
+      <strong>${money(total)}</strong>
+    </div>
+
+  `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

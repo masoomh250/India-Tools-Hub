@@ -1,1 +1,480 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inflation Calculator | India Tools Hub</title><meta name="description" content="Estimate what an amount may cost in the future after annual inflation."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/inflation/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Finance / Inflation Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Inflation Calculator</h1><p>Estimate what an amount may cost in the future after annual inflation.</p><div class="form-grid"><div class="field"><label>Current cost (₹)</label><input id="p" type="number" value="100000"></div><div class="field"><label>Annual inflation (%)</label><input id="r" type="number" value="6"></div><div class="field"><label>Years</label><input id="y" type="number" value="10"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Inflation Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let p=num('p'),r=num('r')/100,y=num('y'),a=p*Math.pow(1+r,y);document.getElementById('out').innerHTML=`<div class="main-result">${money(a)}</div><div class="result-row"><span>Additional cost due to inflation</span><strong>${money(a-p)}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Inflation Calculator: Future Cost & Purchasing Power | India Tools Hub</title>
+
+<meta name="description" content="Calculate the future cost of goods and services after inflation. Estimate future prices, additional inflation cost and purchasing power over time.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/inflation/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Inflation Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/inflation/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate the estimated future cost of an amount after applying annual inflation.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Finance / Inflation Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Inflation Calculator</h1>
+
+<p>
+Estimate how much today's cost could increase in the future because
+of annual inflation.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="p">Current cost (₹)</label>
+
+<input
+id="p"
+type="number"
+value="100000"
+min="1"
+step="1000"
+>
+
+</div>
+
+<div class="field">
+
+<label for="r">Annual inflation rate (%)</label>
+
+<input
+id="r"
+type="number"
+value="6"
+min="0"
+step="0.1"
+>
+
+</div>
+
+<div class="field">
+
+<label for="y">Number of years</label>
+
+<input
+id="y"
+type="number"
+value="10"
+min="0"
+step="0.1"
+>
+
+</div>
+
+</div>
+
+<button
+class="btn"
+style="margin-top:20px"
+onclick="calc()"
+>
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Understand future costs</h3>
+
+<p>
+See how inflation can affect the future price of today's expenses,
+savings goals and purchases.
+</p>
+
+<p class="note">
+This calculator uses a constant annual inflation assumption. Actual
+inflation can change from year to year.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>What is Inflation?</h2>
+
+<p>
+Inflation is the general increase in prices of goods and services over
+time. As prices rise, the purchasing power of the same amount of money
+generally decreases.
+</p>
+
+<p>
+For example, if an item costs ₹1,00,000 today and prices increase by
+6% every year, the same item could cost significantly more after
+several years.
+</p>
+
+
+<h2>Inflation Calculator Formula</h2>
+
+<p>
+The estimated future cost is calculated using compound inflation:
+</p>
+
+<p>
+<strong>
+Future Cost = Current Cost × (1 + Inflation Rate)<sup>Years</sup>
+</strong>
+</p>
+
+<p>
+The annual inflation rate should be entered as a percentage. The
+calculator converts it into a decimal before performing the calculation.
+</p>
+
+
+<h2>Example</h2>
+
+<p>
+Suppose something costs ₹1,00,000 today and inflation averages 6% per
+year for 10 years.
+</p>
+
+<p>
+The estimated future cost would be approximately:
+</p>
+
+<p>
+<strong>
+₹1,00,000 × (1.06)<sup>10</sup>
+= ₹1,79,085.85
+</strong>
+</p>
+
+<p>
+This means the estimated additional cost caused by inflation would be
+approximately ₹79,085.85.
+</p>
+
+
+<h2>How Inflation Affects Purchasing Power</h2>
+
+<p>
+Inflation does not only increase future prices. It also reduces the
+amount of goods and services that a fixed amount of money can purchase
+over time.
+</p>
+
+<p>
+For example, if inflation averages 6% annually, ₹1,00,000 today would
+have approximately the purchasing power of ₹55,839 after 10 years,
+assuming the same constant inflation rate.
+</p>
+
+<p>
+The purchasing power calculation used by this calculator is:
+</p>
+
+<p>
+<strong>
+Future Purchasing Power = Current Amount ÷ (1 + Inflation Rate)<sup>Years</sup>
+</strong>
+</p>
+
+
+<h2>Why Inflation Matters for Financial Planning</h2>
+
+<p>
+Inflation can have a significant impact on long term financial goals.
+A retirement corpus, education fund, house purchase or other future
+expense may require a larger amount than today's cost suggests.
+</p>
+
+<p>
+Using an inflation assumption can help estimate how much a future
+expense might cost and how much money may be required to meet that goal.
+</p>
+
+
+<h2>Important Limitations</h2>
+
+<p>
+This calculator assumes the same inflation rate for every year.
+Real inflation does not necessarily remain constant.
+</p>
+
+<p>
+Different goods and services can also experience different rates of
+price increase. Therefore, the result should be treated as an estimate
+rather than a prediction of an actual future price.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>What does an inflation calculator show?</summary>
+
+<p>
+It estimates what a current amount could cost in the future if prices
+increase at a specified annual inflation rate.
+</p>
+
+</details>
+
+
+<details>
+<summary>How does inflation reduce purchasing power?</summary>
+
+<p>
+When prices increase, the same amount of money can generally purchase
+fewer goods and services. The effect becomes more significant over
+longer periods.
+</p>
+
+</details>
+
+
+<details>
+<summary>Does this calculator predict actual inflation?</summary>
+
+<p>
+No. It applies the annual inflation rate you enter as a constant
+assumption. Actual inflation can vary from year to year.
+</p>
+
+</details>
+
+
+<details>
+<summary>What happens if inflation is 0%?</summary>
+
+<p>
+If inflation is 0%, the estimated future cost remains equal to the
+current cost.
+</p>
+
+</details>
+
+
+<details>
+<summary>Can I use this calculator for retirement planning?</summary>
+
+<p>
+Yes. It can help estimate how today's expenses might change in the
+future under a chosen inflation assumption. Retirement planning also
+requires considering investment returns, taxes, expenses and other
+financial factors.
+</p>
+
+</details>
+
+
+<details>
+<summary>Is this Inflation Calculator free?</summary>
+
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+
+</details>
+
+
+<details>
+<summary>Are my inputs stored?</summary>
+
+<p>
+The calculation runs in your browser. The static calculator does not
+need to store your entered values to perform the calculation.
+</p>
+
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+You may also find these calculators useful:
+</p>
+
+<p>
+<a href="../compound-interest/">Compound Interest Calculator</a> |
+<a href="../sip/">SIP Calculator</a> |
+<a href="../ppf/">PPF Calculator</a> |
+<a href="../nps/">NPS Calculator</a> |
+<a href="../fd/">FD Calculator</a>
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    let p = num('p');
+    let r = num('r');
+    let y = num('y');
+
+    let out = document.getElementById('out');
+
+    if(!p || p <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid current cost greater than 0.</div>';
+
+        return;
+    }
+
+    if(r < 0){
+
+        out.innerHTML =
+            '<div class="note">Inflation rate cannot be negative.</div>';
+
+        return;
+    }
+
+    if(y < 0){
+
+        out.innerHTML =
+            '<div class="note">Number of years cannot be negative.</div>';
+
+        return;
+    }
+
+    let rate = r / 100;
+
+    let futureCost =
+        p * Math.pow(1 + rate, y);
+
+    let additionalCost =
+        futureCost - p;
+
+    let purchasingPower =
+        p / Math.pow(1 + rate, y);
+
+    let priceIncreasePercent =
+        ((futureCost / p) - 1) * 100;
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${money(futureCost)}
+        </div>
+
+        <div class="result-row">
+            <span>Current cost</span>
+            <strong>${money(p)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Additional cost due to inflation</span>
+            <strong>${money(additionalCost)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total estimated price increase</span>
+            <strong>${priceIncreasePercent.toFixed(2)}%</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Purchasing power of ₹${money(p)} after ${y} year${y == 1 ? '' : 's'}</span>
+            <strong>${money(purchasingPower)}</strong>
+        </div>
+
+        <div class="note">
+            Estimated using a constant annual inflation rate of
+            ${r.toFixed(2)}% for ${y} year${y == 1 ? '' : 's'}.
+            Actual inflation may vary over time.
+        </div>
+
+    `;
+}
+
+calc();
+
+</script>
+
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

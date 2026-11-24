@@ -1,1 +1,474 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BMI Calculator | India Tools Hub</title><meta name="description" content="Calculate body mass index from height and weight."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/bmi/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Health / BMI Calculator</div><div class="tool-layout"><div class="calc-card"><h1>BMI Calculator</h1><p>Calculate body mass index from height and weight.</p><div class="form-grid"><div class="field"><label>Weight (kg)</label><input id="w" type="number" value="70"></div><div class="field"><label>Height (cm)</label><input id="h" type="number" value="170"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate BMI</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the BMI Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let w=num('w'),h=num('h')/100,b=w/(h*h);let cat=b<18.5?'Underweight':b<25?'Normal range':b<30?'Overweight':'Obesity';document.getElementById('out').innerHTML=`<div class="main-result">${b.toFixed(1)}</div><div class="result-row"><span>Category</span><strong>${cat}</strong></div><div class="note">BMI is a screening measure, not a diagnosis.</div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>BMI Calculator: Calculate Body Mass Index | India Tools Hub</title>
+
+<meta name="description" content="Calculate BMI from height and weight instantly. Get your BMI category, healthy BMI range and estimated healthy weight range for adults.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/bmi/">
+
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BMI Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/bmi/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "description": "Calculate body mass index from height and weight and understand the standard adult BMI categories.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Health / BMI Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>BMI Calculator</h1>
+
+<p>
+Calculate your Body Mass Index (BMI) using your height and weight.
+Get your BMI value, weight category and estimated healthy weight range.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="w">Weight (kg)</label>
+<input id="w" type="number" value="70" min="1" max="500" step="0.1">
+</div>
+
+<div class="field">
+<label for="h">Height (cm)</label>
+<input id="h" type="number" value="170" min="50" max="300" step="0.1">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate BMI
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Simple and fast</h3>
+
+<p>
+Enter your height and weight to calculate BMI instantly.
+Your calculation is performed in your browser.
+</p>
+
+<p class="note">
+BMI is a screening measure and should not be treated as a medical diagnosis.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>What is BMI?</h2>
+
+<p>
+Body Mass Index (BMI) is a numerical measure calculated from a person's
+weight and height. It is commonly used as a screening measure to help
+classify weight status in adults.
+</p>
+
+<p>
+The BMI formula is:
+</p>
+
+<p>
+<strong>BMI = Weight (kg) ÷ Height (m)²</strong>
+</p>
+
+<h2>Adult BMI Categories</h2>
+
+<p>
+For adults aged 20 years and older, the standard BMI categories are:
+</p>
+
+<div class="faq">
+
+<details open>
+<summary>Underweight: BMI below 18.5</summary>
+<p>
+A BMI below 18.5 falls in the underweight category.
+</p>
+</details>
+
+<details>
+<summary>Healthy weight: BMI 18.5 to 24.9</summary>
+<p>
+A BMI from 18.5 to less than 25 falls in the healthy weight category.
+</p>
+</details>
+
+<details>
+<summary>Overweight: BMI 25.0 to 29.9</summary>
+<p>
+A BMI from 25 to less than 30 falls in the overweight category.
+</p>
+</details>
+
+<details>
+<summary>Obesity: BMI 30 or higher</summary>
+<p>
+A BMI of 30 or higher falls in the obesity category. Obesity can be
+further classified into Class 1, Class 2 and Class 3.
+</p>
+</details>
+
+</div>
+
+
+<h2>How to use the BMI Calculator</h2>
+
+<p>
+Enter your current weight in kilograms and height in centimetres.
+Then select <strong>Calculate BMI</strong>.
+</p>
+
+<p>
+The calculator displays your BMI, weight category, healthy BMI range
+and an estimated healthy weight range for your height.
+</p>
+
+
+<h2>How BMI is calculated</h2>
+
+<p>
+First convert height from centimetres to metres. Then divide your
+weight in kilograms by the square of your height in metres.
+</p>
+
+<p>
+For example, if a person weighs 70 kg and is 170 cm tall:
+</p>
+
+<p>
+<strong>
+BMI = 70 ÷ (1.70 × 1.70) = 24.2
+</strong>
+</p>
+
+<p>
+This falls within the standard healthy weight BMI range for adults.
+</p>
+
+
+<h2>Estimated Healthy Weight Range</h2>
+
+<p>
+For adults, the standard healthy BMI range is 18.5 to less than 25.
+This calculator uses that range to estimate the corresponding weight
+range for your entered height.
+</p>
+
+<p>
+The estimated range is calculated from:
+</p>
+
+<p>
+<strong>
+Minimum healthy weight = 18.5 × height²
+</strong>
+</p>
+
+<p>
+<strong>
+Maximum healthy weight = 24.9 × height²
+</strong>
+</p>
+
+
+<h2>Important information about BMI</h2>
+
+<p>
+BMI is useful as a screening measure, but it does not directly measure
+body fat or distinguish between muscle mass and fat mass. People with
+different body compositions can have the same BMI.
+</p>
+
+<p>
+BMI should therefore be considered along with other factors such as
+overall health, physical activity, medical history and other health
+measurements.
+</p>
+
+<p class="note">
+This calculator is intended for informational purposes only and is not
+a substitute for professional medical advice.
+</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>What is a healthy BMI for adults?</summary>
+<p>
+For adults aged 20 years and older, a BMI from 18.5 to less than 25 is
+classified as the healthy weight range under the standard adult BMI
+categories.
+</p>
+</details>
+
+<details>
+<summary>What BMI is considered overweight?</summary>
+<p>
+For adults, a BMI from 25 to less than 30 is classified as overweight.
+</p>
+</details>
+
+<details>
+<summary>What BMI is considered obesity?</summary>
+<p>
+For adults, a BMI of 30 or higher is classified as obesity. It can be
+further divided into Class 1, Class 2 and Class 3 obesity.
+</p>
+</details>
+
+<details>
+<summary>Does BMI apply to children?</summary>
+<p>
+BMI is interpreted differently for children and teenagers because their
+BMI is assessed using age and sex specific growth references. This
+calculator is designed for standard adult BMI calculations.
+</p>
+</details>
+
+<details>
+<summary>Can BMI determine how much body fat I have?</summary>
+<p>
+No. BMI does not directly measure body fat. It is a screening measure
+that should be considered alongside other health information.
+</p>
+</details>
+
+<details>
+<summary>Is this BMI Calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+<details>
+<summary>Are my height and weight stored?</summary>
+<p>
+The calculation runs in your browser. The static calculator does not
+need to store your height or weight to perform the calculation.
+</p>
+</details>
+
+</div>
+
+
+<h2>Related Calculators</h2>
+
+<p>
+You may also find these India Tools Hub calculators useful:
+</p>
+
+<p>
+<a href="../age/">Age Calculator</a> |
+<a href="../percentage/">Percentage Calculator</a> |
+<a href="../date-difference/">Date Difference Calculator</a>
+</p>
+
+</div>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    let w = num('w');
+    let hCm = num('h');
+
+    let out = document.getElementById('out');
+
+    if(!w || !hCm || w <= 0 || hCm <= 0){
+
+        out.innerHTML =
+            '<div class="note">Please enter a valid weight and height.</div>';
+
+        return;
+    }
+
+    if(w > 500){
+
+        out.innerHTML =
+            '<div class="note">Please enter a weight of 500 kg or less.</div>';
+
+        return;
+    }
+
+    if(hCm < 50 || hCm > 300){
+
+        out.innerHTML =
+            '<div class="note">Please enter a height between 50 cm and 300 cm.</div>';
+
+        return;
+    }
+
+    let h = hCm / 100;
+
+    let bmi = w / (h * h);
+
+    let category = '';
+
+    let detail = '';
+
+    if(bmi < 18.5){
+
+        category = 'Underweight';
+        detail = 'Your BMI is below the standard healthy weight range for adults.';
+
+    } else if(bmi < 25){
+
+        category = 'Healthy weight';
+        detail = 'Your BMI is within the standard healthy weight range for adults.';
+
+    } else if(bmi < 30){
+
+        category = 'Overweight';
+        detail = 'Your BMI is above the standard healthy weight range for adults.';
+
+    } else {
+
+        if(bmi < 35){
+
+            category = 'Obesity: Class 1';
+
+        } else if(bmi < 40){
+
+            category = 'Obesity: Class 2';
+
+        } else {
+
+            category = 'Obesity: Class 3';
+
+        }
+
+        detail = 'Your BMI is in the obesity range under standard adult BMI categories.';
+    }
+
+    let healthyMin = 18.5 * h * h;
+    let healthyMax = 24.9 * h * h;
+
+    let bmiHealthyMin = 18.5;
+    let bmiHealthyMax = 24.9;
+
+    let displayMax = healthyMax;
+
+    out.innerHTML = `
+
+        <div class="main-result">
+            ${bmi.toFixed(1)}
+        </div>
+
+        <div class="result-row">
+            <span>Category</span>
+            <strong>${category}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Healthy BMI range</span>
+            <strong>${bmiHealthyMin.toFixed(1)} to ${bmiHealthyMax.toFixed(1)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Estimated healthy weight</span>
+            <strong>${money(healthyMin)} to ${money(displayMax)}</strong>
+        </div>
+
+        <div class="note">
+            ${detail}
+        </div>
+
+        <div class="note">
+            BMI is a screening measure, not a diagnosis. Individual health
+            assessment may require other factors and measurements.
+        </div>
+
+    `;
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

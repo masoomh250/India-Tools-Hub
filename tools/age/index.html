@@ -1,1 +1,590 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Age Calculator | India Tools Hub</title><meta name="description" content="Calculate age from date of birth."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/age/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Utility / Age Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Age Calculator</h1><p>Calculate age from date of birth.</p><div class="form-grid"><div class="field"><label>Date of birth</label><input id="dob" type="date"></div><div class="field"><label>As of date</label><input id="asof" type="date"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate age</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Age Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>const today=new Date();document.getElementById('asof').value=today.toISOString().slice(0,10);document.getElementById('dob').value=new Date(today.getFullYear()-30,today.getMonth(),today.getDate()).toISOString().slice(0,10);function calc(){let d=new Date(document.getElementById('dob').value),a=new Date(document.getElementById('asof').value);if(d>a){document.getElementById('out').innerHTML='Please choose a valid date of birth.';return}let y=a.getFullYear()-d.getFullYear(),m=a.getMonth()-d.getMonth(),day=a.getDate()-d.getDate();if(day<0){m--;day+=new Date(a.getFullYear(),a.getMonth(),0).getDate()}if(m<0){y--;m+=12}document.getElementById('out').innerHTML=`<div class="main-result">${y} years</div><div class="result-row"><span>Additional months</span><strong>${m}</strong></div><div class="result-row"><span>Additional days</span><strong>${day}</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Age Calculator | Calculate Exact Age in Years, Months & Days</title>
+
+<meta name="description" content="Use the free Age Calculator to calculate your exact age in years, months and days. Find total days, weeks, months, next birthday, day of birth and zodiac sign.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/age/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Age Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/age/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "description": "Free age calculator to calculate exact age in years, months and days, total days, weeks, months, next birthday and day of birth.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Utility / Age Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Age Calculator</h1>
+
+<p>
+Calculate your exact age in years, months and days from your date of birth.
+You can also find your total days, weeks, months and next birthday.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="dob">Date of birth</label>
+<input id="dob" type="date">
+</div>
+
+<div class="field">
+<label for="asof">Calculate age as of</label>
+<input id="asof" type="date">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate Age
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">Advertisement space</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Fast and accurate age calculation</h3>
+
+<p>
+Enter your date of birth and the date on which you want to calculate your age.
+The calculator works directly in your browser.
+</p>
+
+<p>
+It calculates your completed years, months and days while also providing useful
+birthday and date information.
+</p>
+
+<p class="note">
+This calculator is intended for general informational purposes.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the Age Calculator</h2>
+
+<p>
+Enter your date of birth and select the date on which you want to calculate your age.
+By default, the calculator uses today's date. Click <strong>Calculate Age</strong>
+to see your exact age.
+</p>
+
+<h3>What does the Age Calculator show?</h3>
+
+<p>
+The calculator provides your exact completed age in years, months and days.
+It also calculates the approximate total number of days, weeks and months since your
+date of birth.
+</p>
+
+<h3>How age is calculated</h3>
+
+<p>
+Age is calculated by comparing the date of birth with the selected calculation date.
+The calculator first determines the completed years, then the remaining months and
+days after those completed years.
+</p>
+
+<p>
+For example, if a person was born on 15 January 1995 and the calculation date is
+20 November 2026, the result is <strong>31 years, 10 months and 5 days</strong>.
+</p>
+
+<h3>Why use an Age Calculator?</h3>
+
+<p>
+An age calculator can be useful when you need to determine your exact age for
+applications, forms, eligibility checks, financial planning, school or college
+requirements, insurance documentation, retirement planning and other situations
+where your date of birth is required.
+</p>
+
+<h3>Next birthday</h3>
+
+<p>
+The calculator also shows your next birthday and the number of days remaining until
+it. If your birthday falls on the current date, it will show that today is your
+birthday.
+</p>
+
+<h3>Day of birth</h3>
+
+<p>
+The calculator identifies the day of the week on which you were born, such as
+Monday, Tuesday or Sunday.
+</p>
+
+<h3>Zodiac sign</h3>
+
+<p>
+Your zodiac sign is shown based on your birth date using the commonly used Western
+zodiac date ranges. Zodiac information is provided for general interest and does not
+represent a scientific assessment.
+</p>
+
+
+<div class="faq">
+
+<details>
+<summary>How accurate is the Age Calculator?</summary>
+<p>
+The calculator uses calendar dates to determine your completed years, months and
+days. It also accounts for different month lengths and leap years.
+</p>
+</details>
+
+<details>
+<summary>Can I calculate my age on a past date?</summary>
+<p>
+Yes. Enter the past date in the "Calculate age as of" field to determine how old
+you were on that date.
+</p>
+</details>
+
+<details>
+<summary>Can I calculate my age on a future date?</summary>
+<p>
+Yes. You can enter a future date to calculate the age you will have reached on that
+date.
+</p>
+</details>
+
+<details>
+<summary>Does the calculator account for leap years?</summary>
+<p>
+Yes. The calculation uses calendar dates and accounts for leap years when calculating
+the difference between dates.
+</p>
+</details>
+
+<details>
+<summary>What is my age in total days?</summary>
+<p>
+The calculator estimates the total elapsed number of days between your date of birth
+and the selected calculation date.
+</p>
+</details>
+
+<details>
+<summary>Can I calculate my next birthday?</summary>
+<p>
+Yes. The result shows your next birthday and the number of days remaining until it.
+</p>
+</details>
+
+<details>
+<summary>Is this Age Calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+<details>
+<summary>Are my date of birth details stored?</summary>
+<p>
+The calculation runs in your browser. The static calculator does not require your
+date of birth to be sent to a server for the calculation.
+</p>
+</details>
+
+</div>
+
+
+<h3>Related calculators</h3>
+
+<p>
+<a href="../date-difference/index.html">Date Difference Calculator</a> |
+<a href="../percentage/index.html">Percentage Calculator</a> |
+<a href="../bmi/index.html">BMI Calculator</a> |
+<a href="../unit-converter/index.html">Unit Converter</a>
+</p>
+
+<p class="note">
+Results are provided for informational purposes. Always verify age or date related
+information against official documents when it is required for legal, financial,
+educational or government purposes.
+</p>
+
+</div>
+
+<div class="adbox">Advertisement space</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function pad(n){
+    return String(n).padStart(2, '0');
+}
+
+
+function formatDate(date){
+
+    return date.getFullYear() + '-' +
+           pad(date.getMonth() + 1) + '-' +
+           pad(date.getDate());
+
+}
+
+
+function parseDate(value){
+
+    if(!value) return null;
+
+    let parts = value.split('-');
+
+    if(parts.length !== 3) return null;
+
+    let year = Number(parts[0]);
+    let month = Number(parts[1]);
+    let day = Number(parts[2]);
+
+    let date = new Date(year, month - 1, day);
+
+    if(
+        date.getFullYear() !== year ||
+        date.getMonth() !== month - 1 ||
+        date.getDate() !== day
+    ){
+        return null;
+    }
+
+    return date;
+}
+
+
+function daysBetween(start, end){
+
+    let startUTC = Date.UTC(
+        start.getFullYear(),
+        start.getMonth(),
+        start.getDate()
+    );
+
+    let endUTC = Date.UTC(
+        end.getFullYear(),
+        end.getMonth(),
+        end.getDate()
+    );
+
+    return Math.round((endUTC - startUTC) / 86400000);
+
+}
+
+
+function getZodiac(month, day){
+
+    if((month === 3 && day >= 21) || (month === 4 && day <= 19)){
+        return 'Aries';
+    }
+
+    if((month === 4 && day >= 20) || (month === 5 && day <= 20)){
+        return 'Taurus';
+    }
+
+    if((month === 5 && day >= 21) || (month === 6 && day <= 20)){
+        return 'Gemini';
+    }
+
+    if((month === 6 && day >= 21) || (month === 7 && day <= 22)){
+        return 'Cancer';
+    }
+
+    if((month === 7 && day >= 23) || (month === 8 && day <= 22)){
+        return 'Leo';
+    }
+
+    if((month === 8 && day >= 23) || (month === 9 && day <= 22)){
+        return 'Virgo';
+    }
+
+    if((month === 9 && day >= 23) || (month === 10 && day <= 22)){
+        return 'Libra';
+    }
+
+    if((month === 10 && day >= 23) || (month === 11 && day <= 21)){
+        return 'Scorpio';
+    }
+
+    if((month === 11 && day >= 22) || (month === 12 && day <= 21)){
+        return 'Sagittarius';
+    }
+
+    if((month === 12 && day >= 22) || (month === 1 && day <= 19)){
+        return 'Capricorn';
+    }
+
+    if((month === 1 && day >= 20) || (month === 2 && day <= 18)){
+        return 'Aquarius';
+    }
+
+    return 'Pisces';
+
+}
+
+
+function calc(){
+
+    let dob = parseDate(document.getElementById('dob').value);
+    let asof = parseDate(document.getElementById('asof').value);
+
+    if(!dob || !asof){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter both dates.</div>';
+
+        return;
+
+    }
+
+    if(dob > asof){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">Date of birth cannot be later than the calculation date.</div>';
+
+        return;
+
+    }
+
+
+    let years = asof.getFullYear() - dob.getFullYear();
+    let months = asof.getMonth() - dob.getMonth();
+    let days = asof.getDate() - dob.getDate();
+
+
+    if(days < 0){
+
+        months--;
+
+        let previousMonthDays = new Date(
+            asof.getFullYear(),
+            asof.getMonth(),
+            0
+        ).getDate();
+
+        days += previousMonthDays;
+
+    }
+
+
+    if(months < 0){
+
+        years--;
+        months += 12;
+
+    }
+
+
+    let totalDays = daysBetween(dob, asof);
+    let totalWeeks = Math.floor(totalDays / 7);
+    let totalMonths = years * 12 + months;
+
+
+    let nextBirthday = new Date(
+        asof.getFullYear(),
+        dob.getMonth(),
+        dob.getDate()
+    );
+
+
+    if(nextBirthday < asof){
+
+        nextBirthday = new Date(
+            asof.getFullYear() + 1,
+            dob.getMonth(),
+            dob.getDate()
+        );
+
+    }
+
+
+    let daysUntilBirthday = daysBetween(asof, nextBirthday);
+
+    let birthdayMessage;
+
+    if(daysUntilBirthday === 0){
+
+        birthdayMessage = 'Today is your birthday! 🎉';
+
+    } else {
+
+        birthdayMessage =
+            daysUntilBirthday + ' day' +
+            (daysUntilBirthday === 1 ? '' : 's') +
+            ' until your next birthday';
+
+    }
+
+
+    let weekday = dob.toLocaleDateString(
+        'en-IN',
+        { weekday: 'long' }
+    );
+
+
+    let zodiac = getZodiac(
+        dob.getMonth() + 1,
+        dob.getDate()
+    );
+
+
+    let nextBirthdayText = nextBirthday.toLocaleDateString(
+        'en-IN',
+        {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        }
+    );
+
+
+    document.getElementById('out').innerHTML = `
+
+        <div class="main-result">
+            ${years} years ${months} months ${days} days
+        </div>
+
+        <div class="result-row">
+            <span>Completed years</span>
+            <strong>${years}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Additional months</span>
+            <strong>${months}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Additional days</span>
+            <strong>${days}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total months</span>
+            <strong>${totalMonths}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total weeks</span>
+            <strong>${totalWeeks.toLocaleString('en-IN')}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Total days</span>
+            <strong>${totalDays.toLocaleString('en-IN')}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Next birthday</span>
+            <strong>${nextBirthdayText}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Birthday countdown</span>
+            <strong>${birthdayMessage}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Day of birth</span>
+            <strong>${weekday}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Zodiac sign</span>
+            <strong>${zodiac}</strong>
+        </div>
+
+    `;
+}
+
+
+const today = new Date();
+
+document.getElementById('asof').value = formatDate(today);
+
+const defaultDOB = new Date(
+    today.getFullYear() - 30,
+    today.getMonth(),
+    today.getDate()
+);
+
+document.getElementById('dob').value = formatDate(defaultDOB);
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

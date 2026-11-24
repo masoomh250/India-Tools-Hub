@@ -1,28 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/about.html</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/contact.html</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/privacy.html</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/terms.html</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/disclaimer.html</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/age/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/bmi/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/compound-interest/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/date-difference/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/discount/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/emi/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/fd/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/fuel-cost/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/gst/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/income-tax/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/inflation/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/loan-interest/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/nps/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/percentage/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/ppf/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/salary/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/sip/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/trip-cost/</loc></url>
-  <url><loc>https://masoomh250.github.io/India-Tools-Hub/tools/unit-converter/</loc></url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/terms.html</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/disclaimer.html</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/age/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/bmi/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/compound-interest/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/date-difference/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/discount/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/emi/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/fd/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/fuel-cost/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/gst/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/income-tax/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/inflation/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/loan-interest/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/nps/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/percentage/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/ppf/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/salary/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/sip/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/trip-cost/</loc>
+  </url>
+
+  <url>
+    <loc>https://masoomh250.github.io/India-Tools-Hub/tools/unit-converter/</loc>
+  </url>
+
 </urlset>

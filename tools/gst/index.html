@@ -1,1 +1,409 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GST Calculator | India Tools Hub</title><meta name="description" content="Add GST to a base price or remove GST from an inclusive price."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/gst/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Tax / GST Calculator</div><div class="tool-layout"><div class="calc-card"><h1>GST Calculator</h1><p>Add GST to a base price or remove GST from an inclusive price.</p><div class="form-grid"><div class="field"><label>Amount (₹)</label><input id="a" type="number" value="10000"></div><div class="field"><label>GST rate (%)</label><select id="r"><option>5</option><option selected>12</option><option>18</option><option>28</option></select></div><div class="field"><label>Mode</label><select id="mode"><option value="add">Add GST</option><option value="remove">Remove GST</option></select></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate GST</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the GST Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let a=num('a'),r=num('r')/100,mode=document.getElementById('mode').value;if(mode==='add'){let g=a*r;document.getElementById('out').innerHTML=`<div class="main-result">${money(a+g)}</div><div class="result-row"><span>GST amount</span><strong>${money(g)}</strong></div><div class="result-row"><span>Base amount</span><strong>${money(a)}</strong></div>`}else{let base=a/(1+r);document.getElementById('out').innerHTML=`<div class="main-result">${money(base)}</div><div class="result-row"><span>GST included</span><strong>${money(a-base)}</strong></div><div class="result-row"><span>Inclusive amount</span><strong>${money(a)}</strong></div>`}}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>GST Calculator | India Tools Hub</title>
+
+<meta name="description" content="Calculate GST in India instantly. Add GST to a base price or remove GST from an inclusive price using 5%, 12%, 18% or 28% GST rates.">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/gst/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Tax / GST Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>GST Calculator</h1>
+
+<p>
+Calculate GST quickly by adding GST to a base price or removing GST from a
+GST-inclusive price.
+</p>
+
+<div class="form-grid">
+
+<div class="field">
+<label>Amount (₹)</label>
+<input id="a" type="number" value="10000" min="0" step="0.01">
+</div>
+
+<div class="field">
+<label>GST rate (%)</label>
+<select id="r">
+<option value="5">5%</option>
+<option value="12" selected>12%</option>
+<option value="18">18%</option>
+<option value="28">28%</option>
+</select>
+</div>
+
+<div class="field">
+<label>Mode</label>
+<select id="mode">
+<option value="add">Add GST</option>
+<option value="remove">Remove GST</option>
+</select>
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate GST
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+<aside>
+
+<div class="adbox">
+Advertisement space
+</div>
+
+<div class="info-card">
+
+<div class="tag">
+About this tool
+</div>
+
+<h3>
+Simple and fast
+</h3>
+
+<p>
+Enter an amount, choose the GST rate and select whether you want to add or
+remove GST.
+</p>
+
+<p class="note">
+The calculation runs directly in your browser. Your entered amount is not
+required to be sent to a server.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the GST Calculator</h2>
+
+<p>
+Enter the amount, select the applicable GST rate and choose whether you want
+to add GST to the amount or remove GST from an inclusive amount.
+</p>
+
+
+<h2>How to calculate GST?</h2>
+
+<p>
+When adding GST to a base amount, the GST amount is calculated as:
+</p>
+
+<p>
+<strong>GST = Base Amount × GST Rate ÷ 100</strong>
+</p>
+
+<p>
+The final amount is:
+</p>
+
+<p>
+<strong>Total Amount = Base Amount + GST</strong>
+</p>
+
+
+<h2>How to remove GST from an inclusive amount?</h2>
+
+<p>
+When an amount already includes GST, the original base amount can be calculated
+using:
+</p>
+
+<p>
+<strong>Base Amount = Inclusive Amount ÷ (1 + GST Rate ÷ 100)</strong>
+</p>
+
+<p>
+The GST included in the amount is then:
+</p>
+
+<p>
+<strong>GST = Inclusive Amount − Base Amount</strong>
+</p>
+
+
+<h2>GST calculation example</h2>
+
+<p>
+Suppose the base price of a product is <strong>₹1,00,000</strong> and the GST
+rate is <strong>12%</strong>.
+</p>
+
+<p>
+GST = ₹1,00,000 × 12% = <strong>₹12,000</strong>
+</p>
+
+<p>
+Total price including GST = <strong>₹1,12,000</strong>
+</p>
+
+
+<h2>Example of removing GST</h2>
+
+<p>
+Suppose the final price including 12% GST is <strong>₹80,000</strong>.
+</p>
+
+<p>
+The original price before GST is approximately <strong>₹71,428.57</strong>.
+</p>
+
+<p>
+GST included in the price is approximately <strong>₹8,571.43</strong>.
+</p>
+
+
+<h2>Common GST rates</h2>
+
+<p>
+This calculator currently provides commonly used GST rate options of
+<strong>5%, 12%, 18% and 28%</strong>.
+</p>
+
+<p>
+The applicable GST rate depends on the goods or services being supplied.
+Always verify the applicable rate for your specific product or service.
+</p>
+
+
+<h2>Frequently asked questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>Is the GST calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Can I calculate GST inclusive prices?</summary>
+<p>
+Yes. Select "Remove GST" to calculate the base amount and GST component from
+a GST-inclusive price.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Can I add GST to a base price?</summary>
+<p>
+Yes. Select "Add GST" to calculate the GST amount and final price.
+</p>
+</details>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>Are my inputs stored?</summary>
+<p>
+The calculation runs in your browser. This static website does not need your
+calculator inputs to calculate the result.
+</p>
+</details>
+
+</div>
+
+
+<h2>Related calculators</h2>
+
+<p>
+You can also use these India Tools Hub calculators:
+</p>
+
+<p>
+Income Tax Calculator<br>
+Salary Calculator<br>
+EMI Calculator<br>
+SIP Calculator<br>
+FD Calculator
+</p>
+
+
+<h2>Important note</h2>
+
+<p>
+This calculator is provided for general informational purposes. GST rates can
+vary depending on the goods or services, applicable rules and tax treatment.
+Verify the applicable GST rate before making business, billing or tax decisions.
+</p>
+
+</div>
+
+
+<div class="adbox">
+Advertisement space
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function calc(){
+
+    const amount = num('a');
+    const rate = num('r');
+    const mode = document.getElementById('mode').value;
+    const out = document.getElementById('out');
+
+    if (!Number.isFinite(amount) || amount < 0) {
+
+        out.innerHTML = `
+            <div class="result-row">
+                <strong>Please enter a valid amount.</strong>
+            </div>
+        `;
+
+        return;
+    }
+
+    if (!Number.isFinite(rate) || rate < 0) {
+
+        out.innerHTML = `
+            <div class="result-row">
+                <strong>Please select a valid GST rate.</strong>
+            </div>
+        `;
+
+        return;
+    }
+
+    const gstRate = rate / 100;
+
+    if (mode === 'add') {
+
+        const gst = amount * gstRate;
+        const total = amount + gst;
+
+        out.innerHTML = `
+            <div class="main-result">
+                ${money(total)}
+            </div>
+
+            <div class="result-row">
+                <span>GST amount</span>
+                <strong>${money(gst)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Base amount</span>
+                <strong>${money(amount)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Total including GST</span>
+                <strong>${money(total)}</strong>
+            </div>
+        `;
+
+    } else {
+
+        if (gstRate < 0) {
+
+            out.innerHTML = `
+                <div class="result-row">
+                    <strong>Please select a valid GST rate.</strong>
+                </div>
+            `;
+
+            return;
+        }
+
+        const base = amount / (1 + gstRate);
+        const gst = amount - base;
+
+        out.innerHTML = `
+            <div class="main-result">
+                ${money(base)}
+            </div>
+
+            <div class="result-row">
+                <span>GST included</span>
+                <strong>${money(gst)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Inclusive amount</span>
+                <strong>${money(amount)}</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Base amount before GST</span>
+                <strong>${money(base)}</strong>
+            </div>
+        `;
+    }
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

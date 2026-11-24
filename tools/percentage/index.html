@@ -1,1 +1,501 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Percentage Calculator | India Tools Hub</title><meta name="description" content="Calculate percentage of a number, percentage change and what percentage one number is of another."><link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/percentage/"><link rel="icon" href="../../favicon.svg"><link rel="stylesheet" href="../../assets/style.css"></head><body><div id="site-header"></div><main><section class="tool-hero"><div class="container"><div class="breadcrumbs"><a href="../../index.html">Home</a> / Utility / Percentage Calculator</div><div class="tool-layout"><div class="calc-card"><h1>Percentage Calculator</h1><p>Calculate percentage of a number, percentage change and what percentage one number is of another.</p><div class="form-grid"><div class="field"><label>Value A</label><input id="a" type="number" value="25"></div><div class="field"><label>Value B</label><input id="b" type="number" value="200"></div></div><button class="btn" style="margin-top:20px" onclick="calc()">Calculate</button><div class="result" id="out"></div></div><aside><div class="adbox">Advertisement space</div><div class="info-card"><div class="tag">About this tool</div><h3>Simple and fast</h3><p>Enter your values and calculate instantly. Your inputs are processed in your browser.</p><p class="note">Results are estimates and should be independently verified where financial, tax or health decisions are involved.</p></div></aside></div></div></section><section class="section"><div class="container"><div class="article"><h2>How to use the Percentage Calculator</h2><p>Enter the required values above and select <strong>Calculate</strong>. The result updates instantly without requiring an account.</p><h3>Important note</h3><p>This calculator is provided for general informational purposes. Real-world results may differ because of lender rules, investment assumptions, tax rules, rounding, fees, timing and other conditions.</p><div class="faq"><details><summary>Is this calculator free?</summary><p>Yes. India Tools Hub tools are designed to be free to use without registration.</p></details></div><div class="faq"><details><summary>Are my inputs stored?</summary><p>The calculations run in your browser. This static site does not need your calculator inputs to calculate the result.</p></details></div></div><div class="adbox">Advertisement space</div></div></section></main><div id="site-footer"></div><script src="../../js/main.js"></script><script>function calc(){let a=num('a'),b=num('b'),p=b? a/b*100:0,part=b*p/100,change=a? (b-a)/a*100:0;document.getElementById('out').innerHTML=`<div class="main-result">${p.toFixed(2)}%</div><div class="result-row"><span>A is what % of B</span><strong>${p.toFixed(2)}%</strong></div><div class="result-row"><span>${p.toFixed(2)}% of B</span><strong>${money(part)}</strong></div><div class="result-row"><span>Change from A to B</span><strong>${change.toFixed(2)}%</strong></div>`}calc();</script><script>loadChrome();</script></body></html>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Percentage Calculator | Percentage Increase, Decrease & More</title>
+
+<meta name="description" content="Free Percentage Calculator to calculate percentages, percentage increase or decrease, what percentage one number is of another, and percentage additions or reductions.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/tools/percentage/">
+<link rel="icon" href="../../favicon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Percentage Calculator",
+  "url": "https://masoomh250.github.io/India-Tools-Hub/tools/percentage/",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "description": "Free percentage calculator for calculating percentages, percentage change, percentage increase, percentage decrease and percentage additions or reductions.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<section class="tool-hero">
+
+<div class="container">
+
+<div class="breadcrumbs">
+<a href="../../index.html">Home</a> / Utility / Percentage Calculator
+</div>
+
+<div class="tool-layout">
+
+<div class="calc-card">
+
+<h1>Percentage Calculator</h1>
+
+<p>
+Calculate percentages, percentage increase or decrease, and find what percentage
+one number is of another.
+</p>
+
+<h3>1. What is X% of Y?</h3>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="percent1">Percentage (%)</label>
+<input id="percent1" type="number" value="20" step="0.01" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="value1">Value</label>
+<input id="value1" type="number" value="500" step="0.01" inputmode="decimal">
+</div>
+
+</div>
+
+<h3 style="margin-top:24px">2. X is what percentage of Y?</h3>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="value2">X</label>
+<input id="value2" type="number" value="25" step="0.01" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="value3">Y</label>
+<input id="value3" type="number" value="200" step="0.01" inputmode="decimal">
+</div>
+
+</div>
+
+<h3 style="margin-top:24px">3. Percentage increase or decrease</h3>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="oldValue">Original value</label>
+<input id="oldValue" type="number" value="100" step="0.01" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="newValue">New value</label>
+<input id="newValue" type="number" value="125" step="0.01" inputmode="decimal">
+</div>
+
+</div>
+
+<h3 style="margin-top:24px">4. Add or subtract a percentage</h3>
+
+<div class="form-grid">
+
+<div class="field">
+<label for="baseValue">Base value</label>
+<input id="baseValue" type="number" value="1000" step="0.01" inputmode="decimal">
+</div>
+
+<div class="field">
+<label for="changePercent">Percentage (%)</label>
+<input id="changePercent" type="number" value="10" step="0.01" inputmode="decimal">
+</div>
+
+</div>
+
+<button class="btn" style="margin-top:20px" onclick="calc()">
+Calculate
+</button>
+
+<div class="result" id="out"></div>
+
+</div>
+
+
+<aside>
+
+<div class="adbox">Advertisement space</div>
+
+<div class="info-card">
+
+<div class="tag">About this tool</div>
+
+<h3>Quick percentage calculations</h3>
+
+<p>
+Use this calculator for discounts, price changes, salary increases, marks,
+business calculations and everyday percentage problems.
+</p>
+
+<p>
+All calculations are performed instantly in your browser.
+</p>
+
+<p class="note">
+Results are mathematical calculations and should be checked independently when
+used for financial, tax or business decisions.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="article">
+
+<h2>How to use the Percentage Calculator</h2>
+
+<p>
+Enter the values required for the calculation and click <strong>Calculate</strong>.
+The calculator provides several common percentage calculations on the same page.
+</p>
+
+
+<h3>What is X% of Y?</h3>
+
+<p>
+This calculation finds a percentage of a number.
+</p>
+
+<p>
+<strong>Percentage value = (Percentage ÷ 100) × Number</strong>
+</p>
+
+<p>
+For example, 20% of ₹500 is ₹100.
+</p>
+
+
+<h3>X is what percentage of Y?</h3>
+
+<p>
+This calculation tells you what percentage one number represents of another number.
+</p>
+
+<p>
+<strong>Percentage = (X ÷ Y) × 100</strong>
+</p>
+
+<p>
+For example, 25 is 12.5% of 200.
+</p>
+
+
+<h3>Percentage increase or decrease</h3>
+
+<p>
+Use the original value and new value to calculate how much the value has increased
+or decreased in percentage terms.
+</p>
+
+<p>
+<strong>Percentage change = ((New Value − Original Value) ÷ Original Value) × 100</strong>
+</p>
+
+<p>
+A positive result indicates an increase, while a negative result indicates a decrease.
+</p>
+
+
+<h3>Adding or subtracting a percentage</h3>
+
+<p>
+You can also calculate the result after increasing or decreasing a value by a
+specific percentage.
+</p>
+
+<p>
+<strong>Increased value = Base Value × (1 + Percentage ÷ 100)</strong>
+</p>
+
+<p>
+<strong>Reduced value = Base Value × (1 − Percentage ÷ 100)</strong>
+</p>
+
+
+<h3>Common uses of percentage calculations</h3>
+
+<p>
+Percentage calculations are commonly used for discounts, GST calculations,
+salary increments, exam marks, profit and loss, price changes, business reports,
+investment returns and comparing values.
+</p>
+
+
+<div class="faq">
+
+<details>
+<summary>What is 20% of 500?</summary>
+<p>
+20% of 500 is 100.
+</p>
+</details>
+
+<details>
+<summary>How do I calculate percentage increase?</summary>
+<p>
+Subtract the original value from the new value, divide the result by the original
+value and multiply by 100.
+</p>
+</details>
+
+<details>
+<summary>How do I calculate percentage decrease?</summary>
+<p>
+Subtract the new value from the original value, divide the result by the original
+value and multiply by 100. The result represents the percentage decrease.
+</p>
+</details>
+
+<details>
+<summary>How do I find what percentage one number is of another?</summary>
+<p>
+Divide the first number by the second number and multiply the result by 100.
+</p>
+</details>
+
+<details>
+<summary>How do I calculate a discount percentage?</summary>
+<p>
+Divide the discount amount by the original price and multiply by 100.
+</p>
+</details>
+
+<details>
+<summary>How do I calculate a salary percentage increase?</summary>
+<p>
+Subtract the old salary from the new salary, divide the difference by the old salary
+and multiply by 100.
+</p>
+</details>
+
+<details>
+<summary>Can percentage calculations have decimal values?</summary>
+<p>
+Yes. You can use decimal numbers for both values and percentages.
+</p>
+</details>
+
+<details>
+<summary>Is this Percentage Calculator free?</summary>
+<p>
+Yes. India Tools Hub calculators are free to use without registration.
+</p>
+</details>
+
+<details>
+<summary>Are my inputs stored?</summary>
+<p>
+The calculations run directly in your browser. The static calculator does not need
+your inputs to be sent to a server.
+</p>
+</details>
+
+</div>
+
+
+<h3>Related calculators</h3>
+
+<p>
+<a href="../gst/index.html">GST Calculator</a> |
+<a href="../discount/index.html">Discount Calculator</a> |
+<a href="../compound-interest/index.html">Compound Interest Calculator</a> |
+<a href="../income-tax/index.html">Income Tax Calculator</a> |
+<a href="../salary/index.html">Salary Calculator</a>
+</p>
+
+<p class="note">
+Results are provided for informational purposes. Verify important financial,
+tax or business calculations before relying on them.
+</p>
+
+</div>
+
+<div class="adbox">Advertisement space</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+
+<script src="../../js/main.js"></script>
+
+<script>
+
+function formatNumber(value){
+
+    return Number(value).toLocaleString('en-IN', {
+        maximumFractionDigits: 2
+    });
+
+}
+
+
+function calc(){
+
+    let percent1 = num('percent1');
+    let value1 = num('value1');
+
+    let value2 = num('value2');
+    let value3 = num('value3');
+
+    let oldValue = num('oldValue');
+    let newValue = num('newValue');
+
+    let baseValue = num('baseValue');
+    let changePercent = num('changePercent');
+
+
+    if(
+        !Number.isFinite(percent1) ||
+        !Number.isFinite(value1) ||
+        !Number.isFinite(value2) ||
+        !Number.isFinite(value3) ||
+        !Number.isFinite(oldValue) ||
+        !Number.isFinite(newValue) ||
+        !Number.isFinite(baseValue) ||
+        !Number.isFinite(changePercent)
+    ){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">Please enter valid numbers in all fields.</div>';
+
+        return;
+
+    }
+
+
+    if(value3 === 0){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">Y cannot be zero when calculating what percentage X is of Y.</div>';
+
+        return;
+
+    }
+
+
+    if(oldValue === 0){
+
+        document.getElementById('out').innerHTML =
+            '<div class="note">The original value cannot be zero when calculating percentage change.</div>';
+
+        return;
+
+    }
+
+
+    let percentageOfValue =
+        (percent1 / 100) * value1;
+
+
+    let percentageOfAnother =
+        (value2 / value3) * 100;
+
+
+    let percentageChange =
+        ((newValue - oldValue) / Math.abs(oldValue)) * 100;
+
+
+    let increasedValue =
+        baseValue * (1 + changePercent / 100);
+
+
+    let decreasedValue =
+        baseValue * (1 - changePercent / 100);
+
+
+    let changeLabel;
+
+    if(percentageChange > 0){
+
+        changeLabel = 'Increase';
+
+    }else if(percentageChange < 0){
+
+        changeLabel = 'Decrease';
+
+    }else{
+
+        changeLabel = 'No change';
+
+    }
+
+
+    document.getElementById('out').innerHTML = `
+
+        <div class="main-result">
+            ${formatNumber(percentageOfValue)}
+        </div>
+
+        <div class="result-row">
+            <span>${formatNumber(percent1)}% of ${formatNumber(value1)}</span>
+            <strong>${formatNumber(percentageOfValue)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>${formatNumber(value2)} is what % of ${formatNumber(value3)}</span>
+            <strong>${formatNumber(percentageOfAnother)}%</strong>
+        </div>
+
+        <div class="result-row">
+            <span>${changeLabel} from ${formatNumber(oldValue)} to ${formatNumber(newValue)}</span>
+            <strong>${Math.abs(percentageChange).toFixed(2)}%</strong>
+        </div>
+
+        <div class="result-row">
+            <span>${formatNumber(baseValue)} increased by ${formatNumber(changePercent)}%</span>
+            <strong>${formatNumber(increasedValue)}</strong>
+        </div>
+
+        <div class="result-row">
+            <span>${formatNumber(baseValue)} decreased by ${formatNumber(changePercent)}%</span>
+            <strong>${formatNumber(decreasedValue)}</strong>
+        </div>
+
+    `;
+
+}
+
+calc();
+
+</script>
+
+<script>
+loadChrome();
+</script>
+
+</body>
+</html>

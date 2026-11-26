@@ -1,752 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Is EMI Calculated in India? | India Tools Hub</title>
+<meta name="description" content="Learn how home loan and personal loan EMI is calculated in India, including the EMI formula, monthly interest rate, tenure and practical examples.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Is EMI Calculated in India?">
+<meta property="og:description" content="Learn how home loan and personal loan EMI is calculated in India, including the EMI formula, monthly interest rate, tenure and practical examples.">
+<meta property="og:url" content="https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html">
+<meta property="og:site_name" content="India Tools Hub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How Is EMI Calculated in India?">
+<meta name="twitter:description" content="Learn how home loan and personal loan EMI is calculated in India, including the EMI formula, monthly interest rate, tenure and practical examples.">
+<link rel="stylesheet" href="../assets/style.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.guide-page{max-width:900px;margin:0 auto;padding:40px 20px 70px}
+.guide-hero{padding:35px 0 25px}
+.eyebrow{font-size:13px;font-weight:800;margin-bottom:12px;color:#2563eb}
+.guide-hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:0 0 18px}
+.guide-hero p,.guide-content{line-height:1.75}
+.guide-hero p{font-size:18px;color:#555}
+.guide-content{font-size:16px;color:#333}
+.guide-content h2{font-size:29px;line-height:1.25;margin-top:48px;margin-bottom:18px}
+.guide-content h3{font-size:21px;margin-top:30px;margin-bottom:10px}
+.guide-content p{margin:0 0 17px}
+.guide-content li{margin-bottom:9px}
+.formula-box,.cta-box,.example-card,.result-box{border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin:22px 0}
+.formula-box,.cta-box{background:#f5f7fb}
+.formula{text-align:center;font-size:19px;font-weight:700;margin:12px 0}
+.example-card{background:#fff}
+.result-box{background:#eef6ff}
+.table-wrap{overflow-x:auto;margin:24px 0}
+.guide-table{width:100%;border-collapse:collapse;min-width:560px}
+.guide-table th,.guide-table td{border:1px solid #e2e8f0;padding:12px;text-align:left}
+.guide-table th{background:#f5f7fb}
+.cta-button{display:inline-block;padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:700;background:#2563eb;color:#fff}
+.faq-item{border-bottom:1px solid #e2e8f0;padding:16px 0}
+.faq-item summary{cursor:pointer;font-weight:700}
+.related-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.related-links a{padding:13px;border:1px solid #e2e8f0;border-radius:9px;text-decoration:none;font-weight:600}
+.small-note{font-size:14px;color:#666}
+</style>
 
-  <title>EMI Calculator Guide: How EMI Is Calculated in India | India Tools Hub</title>
-
-  <meta name="description" content="Learn how EMI is calculated in India with the EMI formula, home loan EMI examples for ₹10 lakh, ₹20 lakh and ₹30 lakh, factors affecting EMI and total interest.">
-
-  <meta name="robots" content="index, follow, max-image-preview:large">
-
-  <link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html">
-
-  <meta name="theme-color" content="#2563eb">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="EMI Calculator Guide: How EMI Is Calculated in India">
-  <meta property="og:description" content="Understand EMI calculation, the EMI formula, home loan examples and total interest with this simple guide.">
-  <meta property="og:url" content="https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html">
-  <meta property="og:site_name" content="India Tools Hub">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="EMI Calculator Guide: How EMI Is Calculated in India">
-  <meta name="twitter:description" content="Learn how loan EMI is calculated with practical Indian home loan examples.">
-
-  <link rel="stylesheet" href="../assets/style.css">
-
-  <style>
-    .guide-page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 70px;
-    }
-
-    .guide-hero {
-      padding: 35px 0 25px;
-    }
-
-    .guide-hero .eyebrow {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #2563eb;
-    }
-
-    .guide-hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.1;
-      margin: 0 0 18px;
-    }
-
-    .guide-hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #555;
-      margin: 0;
-    }
-
-    .guide-content {
-      font-size: 17px;
-      line-height: 1.8;
-      color: #333;
-    }
-
-    .guide-content h2 {
-      font-size: 30px;
-      line-height: 1.25;
-      margin-top: 48px;
-      margin-bottom: 18px;
-    }
-
-    .guide-content h3 {
-      font-size: 22px;
-      margin-top: 30px;
-      margin-bottom: 12px;
-    }
-
-    .guide-content p {
-      margin: 0 0 18px;
-    }
-
-    .guide-content ul,
-    .guide-content ol {
-      padding-left: 24px;
-      margin-bottom: 24px;
-    }
-
-    .guide-content li {
-      margin-bottom: 10px;
-    }
-
-    .formula-box {
-      background: #f5f7fb;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 24px;
-      margin: 25px 0;
-      text-align: center;
-      overflow-x: auto;
-    }
-
-    .formula {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 10px 0;
-    }
-
-    .example-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 22px;
-      margin: 18px 0;
-      background: #fff;
-    }
-
-    .example-card h3 {
-      margin-top: 0;
-    }
-
-    .result-box {
-      background: #eef6ff;
-      border-radius: 12px;
-      padding: 18px;
-      margin-top: 15px;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin: 25px 0;
-    }
-
-    .guide-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-
-    .guide-table th,
-    .guide-table td {
-      border: 1px solid #e2e8f0;
-      padding: 13px;
-      text-align: left;
-    }
-
-    .guide-table th {
-      background: #f5f7fb;
-      font-weight: 700;
-    }
-
-    .cta-box {
-      margin: 40px 0;
-      padding: 28px;
-      border-radius: 16px;
-      background: #f5f7fb;
-      border: 1px solid #e2e8f0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      background: #2563eb;
-      color: #fff;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: 18px 0;
-    }
-
-    .faq-item summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .related-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .related-links a {
-      display: block;
-      padding: 15px;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .last-updated {
-      font-size: 14px;
-      color: #777;
-      margin-top: 15px;
-    }
-  </style>
-
-  <!-- WebPage structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "EMI Calculator Guide: How EMI Is Calculated in India",
-    "description": "A practical guide explaining EMI calculation, the EMI formula, home loan examples and total interest.",
-    "author": {
-      "@type": "Organization",
-      "name": "India Tools Hub"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Is EMI Calculated in India?",
+  "description": "Learn how home loan and personal loan EMI is calculated in India, including the EMI formula, monthly interest rate, tenure and practical examples.",
+  "author": {
+    "@type": "Organization",
+    "name": "India Tools Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "India Tools Hub"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "India Tools Hub",
+      "item": "https://masoomh250.github.io/India-Tools-Hub/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "India Tools Hub"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How Is EMI Calculated in India?",
+      "item": "https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html"
     }
-  }
-  </script>
-
-  <!-- Breadcrumb structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "India Tools Hub",
-        "item": "https://masoomh250.github.io/India-Tools-Hub/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "EMI Calculator Guide",
-        "item": "https://masoomh250.github.io/India-Tools-Hub/guides/emi-calculator-guide.html"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EMI is a scheduled periodic loan payment that generally includes principal and interest."
       }
-    ]
-  }
-  </script>
-
-  <!-- FAQ structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is EMI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "EMI stands for Equated Monthly Instalment. It is the fixed monthly payment made by a borrower toward a loan, covering both principal and interest."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is EMI calculated?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "EMI is calculated using the loan amount, monthly interest rate and total number of monthly instalments. The standard EMI formula is P × r × (1+r)^n / ((1+r)^n−1)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does a longer loan tenure reduce EMI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A longer loan tenure generally reduces the monthly EMI, but it usually increases the total interest paid over the life of the loan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I calculate home loan EMI online?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. An online EMI calculator can estimate the monthly payment, total interest and total repayment using the loan amount, interest rate and tenure."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "How is EMI calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard reducing-balance EMI calculation uses the loan principal, monthly interest rate and number of monthly instalments."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Does a longer tenure reduce EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually yes, but a longer tenure generally increases the total interest paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the EMI shown by a calculator guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Actual lender figures can differ because of fees, rounding, insurance, rate changes and lender-specific terms."
+      }
+    }
+  ]
+}
+</script>
 </head>
-
 <body>
-
-  <header style="border-bottom:1px solid #e5e7eb;">
-    <div style="max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
-      <a href="../" style="text-decoration:none;font-weight:800;font-size:20px;">
-        🇮🇳 India Tools Hub
-      </a>
-
-      <nav style="display:flex;gap:18px;flex-wrap:wrap;">
-        <a href="../" style="text-decoration:none;">Home</a>
-        <a href="../tools/emi/" style="text-decoration:none;font-weight:700;">EMI Calculator</a>
-        <a href="../about.html" style="text-decoration:none;">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="guide-page">
-
-    <section class="guide-hero">
-      <div class="eyebrow">EMI CALCULATOR GUIDE</div>
-
-      <h1>How Is EMI Calculated in India?</h1>
-
-      <p>
-        EMI, or Equated Monthly Instalment, is the amount you pay every month
-        toward a loan. This guide explains the EMI formula, how interest and
-        principal are calculated, and how much you may pay for different home
-        loan amounts.
-      </p>
-
-      <p class="last-updated">
-        India Tools Hub: Practical guide for understanding loan EMI calculations.
-      </p>
-    </section>
-
-    <article class="guide-content">
-
-      <div class="cta-box">
-        <strong>Want to calculate your EMI directly?</strong>
-        <p>
-          Enter your loan amount, interest rate and tenure in our free EMI
-          Calculator to estimate your monthly payment, total interest and total
-          repayment.
-        </p>
-
-        <a class="cta-button" href="../tools/emi/">
-          Open EMI Calculator
-        </a>
-      </div>
-
-      <h2>What Is EMI?</h2>
-
-      <p>
-        EMI stands for <strong>Equated Monthly Instalment</strong>. It is the
-        regular monthly payment made by a borrower to repay a loan over a
-        specified period.
-      </p>
-
-      <p>
-        An EMI generally contains two components: the <strong>principal</strong>
-        amount and the <strong>interest</strong> charged by the lender.
-        At the beginning of many reducing-balance loans, a larger portion of
-        the EMI goes toward interest. As the outstanding principal decreases,
-        the interest component generally reduces.
-      </p>
-
-      <h2>How Is EMI Calculated?</h2>
-
-      <p>
-        The standard reducing-balance EMI formula uses three important inputs:
-      </p>
-
-      <ol>
-        <li><strong>Principal:</strong> The amount borrowed.</li>
-        <li><strong>Interest rate:</strong> The annual rate charged on the loan.</li>
-        <li><strong>Tenure:</strong> The total loan period.</li>
-      </ol>
-
-      <div class="formula-box">
-        <div>Standard EMI Formula</div>
-
-        <div class="formula">
-          EMI = P × r × (1 + r)<sup>n</sup> ÷ [(1 + r)<sup>n</sup> − 1]
-        </div>
-
-        <p>
-          P = Principal loan amount<br>
-          r = Monthly interest rate<br>
-          n = Total number of monthly instalments
-        </p>
-      </div>
-
-      <h3>Converting the annual interest rate into a monthly rate</h3>
-
-      <p>
-        If the lender quotes an annual interest rate, the monthly rate used in
-        the formula is generally calculated by dividing the annual rate by 12.
-      </p>
-
-      <div class="formula-box">
-        <div class="formula">
-          Monthly Rate = Annual Interest Rate ÷ 12
-        </div>
-      </div>
-
-      <p>
-        For example, an annual interest rate of 8.5% becomes approximately
-        0.7083% per month, expressed as a decimal as approximately 0.007083.
-      </p>
-
-      <h2>Home Loan EMI Example: ₹10 Lakh</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Loan amount: <strong>₹10,00,000</strong><br>
-          Interest rate: <strong>8.5% per year</strong><br>
-          Loan tenure: <strong>20 years</strong>
-        </p>
-
-        <div class="result-box">
-          Estimated monthly EMI: <strong>approximately ₹8,678</strong>
-        </div>
-
-        <p>
-          Over 240 monthly instalments, the total repayment is approximately
-          ₹20.83 lakh, including approximately ₹10.83 lakh in interest.
-        </p>
-      </div>
-
-      <h2>Home Loan EMI Example: ₹20 Lakh</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Loan amount: <strong>₹20,00,000</strong><br>
-          Interest rate: <strong>8.5% per year</strong><br>
-          Loan tenure: <strong>20 years</strong>
-        </p>
-
-        <div class="result-box">
-          Estimated monthly EMI: <strong>approximately ₹17,356</strong>
-        </div>
-
-        <p>
-          Over 240 monthly instalments, the total repayment is approximately
-          ₹41.66 lakh, including approximately ₹21.66 lakh in interest.
-        </p>
-      </div>
-
-      <h2>Home Loan EMI Example: ₹30 Lakh</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Loan amount: <strong>₹30,00,000</strong><br>
-          Interest rate: <strong>8.5% per year</strong><br>
-          Loan tenure: <strong>20 years</strong>
-        </p>
-
-        <div class="result-box">
-          Estimated monthly EMI: <strong>approximately ₹26,035</strong>
-        </div>
-
-        <p>
-          Over 240 monthly instalments, the total repayment is approximately
-          ₹62.48 lakh, including approximately ₹32.48 lakh in interest.
-        </p>
-      </div>
-
-      <h2>EMI Examples at a Glance</h2>
-
-      <div class="table-wrap">
-        <table class="guide-table">
-          <thead>
-            <tr>
-              <th>Loan Amount</th>
-              <th>Interest Rate</th>
-              <th>Tenure</th>
-              <th>Approx. EMI</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>₹10 lakh</td>
-              <td>8.5%</td>
-              <td>20 years</td>
-              <td>₹8,678</td>
-            </tr>
-
-            <tr>
-              <td>₹20 lakh</td>
-              <td>8.5%</td>
-              <td>20 years</td>
-              <td>₹17,356</td>
-            </tr>
-
-            <tr>
-              <td>₹30 lakh</td>
-              <td>8.5%</td>
-              <td>20 years</td>
-              <td>₹26,035</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p>
-        These are illustrative calculations. Actual EMI can vary depending on
-        the lender's interest rate, loan structure, repayment schedule,
-        processing terms and other applicable conditions.
-      </p>
-
-      <h2>What Factors Affect Your EMI?</h2>
-
-      <h3>1. Loan Amount</h3>
-
-      <p>
-        A larger loan generally results in a higher EMI when the interest rate
-        and tenure remain unchanged.
-      </p>
-
-      <h3>2. Interest Rate</h3>
-
-      <p>
-        A higher interest rate generally increases the EMI and the total
-        interest paid over the loan tenure.
-      </p>
-
-      <h3>3. Loan Tenure</h3>
-
-      <p>
-        A longer tenure can reduce the monthly EMI, but you may pay more total
-        interest because the loan remains outstanding for a longer period.
-      </p>
-
-      <h3>4. Prepayments</h3>
-
-      <p>
-        Part-prepayments can reduce the outstanding principal. Depending on
-        the lender and loan terms, this may help reduce the overall interest
-        burden or shorten the repayment period.
-      </p>
-
-      <h2>Longer Tenure vs Shorter Tenure</h2>
-
-      <p>
-        Choosing a loan tenure involves a trade-off between monthly
-        affordability and total interest.
-      </p>
-
-      <div class="table-wrap">
-        <table class="guide-table">
-          <thead>
-            <tr>
-              <th>Tenure</th>
-              <th>Typical Effect on EMI</th>
-              <th>Typical Effect on Total Interest</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Shorter</td>
-              <td>Higher monthly EMI</td>
-              <td>Lower total interest</td>
-            </tr>
-
-            <tr>
-              <td>Longer</td>
-              <td>Lower monthly EMI</td>
-              <td>Higher total interest</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>How Much of Your EMI Goes Toward Interest?</h2>
-
-      <p>
-        For a reducing-balance loan, interest is calculated on the outstanding
-        principal. Because the outstanding principal usually decreases as you
-        repay the loan, the interest component generally decreases over time.
-      </p>
-
-      <p>
-        This means the composition of your EMI can change throughout the loan
-        tenure even when the scheduled EMI remains the same.
-      </p>
-
-      <h2>EMI vs Total Interest</h2>
-
-      <p>
-        Looking only at the monthly EMI can sometimes give an incomplete
-        picture of the cost of borrowing.
-      </p>
-
-      <p>
-        For example, a loan with a lower EMI may appear more affordable, but if
-        it has a much longer tenure, the total interest paid can be
-        substantially higher.
-      </p>
-
-      <p>
-        Before taking a loan, it is useful to compare:
-      </p>
-
-      <ol>
-        <li>Monthly EMI</li>
-        <li>Total interest payable</li>
-        <li>Total repayment amount</li>
-        <li>Loan tenure</li>
-        <li>Interest rate</li>
-      </ol>
-
-      <h2>How to Use an EMI Calculator</h2>
-
-      <p>
-        You can use an online EMI calculator to quickly compare different loan
-        scenarios.
-      </p>
-
-      <ol>
-        <li>Enter the loan amount.</li>
-        <li>Enter the annual interest rate.</li>
-        <li>Enter the loan tenure.</li>
-        <li>Calculate the estimated EMI.</li>
-        <li>Compare the total interest and total repayment.</li>
-      </ol>
-
-      <div class="cta-box">
-        <strong>Calculate your loan EMI</strong>
-
-        <p>
-          Try different loan amounts, interest rates and tenures using our
-          free India-focused EMI Calculator.
-        </p>
-
-        <a class="cta-button" href="../tools/emi/">
-          Calculate EMI Now
-        </a>
-      </div>
-
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <details>
-          <summary>What is EMI?</summary>
-
-          <p>
-            EMI stands for Equated Monthly Instalment. It is the regular
-            monthly payment made toward a loan and generally includes both
-            principal and interest.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>How is EMI calculated?</summary>
-
-          <p>
-            EMI is calculated using the principal amount, monthly interest
-            rate and total number of monthly instalments. The standard formula
-            is P × r × (1+r)<sup>n</sup> ÷ [(1+r)<sup>n</sup>−1].
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Does a longer loan tenure reduce EMI?</summary>
-
-          <p>
-            Generally, yes. A longer tenure can reduce the monthly EMI, but it
-            usually increases the total interest paid over the life of the
-            loan.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Can I calculate home loan EMI online?</summary>
-
-          <p>
-            Yes. An online EMI calculator can estimate your monthly EMI, total
-            interest and total repayment based on the loan amount, interest
-            rate and tenure.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Is the EMI shown by a calculator the exact amount charged by a bank?</summary>
-
-          <p>
-            An EMI calculator provides an estimate based on the values entered.
-            The actual repayment schedule can differ depending on the lender's
-            terms, interest calculation method, fees and other conditions.
-          </p>
-        </details>
-      </div>
-
-      <h2>Related Calculators</h2>
-
-      <div class="related-links">
-        <a href="../tools/emi/">EMI Calculator</a>
-        <a href="../tools/loan-interest/">Loan Interest Calculator</a>
-        <a href="../tools/sip/">SIP Calculator</a>
-        <a href="../tools/fd/">FD Calculator</a>
-        <a href="../tools/percentage/">Percentage Calculator</a>
-        <a href="../">All India Tools</a>
-      </div>
-
-      <h2>Final Takeaway</h2>
-
-      <p>
-        EMI depends mainly on the loan amount, interest rate and repayment
-        tenure. While increasing the tenure can make the monthly payment more
-        manageable, it can also increase the total interest paid.
-      </p>
-
-      <p>
-        Therefore, when comparing loans, don't look only at the EMI. Consider
-        the interest rate, total interest, total repayment and loan tenure
-        together.
-      </p>
-
-      <p>
-        For a quick estimate, use the
-        <a href="../tools/emi/"><strong>India Tools Hub EMI Calculator</strong></a>
-        and compare different loan scenarios before making a decision.
-      </p>
-
-    </article>
-
-  </main>
-
-  <footer style="border-top:1px solid #e5e7eb;padding:30px 20px;">
-    <div style="max-width:1100px;margin:0 auto;text-align:center;">
-      <p>
-        © India Tools Hub. Free online calculators and practical guides for India.
-      </p>
-
-      <p>
-        <a href="../privacy.html">Privacy</a> |
-        <a href="../terms.html">Terms</a> |
-        <a href="../disclaimer.html">Disclaimer</a> |
-        <a href="../contact.html">Contact</a>
-      </p>
-    </div>
-  </footer>
-
+<header style="border-bottom:1px solid #e5e7eb;">
+<div style="max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
+<a href="../" style="text-decoration:none;font-weight:800;font-size:20px;">🇮🇳 India Tools Hub</a>
+<nav style="display:flex;gap:18px;flex-wrap:wrap;">
+<a href="../" style="text-decoration:none;">Home</a>
+<a href="../tools/emi-calculator-guide/" style="text-decoration:none;font-weight:700;">Emi Calculator Guide</a>
+<a href="../about.html" style="text-decoration:none;">About</a>
+<a href="../contact.html" style="text-decoration:none;">Contact</a>
+</nav>
+</div>
+</header>
+<main class="guide-page">
+<section class="guide-hero">
+<div class="eyebrow">EMI CALCULATOR GUIDE</div>
+<h1>How Is EMI Calculated in India?</h1>
+<p>EMI stands for Equated Monthly Instalment. This guide explains the standard reducing-balance EMI formula, how annual interest is converted to a monthly rate, and how loan amount, interest rate and tenure affect your repayment.</p>
+</section>
+<div class="cta-box">
+<strong>Want to calculate it directly?</strong>
+<p>Use the free Emi Calculator Guide on India Tools Hub and compare different scenarios using your own inputs.</p>
+<a class="cta-button" href="../tools/emi-calculator-guide/">Open Emi Calculator Guide</a>
+</div>
+<article class="guide-content">
+<h2>What is EMI?</h2><p>EMI is the fixed scheduled payment a borrower generally makes to a lender each month toward a loan. An EMI normally contains both principal and interest.</p><p>During the early stages of many amortising loans, a larger share of the EMI may go toward interest. As the outstanding principal falls, the interest component generally decreases.</p><h2>How Is EMI Calculated?</h2><p>The standard reducing-balance EMI formula uses the principal, monthly interest rate and total number of monthly payments.</p><div class="formula-box"><div class="formula">EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)</div><p>P = principal loan amount<br>r = monthly interest rate in decimal form<br>n = total number of monthly instalments</p></div><h2>Converting the annual interest rate into a monthly rate</h2><p>For a monthly EMI calculation, the annual interest rate is commonly divided by 12 and converted from a percentage into a decimal.</p><p>For example, 8.5% per year becomes approximately 0.7083% per month, expressed as a decimal approximately 0.007083.</p><h2>Home Loan EMI Example: ₹10 Lakh</h2><p>Loan amount: ₹10,00,000</p><p>Annual interest rate: 8.5%</p><p>Loan tenure: 20 years</p><div class="formula-box"><div class="formula">₹8,678.23 per month</div><p>Estimated total payment: approximately ₹20.83 lakh<br>Estimated interest: approximately ₹10.83 lakh</p></div><h2>What Factors Affect Your EMI?</h2><p>Loan amount: A larger principal generally increases the EMI when other inputs remain unchanged.</p><p>Interest rate: A higher rate generally increases both the EMI and total interest.</p><p>Loan tenure: A longer tenure can reduce the monthly EMI but usually increases total interest paid.</p><p>Prepayments: Eligible prepayments can reduce outstanding principal and may reduce future interest.</p>
+<h2>How to Use the Emi Calculator Guide</h2>
+<ol>
+<li>Open the calculator using the button above.</li>
+<li>Enter the required values carefully.</li>
+<li>Review the calculated result and supporting figures.</li>
+<li>Change the inputs to compare different scenarios.</li>
+<li>Use the result as an estimate and verify important real-world decisions against applicable rules or provider terms.</li>
+</ol>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><details><summary>What is EMI?</summary><p>EMI is a scheduled periodic loan payment that generally includes principal and interest.</p></details></div>
+<div class="faq-item"><details><summary>How is EMI calculated?</summary><p>A standard reducing-balance EMI calculation uses the loan principal, monthly interest rate and number of monthly instalments.</p></details></div>
+<div class="faq-item"><details><summary>Does a longer tenure reduce EMI?</summary><p>Usually yes, but a longer tenure generally increases the total interest paid.</p></details></div>
+<div class="faq-item"><details><summary>Is the EMI shown by a calculator guaranteed?</summary><p>No. Actual lender figures can differ because of fees, rounding, insurance, rate changes and lender-specific terms.</p></details></div>
+
+<h2>Related Calculators</h2>
+<div class="related-links">
+<a href="../tools/loan-interest/">Loan Interest</a>
+<a href="../tools/salary/">Salary</a>
+<a href="../tools/sip/">Sip</a>
+<a href="../tools/fd/">Fd</a>
+<a href="../tools/ppf/">Ppf</a>
+<a href="../tools/nps/">Nps</a>
+<a href="../tools/percentage/">Percentage</a>
+<a href="../">All India Tools</a>
+</div>
+<h2>Final Takeaway</h2>
+<p>Learn how home loan and personal loan EMI is calculated in India, including the EMI formula, monthly interest rate, tenure and practical examples. The calculator is designed to make the calculation easier to understand and compare.</p>
+<p class="small-note">Calculator results are estimates where applicable. Actual outcomes can differ because of rates, rules, fees, rounding, timing assumptions or real-world conditions.</p>
+</article>
+</main>
+<footer style="border-top:1px solid #e5e7eb;padding:30px 20px;">
+<div style="max-width:1100px;margin:0 auto;text-align:center;">
+<p>© India Tools Hub. Free online calculators and practical guides for India.</p>
+<p><a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../disclaimer.html">Disclaimer</a> | <a href="../contact.html">Contact</a></p>
+</div>
+</footer>
 </body>
 </html>

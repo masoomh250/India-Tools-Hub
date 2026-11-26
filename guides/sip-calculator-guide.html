@@ -1,766 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Are SIP Returns Calculated in India? | India Tools Hub</title>
+<meta name="description" content="Learn how SIP returns are estimated in India. Understand the SIP formula, monthly investment, expected return, compounding and practical examples.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Are SIP Returns Calculated in India?">
+<meta property="og:description" content="Learn how SIP returns are estimated in India. Understand the SIP formula, monthly investment, expected return, compounding and practical examples.">
+<meta property="og:url" content="https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html">
+<meta property="og:site_name" content="India Tools Hub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How Are SIP Returns Calculated in India?">
+<meta name="twitter:description" content="Learn how SIP returns are estimated in India. Understand the SIP formula, monthly investment, expected return, compounding and practical examples.">
+<link rel="stylesheet" href="../assets/style.css">
 
-  <title>SIP Calculator Guide: How SIP Returns Are Calculated in India | India Tools Hub</title>
+<style>
+.guide-page{max-width:900px;margin:0 auto;padding:40px 20px 70px}
+.guide-hero{padding:35px 0 25px}
+.eyebrow{font-size:13px;font-weight:800;margin-bottom:12px;color:#2563eb}
+.guide-hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:0 0 18px}
+.guide-hero p,.guide-content{line-height:1.75}
+.guide-hero p{font-size:18px;color:#555}
+.guide-content{font-size:16px;color:#333}
+.guide-content h2{font-size:29px;line-height:1.25;margin-top:48px;margin-bottom:18px}
+.guide-content h3{font-size:21px;margin-top:30px;margin-bottom:10px}
+.guide-content p{margin:0 0 17px}
+.guide-content li{margin-bottom:9px}
+.formula-box,.cta-box,.example-card,.result-box{border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin:22px 0}
+.formula-box,.cta-box{background:#f5f7fb}
+.formula{text-align:center;font-size:19px;font-weight:700;margin:12px 0}
+.example-card{background:#fff}
+.result-box{background:#eef6ff}
+.table-wrap{overflow-x:auto;margin:24px 0}
+.guide-table{width:100%;border-collapse:collapse;min-width:560px}
+.guide-table th,.guide-table td{border:1px solid #e2e8f0;padding:12px;text-align:left}
+.guide-table th{background:#f5f7fb}
+.cta-button{display:inline-block;padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:700;background:#2563eb;color:#fff}
+.faq-item{border-bottom:1px solid #e2e8f0;padding:16px 0}
+.faq-item summary{cursor:pointer;font-weight:700}
+.related-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.related-links a{padding:13px;border:1px solid #e2e8f0;border-radius:9px;text-decoration:none;font-weight:600}
+.small-note{font-size:14px;color:#666}
+</style>
 
-  <meta name="description" content="Learn how SIP returns are calculated in India. Understand the SIP formula, monthly investment, expected return, compounding, investment examples and SIP maturity value.">
-
-  <meta name="robots" content="index, follow, max-image-preview:large">
-
-  <link rel="canonical" href="https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html">
-
-  <meta name="theme-color" content="#2563eb">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="SIP Calculator Guide: How SIP Returns Are Calculated in India">
-  <meta property="og:description" content="Understand SIP calculations, expected returns, compounding and practical SIP investment examples.">
-  <meta property="og:url" content="https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html">
-  <meta property="og:site_name" content="India Tools Hub">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="SIP Calculator Guide: How SIP Returns Are Calculated in India">
-  <meta name="twitter:description" content="Learn how SIP returns and maturity value are estimated with practical examples.">
-
-  <link rel="stylesheet" href="../assets/style.css">
-
-  <style>
-    .guide-page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 70px;
-    }
-
-    .guide-hero {
-      padding: 35px 0 25px;
-    }
-
-    .guide-hero .eyebrow {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #2563eb;
-    }
-
-    .guide-hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.1;
-      margin: 0 0 18px;
-    }
-
-    .guide-hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #555;
-      margin: 0 0 12px;
-    }
-
-    .guide-content {
-      font-size: 17px;
-      line-height: 1.8;
-      color: #333;
-    }
-
-    .guide-content h2 {
-      font-size: 30px;
-      line-height: 1.25;
-      margin-top: 48px;
-      margin-bottom: 18px;
-    }
-
-    .guide-content h3 {
-      font-size: 22px;
-      margin-top: 30px;
-      margin-bottom: 12px;
-    }
-
-    .guide-content p {
-      margin: 0 0 18px;
-    }
-
-    .guide-content ul,
-    .guide-content ol {
-      padding-left: 24px;
-      margin-bottom: 24px;
-    }
-
-    .guide-content li {
-      margin-bottom: 10px;
-    }
-
-    .formula-box {
-      background: #f5f7fb;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 24px;
-      margin: 25px 0;
-      text-align: center;
-      overflow-x: auto;
-    }
-
-    .formula {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 10px 0;
-    }
-
-    .example-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 22px;
-      margin: 18px 0;
-      background: #fff;
-    }
-
-    .example-card h3 {
-      margin-top: 0;
-    }
-
-    .result-box {
-      background: #eef6ff;
-      border-radius: 12px;
-      padding: 18px;
-      margin-top: 15px;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin: 25px 0;
-    }
-
-    .guide-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-
-    .guide-table th,
-    .guide-table td {
-      border: 1px solid #e2e8f0;
-      padding: 13px;
-      text-align: left;
-    }
-
-    .guide-table th {
-      background: #f5f7fb;
-      font-weight: 700;
-    }
-
-    .cta-box {
-      margin: 40px 0;
-      padding: 28px;
-      border-radius: 16px;
-      background: #f5f7fb;
-      border: 1px solid #e2e8f0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      background: #2563eb;
-      color: #fff;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: 18px 0;
-    }
-
-    .faq-item summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .related-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .related-links a {
-      display: block;
-      padding: 15px;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .last-updated {
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "SIP Calculator Guide: How SIP Returns Are Calculated in India",
-    "description": "A practical guide explaining SIP calculations, expected returns, compounding and investment examples.",
-    "author": {
-      "@type": "Organization",
-      "name": "India Tools Hub"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Are SIP Returns Calculated in India?",
+  "description": "Learn how SIP returns are estimated in India. Understand the SIP formula, monthly investment, expected return, compounding and practical examples.",
+  "author": {
+    "@type": "Organization",
+    "name": "India Tools Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "India Tools Hub"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "India Tools Hub",
+      "item": "https://masoomh250.github.io/India-Tools-Hub/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "India Tools Hub"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How Are SIP Returns Calculated in India?",
+      "item": "https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html"
     }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "India Tools Hub",
-        "item": "https://masoomh250.github.io/India-Tools-Hub/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "SIP Calculator Guide",
-        "item": "https://masoomh250.github.io/India-Tools-Hub/guides/sip-calculator-guide.html"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SIP stands for Systematic Investment Plan and is a method of making regular investments."
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is SIP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SIP stands for Systematic Investment Plan. It is a method of investing a fixed amount at regular intervals, commonly monthly, into a mutual fund or other investment product."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How are SIP returns calculated?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SIP maturity value can be estimated using the periodic investment amount, expected rate of return and investment duration. The calculation assumes a regular investment schedule and a specified expected return."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does SIP guarantee returns?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. SIP is an investment method and does not guarantee a particular return. Actual mutual fund returns can vary with market performance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I increase my SIP investment over time?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Investors can choose to increase their periodic investment over time, commonly known as a step-up SIP."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "How are SIP returns calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The estimate uses the periodic investment amount, assumed return and investment duration."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Does SIP guarantee returns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SIP does not guarantee a particular investment return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I increase my SIP over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Increasing periodic contributions over time is commonly called a step-up SIP."
+      }
+    }
+  ]
+}
+</script>
 </head>
-
 <body>
-
-  <header style="border-bottom:1px solid #e5e7eb;">
-    <div style="max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
-      <a href="../" style="text-decoration:none;font-weight:800;font-size:20px;">
-        🇮🇳 India Tools Hub
-      </a>
-
-      <nav style="display:flex;gap:18px;flex-wrap:wrap;">
-        <a href="../" style="text-decoration:none;">Home</a>
-        <a href="../tools/sip/" style="text-decoration:none;font-weight:700;">SIP Calculator</a>
-        <a href="../about.html" style="text-decoration:none;">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="guide-page">
-
-    <section class="guide-hero">
-      <div class="eyebrow">SIP CALCULATOR GUIDE</div>
-
-      <h1>How Are SIP Returns Calculated in India?</h1>
-
-      <p>
-        A Systematic Investment Plan, or SIP, allows you to invest a fixed
-        amount at regular intervals. This guide explains how SIP maturity
-        value is estimated, how compounding works and how your investment
-        amount, expected return and time period affect the result.
-      </p>
-
-      <p class="last-updated">
-        India Tools Hub: Practical guide for understanding SIP calculations.
-      </p>
-    </section>
-
-    <article class="guide-content">
-
-      <div class="cta-box">
-        <strong>Want to calculate your SIP investment?</strong>
-
-        <p>
-          Enter your monthly investment, expected annual return and investment
-          period in our free SIP Calculator to estimate your invested amount,
-          potential gain and estimated maturity value.
-        </p>
-
-        <a class="cta-button" href="../tools/sip/">
-          Open SIP Calculator
-        </a>
-      </div>
-
-      <h2>What Is SIP?</h2>
-
-      <p>
-        SIP stands for <strong>Systematic Investment Plan</strong>. It is a
-        method of investing a fixed amount at regular intervals, commonly
-        every month.
-      </p>
-
-      <p>
-        SIPs are commonly associated with mutual funds. Instead of investing a
-        large amount at one time, an investor contributes smaller amounts
-        regularly according to a chosen schedule.
-      </p>
-
-      <p>
-        A SIP is an investment method, not a separate investment product.
-        The actual investment performance depends on the underlying investment
-        and market conditions.
-      </p>
-
-      <h2>How Are SIP Returns Calculated?</h2>
-
-      <p>
-        A SIP calculator estimates the future value of a series of periodic
-        investments. The main inputs are:
-      </p>
-
-      <ol>
-        <li><strong>Monthly investment:</strong> The amount invested every month.</li>
-        <li><strong>Expected annual return:</strong> The assumed yearly rate of return.</li>
-        <li><strong>Investment period:</strong> The number of years the SIP continues.</li>
-      </ol>
-
-      <p>
-        A commonly used monthly SIP future value formula is:
-      </p>
-
-      <div class="formula-box">
-        <div>Illustrative SIP Future Value Formula</div>
-
-        <div class="formula">
-          FV = P × [((1 + r)<sup>n</sup> − 1) ÷ r] × (1 + r)
-        </div>
-
-        <p>
-          P = Periodic investment amount<br>
-          r = Periodic rate of return<br>
-          n = Number of investment periods
-        </p>
-      </div>
-
-      <p>
-        The final multiplication by <strong>(1 + r)</strong> represents an
-        assumption that each monthly contribution is invested at the beginning
-        of the monthly period. Different calculators can use different timing
-        conventions, so results may vary slightly.
-      </p>
-
-      <h3>Converting annual return into a monthly rate</h3>
-
-      <p>
-        For a simple monthly estimate, the annual expected return is divided
-        by 12 to obtain the monthly rate used in the calculation.
-      </p>
-
-      <div class="formula-box">
-        <div class="formula">
-          Monthly Rate = Annual Expected Return ÷ 12
-        </div>
-      </div>
-
-      <h2>SIP Example: ₹10,000 per Month for 10 Years</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Monthly investment: <strong>₹10,000</strong><br>
-          Expected annual return: <strong>12%</strong><br>
-          Investment period: <strong>10 years</strong>
-        </p>
-
-        <div class="result-box">
-          Total amount invested: <strong>₹12,00,000</strong><br>
-          Estimated maturity value: <strong>approximately ₹23.23 lakh</strong><br>
-          Estimated gain: <strong>approximately ₹11.23 lakh</strong>
-        </div>
-
-        <p>
-          This is an illustrative estimate using a monthly beginning-of-period
-          investment assumption. Actual investment returns are not guaranteed.
-        </p>
-      </div>
-
-      <h2>SIP Example: ₹20,000 per Month for 10 Years</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Monthly investment: <strong>₹20,000</strong><br>
-          Expected annual return: <strong>12%</strong><br>
-          Investment period: <strong>10 years</strong>
-        </p>
-
-        <div class="result-box">
-          Total amount invested: <strong>₹24,00,000</strong><br>
-          Estimated maturity value: <strong>approximately ₹46.47 lakh</strong><br>
-          Estimated gain: <strong>approximately ₹22.47 lakh</strong>
-        </div>
-
-        <p>
-          The estimated value doubles when the monthly investment doubles,
-          assuming the same return and investment period.
-        </p>
-      </div>
-
-      <h2>SIP Example: ₹50,000 per Month for 10 Years</h2>
-
-      <div class="example-card">
-        <h3>Example assumptions</h3>
-
-        <p>
-          Monthly investment: <strong>₹50,000</strong><br>
-          Expected annual return: <strong>12%</strong><br>
-          Investment period: <strong>10 years</strong>
-        </p>
-
-        <div class="result-box">
-          Total amount invested: <strong>₹60,00,000</strong><br>
-          Estimated maturity value: <strong>approximately ₹1.16 crore</strong><br>
-          Estimated gain: <strong>approximately ₹56.17 lakh</strong>
-        </div>
-
-        <p>
-          The example demonstrates how increasing the regular investment can
-          significantly increase the potential long-term corpus.
-        </p>
-      </div>
-
-      <h2>SIP Examples at a Glance</h2>
-
-      <div class="table-wrap">
-        <table class="guide-table">
-          <thead>
-            <tr>
-              <th>Monthly SIP</th>
-              <th>Expected Return</th>
-              <th>Period</th>
-              <th>Amount Invested</th>
-              <th>Estimated Value</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>₹10,000</td>
-              <td>12%</td>
-              <td>10 years</td>
-              <td>₹12 lakh</td>
-              <td>₹23.23 lakh</td>
-            </tr>
-
-            <tr>
-              <td>₹20,000</td>
-              <td>12%</td>
-              <td>10 years</td>
-              <td>₹24 lakh</td>
-              <td>₹46.47 lakh</td>
-            </tr>
-
-            <tr>
-              <td>₹50,000</td>
-              <td>12%</td>
-              <td>10 years</td>
-              <td>₹60 lakh</td>
-              <td>₹1.16 crore</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>What Is the Power of Compounding?</h2>
-
-      <p>
-        Compounding means that returns can generate additional returns over
-        time. With regular investing, the combination of periodic contributions
-        and compounding can become increasingly significant as the investment
-        period becomes longer.
-      </p>
-
-      <p>
-        This is one reason why the investment period is an important input in
-        any SIP calculation.
-      </p>
-
-      <h3>Why time matters</h3>
-
-      <p>
-        Increasing the investment period gives the invested money more time to
-        potentially grow. However, the actual result depends on the returns
-        achieved by the investment.
-      </p>
-
-      <h2>What Factors Affect SIP Returns?</h2>
-
-      <h3>1. Monthly Investment</h3>
-
-      <p>
-        A larger monthly investment generally results in a larger potential
-        corpus when the assumed return and investment period remain unchanged.
-      </p>
-
-      <h3>2. Expected Rate of Return</h3>
-
-      <p>
-        A higher assumed rate produces a higher estimated maturity value in a
-        calculator. However, the assumed rate should not be interpreted as a
-        guaranteed future return.
-      </p>
-
-      <h3>3. Investment Duration</h3>
-
-      <p>
-        A longer investment period provides more time for contributions and
-        potential compounding to work.
-      </p>
-
-      <h3>4. Investment Frequency</h3>
-
-      <p>
-        The timing and frequency of contributions affect the mathematical
-        calculation. Monthly SIP calculators generally assume a fixed monthly
-        contribution schedule.
-      </p>
-
-      <h2>SIP vs One-Time Investment</h2>
-
-      <p>
-        SIP and lump-sum investing are different ways of investing.
-      </p>
-
-      <div class="table-wrap">
-        <table class="guide-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>SIP</th>
-              <th>Lump Sum</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Investment pattern</td>
-              <td>Regular contributions</td>
-              <td>One-time investment</td>
-            </tr>
-
-            <tr>
-              <td>Cash requirement</td>
-              <td>Spread over time</td>
-              <td>Larger amount initially</td>
-            </tr>
-
-            <tr>
-              <td>Calculation</td>
-              <td>Multiple periodic investments</td>
-              <td>Single investment</td>
-            </tr>
-
-            <tr>
-              <td>Market exposure</td>
-              <td>Investments occur over multiple dates</td>
-              <td>Amount is invested at one point in time</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>What Is a Step-Up SIP?</h2>
-
-      <p>
-        A step-up SIP increases the periodic investment amount over time.
-        For example, an investor may start with ₹10,000 per month and increase
-        the contribution by a fixed amount or percentage each year.
-      </p>
-
-      <p>
-        Increasing contributions can help investors align their investment
-        strategy with increasing income, although the affordability of the
-        higher contribution should always be considered.
-      </p>
-
-      <h2>How to Use a SIP Calculator</h2>
-
-      <ol>
-        <li>Enter your monthly investment amount.</li>
-        <li>Enter an expected annual rate of return.</li>
-        <li>Enter the investment period in years.</li>
-        <li>Calculate the estimated maturity value.</li>
-        <li>Compare the invested amount with the estimated gain.</li>
-      </ol>
-
-      <div class="cta-box">
-        <strong>Calculate your SIP investment</strong>
-
-        <p>
-          Try different monthly investment amounts, expected returns and
-          investment periods using the India Tools Hub SIP Calculator.
-        </p>
-
-        <a class="cta-button" href="../tools/sip/">
-          Calculate SIP Returns
-        </a>
-      </div>
-
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <details>
-          <summary>What is SIP?</summary>
-
-          <p>
-            SIP stands for Systematic Investment Plan. It is a method of
-            investing a fixed amount at regular intervals, commonly every
-            month.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>How are SIP returns calculated?</summary>
-
-          <p>
-            A SIP calculator estimates the future value of periodic
-            investments using the investment amount, assumed rate of return
-            and investment duration.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Does SIP guarantee returns?</summary>
-
-          <p>
-            No. SIP does not guarantee a particular return. If the underlying
-            investment is market-linked, its actual value can rise or fall.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Can I increase my SIP investment over time?</summary>
-
-          <p>
-            Yes. Investors can increase their periodic investment over time.
-            This approach is commonly called a step-up SIP.
-          </p>
-        </details>
-      </div>
-
-      <div class="faq-item">
-        <details>
-          <summary>Is the SIP calculator result guaranteed?</summary>
-
-          <p>
-            No. A SIP calculator provides an estimate based on the assumptions
-            entered. Actual investment returns may be different.
-          </p>
-        </details>
-      </div>
-
-      <h2>Related Calculators</h2>
-
-      <div class="related-links">
-        <a href="../tools/sip/">SIP Calculator</a>
-        <a href="../tools/compound-interest/">Compound Interest Calculator</a>
-        <a href="../tools/fd/">FD Calculator</a>
-        <a href="../tools/ppf/">PPF Calculator</a>
-        <a href="../tools/nps/">NPS Calculator</a>
-        <a href="../tools/emi/">EMI Calculator</a>
-        <a href="../">All India Tools</a>
-      </div>
-
-      <h2>Final Takeaway</h2>
-
-      <p>
-        SIP calculations depend mainly on the periodic investment amount,
-        expected return, investment duration and timing of contributions.
-        Compounding can become increasingly important over longer periods.
-      </p>
-
-      <p>
-        However, a calculator's projected maturity value is only an estimate.
-        Investment returns can vary, particularly when the underlying
-        investment is market-linked.
-      </p>
-
-      <p>
-        For a quick estimate, use the
-        <a href="../tools/sip/"><strong>India Tools Hub SIP Calculator</strong></a>
-        and compare different investment scenarios.
-      </p>
-
-    </article>
-
-  </main>
-
-  <footer style="border-top:1px solid #e5e7eb;padding:30px 20px;">
-    <div style="max-width:1100px;margin:0 auto;text-align:center;">
-      <p>
-        © India Tools Hub. Free online calculators and practical guides for India.
-      </p>
-
-      <p>
-        <a href="../privacy.html">Privacy</a> |
-        <a href="../terms.html">Terms</a> |
-        <a href="../disclaimer.html">Disclaimer</a> |
-        <a href="../contact.html">Contact</a>
-      </p>
-    </div>
-  </footer>
-
+<header style="border-bottom:1px solid #e5e7eb;">
+<div style="max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;">
+<a href="../" style="text-decoration:none;font-weight:800;font-size:20px;">🇮🇳 India Tools Hub</a>
+<nav style="display:flex;gap:18px;flex-wrap:wrap;">
+<a href="../" style="text-decoration:none;">Home</a>
+<a href="../tools/sip-calculator-guide/" style="text-decoration:none;font-weight:700;">Sip Calculator Guide</a>
+<a href="../about.html" style="text-decoration:none;">About</a>
+<a href="../contact.html" style="text-decoration:none;">Contact</a>
+</nav>
+</div>
+</header>
+<main class="guide-page">
+<section class="guide-hero">
+<div class="eyebrow">SIP CALCULATOR GUIDE</div>
+<h1>How Are SIP Returns Calculated in India?</h1>
+<p>A Systematic Investment Plan, or SIP, allows you to invest a fixed amount at regular intervals. This guide explains how SIP maturity value is estimated, how compounding works and how your investment amount, expected return and time period affect the result.</p>
+</section>
+<div class="cta-box">
+<strong>Want to calculate it directly?</strong>
+<p>Use the free Sip Calculator Guide on India Tools Hub and compare different scenarios using your own inputs.</p>
+<a class="cta-button" href="../tools/sip-calculator-guide/">Open Sip Calculator Guide</a>
+</div>
+<article class="guide-content">
+<h2>What Is SIP?</h2><p>SIP stands for Systematic Investment Plan. It is a method of investing a fixed amount at regular intervals, commonly every month.</p><p>A SIP is an investment method rather than a separate investment product. Actual performance depends on the underlying investment and market conditions.</p><h2>How Are SIP Returns Calculated?</h2><p>A SIP calculator estimates the future value of a series of periodic investments. The main inputs are monthly investment, expected annual return and investment period.</p><div class="formula-box"><div class="formula">FV = P × [((1 + r)ⁿ − 1) ÷ r] × (1 + r)</div><p>P = periodic investment amount<br>r = periodic rate of return<br>n = number of investment periods</p></div><h2>SIP Example: ₹10,000 per Month for 10 Years</h2><p>Monthly investment: ₹10,000</p><p>Expected annual return: 12%</p><p>Investment period: 10 years</p><div class="formula-box"><div class="formula">Estimated maturity value: approximately ₹23.23 lakh</div><p>Total amount invested: ₹12 lakh<br>Estimated gain: approximately ₹11.23 lakh</p></div><h2>What Is the Power of Compounding?</h2><p>Compounding means returns can generate additional returns over time. With regular investing, the effect can become increasingly important over longer periods.</p><p>The actual result depends on the returns achieved by the underlying investment.</p><h2>What Factors Affect SIP Returns?</h2><p>Monthly investment: A larger contribution generally increases the potential corpus.</p><p>Expected return: A higher assumption produces a higher estimated value but is not guaranteed.</p><p>Investment duration: More time can provide more opportunity for compounding.</p><p>Contribution timing: The timing of periodic contributions affects the mathematical result.</p>
+<h2>How to Use the Sip Calculator Guide</h2>
+<ol>
+<li>Open the calculator using the button above.</li>
+<li>Enter the required values carefully.</li>
+<li>Review the calculated result and supporting figures.</li>
+<li>Change the inputs to compare different scenarios.</li>
+<li>Use the result as an estimate and verify important real-world decisions against applicable rules or provider terms.</li>
+</ol>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><details><summary>What is SIP?</summary><p>SIP stands for Systematic Investment Plan and is a method of making regular investments.</p></details></div>
+<div class="faq-item"><details><summary>How are SIP returns calculated?</summary><p>The estimate uses the periodic investment amount, assumed return and investment duration.</p></details></div>
+<div class="faq-item"><details><summary>Does SIP guarantee returns?</summary><p>No. SIP does not guarantee a particular investment return.</p></details></div>
+<div class="faq-item"><details><summary>Can I increase my SIP over time?</summary><p>Yes. Increasing periodic contributions over time is commonly called a step-up SIP.</p></details></div>
+
+<h2>Related Calculators</h2>
+<div class="related-links">
+<a href="../tools/compound-interest/">Compound Interest</a>
+<a href="../tools/fd/">Fd</a>
+<a href="../tools/ppf/">Ppf</a>
+<a href="../tools/nps/">Nps</a>
+<a href="../tools/emi/">Emi</a>
+<a href="../tools/percentage/">Percentage</a>
+<a href="../">All India Tools</a>
+</div>
+<h2>Final Takeaway</h2>
+<p>Learn how SIP returns are estimated in India. Understand the SIP formula, monthly investment, expected return, compounding and practical examples. The calculator is designed to make the calculation easier to understand and compare.</p>
+<p class="small-note">Calculator results are estimates where applicable. Actual outcomes can differ because of rates, rules, fees, rounding, timing assumptions or real-world conditions.</p>
+</article>
+</main>
+<footer style="border-top:1px solid #e5e7eb;padding:30px 20px;">
+<div style="max-width:1100px;margin:0 auto;text-align:center;">
+<p>© India Tools Hub. Free online calculators and practical guides for India.</p>
+<p><a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../disclaimer.html">Disclaimer</a> | <a href="../contact.html">Contact</a></p>
+</div>
+</footer>
 </body>
 </html>
